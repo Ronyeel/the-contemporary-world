@@ -22,6 +22,8 @@
   margin-bottom: 56px;
   line-height: 1;
   color: #00a2ff;
+  position: relative;
+  z-index: 10; /* Render on top of overlapping cloud layers */
 }
 
 /* ── Carousel Track ── */
