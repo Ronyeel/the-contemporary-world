@@ -1,4 +1,3 @@
-import React from "react";
 import "./CloudOverlay.css";
 
 const CloudOverlay = () => {

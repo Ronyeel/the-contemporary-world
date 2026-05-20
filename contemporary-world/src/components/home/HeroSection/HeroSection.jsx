@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "../../common/Button/Button";
 import Earth3D from "../Earth3D/Earth3D";
 import "./HeroSection.css";

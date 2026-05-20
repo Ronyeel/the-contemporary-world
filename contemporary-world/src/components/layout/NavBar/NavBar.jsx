@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Logo from "../../common/Logo/Logo";
 import "./NavBar.css";
 

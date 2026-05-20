@@ -1,4 +1,3 @@
-import React from "react";
 import NavBar from "../components/layout/NavBar/NavBar";
 import HeroSection from "../components/home/HeroSection/HeroSection";
 import LessonsCarousel from "../components/home/LessonsCarousel/LessonsCarousel";

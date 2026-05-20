@@ -50,7 +50,7 @@
   --hero-padding-top: 100px;
   --hero-padding-bottom: 80px;
   --hero-padding-x: 8%;
-
+  
   /* Button Design Tokens */
   --btn-padding-y: 12px;
   --btn-padding-x: 32px;
@@ -58,7 +58,7 @@
   --btn-font-weight: 600;
   --btn-border-radius: 10px; /* Elegant rounded corners from screenshot */
   --btn-transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
-
+  
   /* Hero Section Layout Tokens */
   --hero-title-font-size: clamp(1.8rem, 4.4vw, 3.8rem);
   --hero-title-font-size-md: clamp(1.6rem, 4.8vw, 3.2rem);

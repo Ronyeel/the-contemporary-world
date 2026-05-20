@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import useRealTimeStat from '../../../hooks/useRealTimeStat';
 import './InteractiveMap.css';
 
