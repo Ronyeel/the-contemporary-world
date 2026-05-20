@@ -304,27 +304,45 @@
   border: 1px solid #7c99ff;
   border-radius: 12px;
   position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: auto; /* Allow overflow scroll (hidden scrollbars via CSS below) */
+  display: block; /* Switch to block to containment scroll the fixed canvas */
   background-color: #ffffff;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-x pan-y; /* Optimize native mobile touch gesture scrolling */
+}
+
+.map-center-panel.grabbing {
+  cursor: grabbing;
+}
+
+/* Hide scrollbars globally to keep the game board style clean */
+.map-center-panel::-webkit-scrollbar {
+  display: none;
+}
+.map-center-panel {
+  scrollbar-width: none;
 }
 
 .map-canvas {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 1300px; /* Fixed larger size for a wide panning battlefield map */
+  height: 680px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .map-base-img {
-  width: 90%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   opacity: 0.8;
   mix-blend-mode: multiply; /* Ensure dots blend cleanly onto white */
+  pointer-events: none; /* Disable default browser image drag */
+  user-select: none;
 }
 
 /* Markers */

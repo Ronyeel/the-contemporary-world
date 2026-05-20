@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import useRealTimeStat from '../../../hooks/useRealTimeStat';
 import './InteractiveMap.css';
 
@@ -16,16 +16,92 @@ const InteractiveMap = () => {
   const [activeMarker, setActiveMarker] = useState(null);
   const currentData = themeData[activeTheme];
 
+  const mapContainerRef = useRef(null);
+  const markerDragStart = useRef({ x: 0, y: 0 });
+
   useEffect(() => {
-    // Horizontally center the scrollable map panel on mobile screens initially
-    const mapPanel = document.querySelector('.map-center-panel');
-    if (mapPanel) {
-      const scrollAmount = (680 - mapPanel.clientWidth) / 2;
-      if (scrollAmount > 0) {
-        mapPanel.scrollLeft = scrollAmount;
-      }
-    }
+    const container = mapContainerRef.current;
+    if (!container) return;
+
+    let isDown = false;
+    let startX;
+    let startY;
+    let scrollLeft;
+    let scrollTop;
+
+    const handleMouseDown = (e) => {
+      // Allow only left-click drag panning
+      if (e.button !== 0) return;
+      isDown = true;
+      container.classList.add('grabbing');
+      startX = e.pageX - container.offsetLeft;
+      startY = e.pageY - container.offsetTop;
+      scrollLeft = container.scrollLeft;
+      scrollTop = container.scrollTop;
+    };
+
+    const handleMouseLeave = () => {
+      isDown = false;
+      container.classList.remove('grabbing');
+    };
+
+    const handleMouseUp = () => {
+      isDown = false;
+      container.classList.remove('grabbing');
+    };
+
+    const handleMouseMove = (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - container.offsetLeft;
+      const y = e.pageY - container.offsetTop;
+      const walkX = x - startX;
+      const walkY = y - startY;
+      container.scrollLeft = scrollLeft - walkX;
+      container.scrollTop = scrollTop - walkY;
+    };
+
+    container.addEventListener('mousedown', handleMouseDown);
+    container.addEventListener('mouseleave', handleMouseLeave);
+    container.addEventListener('mouseup', handleMouseUp);
+    container.addEventListener('mousemove', handleMouseMove);
+
+    // Dynamic centering of map canvas inside scrollable container viewport
+    const centerMap = () => {
+      const canvasWidth = container.firstElementChild?.clientWidth || 1300;
+      const canvasHeight = container.firstElementChild?.clientHeight || 680;
+      const scrollX = (canvasWidth - container.clientWidth) / 2;
+      const scrollY = (canvasHeight - container.clientHeight) / 2;
+      if (scrollX > 0) container.scrollLeft = scrollX;
+      if (scrollY > 0) container.scrollTop = scrollY;
+    };
+
+    // Delay slightly to ensure browser has resolved viewport layout dims
+    const timer = setTimeout(centerMap, 50);
+    window.addEventListener('resize', centerMap);
+
+    return () => {
+      container.removeEventListener('mousedown', handleMouseDown);
+      container.removeEventListener('mouseleave', handleMouseLeave);
+      container.removeEventListener('mouseup', handleMouseUp);
+      container.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', centerMap);
+      clearTimeout(timer);
+    };
   }, []);
+
+  const handleMarkerMouseDown = (e) => {
+    markerDragStart.current = { x: e.clientX, y: e.clientY };
+  };
+
+  const handleMarkerClick = (e, marker) => {
+    const deltaX = Math.abs(e.clientX - markerDragStart.current.x);
+    const deltaY = Math.abs(e.clientY - markerDragStart.current.y);
+    // Only select marker if mouse stayed in place (click), not dragged (pan)
+    if (deltaX < 6 && deltaY < 6) {
+      setActiveMarker(marker);
+    }
+  };
 
   // Tickers simulating live data
   const popStat = useRealTimeStat(8100234123, 2.4); 
@@ -83,7 +159,7 @@ const InteractiveMap = () => {
         </div>
 
         {/* Center Map */}
-        <div className="map-center-panel">
+        <div className="map-center-panel" ref={mapContainerRef}>
           <div 
             className="map-canvas" 
             style={{
@@ -100,7 +176,8 @@ const InteractiveMap = () => {
                 <div 
                   key={marker.id}
                   className={`map-marker cod-style-marker ${activeMarker?.id === marker.id ? 'active-focus' : ''}`}
-                  onClick={() => setActiveMarker(marker)}
+                  onMouseDown={handleMarkerMouseDown}
+                  onClick={(e) => handleMarkerClick(e, marker)}
                   style={{ 
                     left: `${marker.x}%`, 
                     top: `${marker.y}%`,
