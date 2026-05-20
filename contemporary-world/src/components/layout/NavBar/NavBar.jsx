@@ -13,22 +13,31 @@ const NavBar = () => {
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          const heroEl = document.getElementById("home");
-          // Fallback to window.innerHeight if hero element isn't in DOM yet
-          const heroHeight = heroEl ? heroEl.offsetHeight : window.innerHeight;
+          // Instead of calculating the dynamic height of the Hero section,
+          // we directly measure the distance of the Lessons section ("#topics") to the viewport top.
+          const topicsEl = document.getElementById("topics");
           
-          // Unified scrolling detection across browsers and nested scroll viewports
-          const scrollPosition = 
-            window.pageYOffset || 
-            document.documentElement.scrollTop || 
-            document.body.scrollTop || 
-            0;
-
-          // Trigger sticky state slightly before leaving the hero to prevent layout gaps (e.g. 50px buffer)
-          if (scrollPosition >= heroHeight - 50) {
-            setIsSticky(true);
+          if (topicsEl) {
+            const rect = topicsEl.getBoundingClientRect();
+            // Trigger sticky fixed layout as soon as the Lessons section reaches the top of viewport (with 80px offset)
+            if (rect.top <= 80) {
+              setIsSticky(true);
+            } else {
+              setIsSticky(false);
+            }
           } else {
-            setIsSticky(false);
+            // Fallback calculation using window height if the topics section element is not yet in the DOM
+            const scrollPosition = 
+              window.pageYOffset || 
+              document.documentElement.scrollTop || 
+              document.body.scrollTop || 
+              0;
+
+            if (scrollPosition >= window.innerHeight - 80) {
+              setIsSticky(true);
+            } else {
+              setIsSticky(false);
+            }
           }
           ticking = false;
         });
@@ -36,12 +45,11 @@ const NavBar = () => {
       }
     };
 
-    // Attach listeners on both window and document to catch all events
     window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", handleScroll, { passive: true });
     document.addEventListener("scroll", handleScroll, { passive: true });
     
-    // Initial evaluation
+    // Run immediately to establish initial state on page loads (e.g. user refreshed mid-scroll)
     handleScroll();
 
     return () => {

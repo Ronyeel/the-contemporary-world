@@ -18,7 +18,7 @@
 /* Sticky state triggered after scrolling past the Hero section */
 .navbar.sticky {
   position: fixed;
-  background: var(--bg-nav);
+  background: rgba(10, 10, 10, 0.85); /* Increased dark backdrop contrast for white sections */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-color);
