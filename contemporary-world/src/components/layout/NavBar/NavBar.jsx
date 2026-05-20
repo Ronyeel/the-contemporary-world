@@ -8,48 +8,40 @@ const NavBar = () => {
   const navItems = ["Home", "Topics", "References", "About Us"];
 
   useEffect(() => {
-    let ticking = false;
-
     const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          // Instead of calculating the dynamic height of the Hero section,
-          // we directly measure the distance of the Lessons section ("#topics") to the viewport top.
-          const topicsEl = document.getElementById("topics");
-          
-          if (topicsEl) {
-            const rect = topicsEl.getBoundingClientRect();
-            // Trigger sticky fixed layout as soon as the Lessons section reaches the top of viewport (with 80px offset)
-            if (rect.top <= 80) {
-              setIsSticky(true);
-            } else {
-              setIsSticky(false);
-            }
-          } else {
-            // Fallback calculation using window height if the topics section element is not yet in the DOM
-            const scrollPosition = 
-              window.pageYOffset || 
-              document.documentElement.scrollTop || 
-              document.body.scrollTop || 
-              0;
-
-            if (scrollPosition >= window.innerHeight - 80) {
-              setIsSticky(true);
-            } else {
-              setIsSticky(false);
-            }
-          }
-          ticking = false;
-        });
-        ticking = true;
+      const topicsEl = document.getElementById("topics");
+      
+      if (topicsEl) {
+        const rect = topicsEl.getBoundingClientRect();
+        // Trigger sticky fixed layout as soon as the Lessons section (white background) reaches the top of viewport.
+        // We use 80px as the threshold (approx navbar height) so it switches exactly as the white section meets the navbar.
+        if (rect.top <= 80) {
+          setIsSticky(true);
+        } else {
+          setIsSticky(false);
+        }
+      } else {
+        // Fallback using scroll height if topics element is not found
+        const scrollPosition = 
+          window.pageYOffset || 
+          document.documentElement.scrollTop || 
+          document.body.scrollTop || 
+          0;
+        
+        if (scrollPosition >= window.innerHeight - 80) {
+          setIsSticky(true);
+        } else {
+          setIsSticky(false);
+        }
       }
     };
 
+    // Listen on multiple targets to ensure scroll events fire instantly across all browsers and devices
     window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", handleScroll, { passive: true });
     document.addEventListener("scroll", handleScroll, { passive: true });
     
-    // Run immediately to establish initial state on page loads (e.g. user refreshed mid-scroll)
+    // Run immediately on load/mount to catch refreshed page states
     handleScroll();
 
     return () => {
