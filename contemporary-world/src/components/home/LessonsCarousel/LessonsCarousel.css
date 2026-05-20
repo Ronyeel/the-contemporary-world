@@ -60,7 +60,15 @@
   width: clamp(200px, 24vw, 290px);
   opacity: 1;
   transform: translateY(0);
-  cursor: default;
+  cursor: pointer;
+  position: relative;
+  z-index: 100; /* Ensure the card is absolutely on top for clicks */
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
+}
+
+.lesson-card--featured:hover {
+  transform: scale(1.04) translateY(-8px);
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
 }
 
 /* ── Cover Image Box ── */

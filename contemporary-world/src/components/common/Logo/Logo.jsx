@@ -1,8 +1,8 @@
 import "./Logo.css";
 
-const Logo = () => {
+const Logo = ({ onClick }) => {
   return (
-    <div className="logo-container">
+    <div className="logo-container" onClick={onClick} style={{ cursor: onClick ? "pointer" : "default" }}>
       <svg className="logo-icon" width="34" height="34" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">

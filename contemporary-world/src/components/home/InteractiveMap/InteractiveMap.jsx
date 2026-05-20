@@ -29,8 +29,8 @@ const InteractiveMap = () => {
     let scrollLeft;
     let scrollTop;
 
+    // Desktop mouse events
     const handleMouseDown = (e) => {
-      // Allow only left-click drag panning
       if (e.button !== 0) return;
       isDown = true;
       container.classList.add('grabbing');
@@ -61,15 +61,49 @@ const InteractiveMap = () => {
       container.scrollTop = scrollTop - walkY;
     };
 
+    // Mobile touch events for omnidirectional/diagonal swipe panning
+    const handleTouchStart = (e) => {
+      if (e.touches.length !== 1) return;
+      isDown = true;
+      container.classList.add('grabbing');
+      startX = e.touches[0].pageX - container.offsetLeft;
+      startY = e.touches[0].pageY - container.offsetTop;
+      scrollLeft = container.scrollLeft;
+      scrollTop = container.scrollTop;
+    };
+
+    const handleTouchEnd = () => {
+      isDown = false;
+      container.classList.remove('grabbing');
+    };
+
+    const handleTouchMove = (e) => {
+      if (!isDown) return;
+      if (e.touches.length !== 1) return;
+      // Allow scroll left/right and up/down simultaneously (diagonal pan)
+      e.preventDefault();
+      const x = e.touches[0].pageX - container.offsetLeft;
+      const y = e.touches[0].pageY - container.offsetTop;
+      const walkX = x - startX;
+      const walkY = y - startY;
+      container.scrollLeft = scrollLeft - walkX;
+      container.scrollTop = scrollTop - walkY;
+    };
+
     container.addEventListener('mousedown', handleMouseDown);
     container.addEventListener('mouseleave', handleMouseLeave);
     container.addEventListener('mouseup', handleMouseUp);
     container.addEventListener('mousemove', handleMouseMove);
 
+    container.addEventListener('touchstart', handleTouchStart, { passive: true });
+    container.addEventListener('touchend', handleTouchEnd, { passive: true });
+    container.addEventListener('touchcancel', handleTouchEnd, { passive: true });
+    container.addEventListener('touchmove', handleTouchMove, { passive: false });
+
     // Dynamic centering of map canvas inside scrollable container viewport
     const centerMap = () => {
       const canvasWidth = container.firstElementChild?.clientWidth || 1300;
-      const canvasHeight = container.firstElementChild?.clientHeight || 680;
+      const canvasHeight = container.firstElementChild?.clientHeight || 650;
       const scrollX = (canvasWidth - container.clientWidth) / 2;
       const scrollY = (canvasHeight - container.clientHeight) / 2;
       if (scrollX > 0) container.scrollLeft = scrollX;
@@ -85,6 +119,12 @@ const InteractiveMap = () => {
       container.removeEventListener('mouseleave', handleMouseLeave);
       container.removeEventListener('mouseup', handleMouseUp);
       container.removeEventListener('mousemove', handleMouseMove);
+
+      container.removeEventListener('touchstart', handleTouchStart);
+      container.removeEventListener('touchend', handleTouchEnd);
+      container.removeEventListener('touchcancel', handleTouchEnd);
+      container.removeEventListener('touchmove', handleTouchMove);
+
       window.removeEventListener('resize', centerMap);
       clearTimeout(timer);
     };
@@ -94,11 +134,25 @@ const InteractiveMap = () => {
     markerDragStart.current = { x: e.clientX, y: e.clientY };
   };
 
+  const handleMarkerTouchStart = (e) => {
+    if (e.touches.length === 1) {
+      markerDragStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    }
+  };
+
   const handleMarkerClick = (e, marker) => {
-    const deltaX = Math.abs(e.clientX - markerDragStart.current.x);
-    const deltaY = Math.abs(e.clientY - markerDragStart.current.y);
-    // Only select marker if mouse stayed in place (click), not dragged (pan)
-    if (deltaX < 6 && deltaY < 6) {
+    const clientX = e.clientX || (e.changedTouches && e.changedTouches[0]?.clientX);
+    const clientY = e.clientY || (e.changedTouches && e.changedTouches[0]?.clientY);
+    
+    let deltaX = 0;
+    let deltaY = 0;
+    
+    if (clientX !== undefined && clientY !== undefined) {
+      deltaX = Math.abs(clientX - markerDragStart.current.x);
+      deltaY = Math.abs(clientY - markerDragStart.current.y);
+    }
+    
+    if (deltaX < 10 && deltaY < 10) {
       setActiveMarker(marker);
     }
   };
@@ -240,6 +294,7 @@ const InteractiveMap = () => {
                   key={marker.id}
                   className={`map-marker cod-style-marker ${activeMarker?.id === marker.id ? 'active-focus' : ''}`}
                   onMouseDown={handleMarkerMouseDown}
+                  onTouchStart={handleMarkerTouchStart}
                   onClick={(e) => handleMarkerClick(e, marker)}
                   style={{ 
                     left: `${marker.x}%`, 

@@ -1,56 +1,15 @@
 import { useState, useEffect } from "react";
 import "./LessonsCarousel.css";
 
-const lessons = [
-  {
-    id: 1,
-    title: "Global Cities & Global Demography",
-    accent: "linear-gradient(135deg, #0f2c5e 0%, #1a4a8a 50%, #0a1e42 100%)",
-    image: null,
-  },
-  {
-    id: 2,
-    title: "Global Food Security and Global Citizenship",
-    accent: "linear-gradient(135deg, #0d3b1f 0%, #1a6e3a 50%, #0a2914 100%)",
-    image: null,
-  },
-  {
-    id: 3,
-    title: "Global Connections: Media, Religion, and Technology",
-    accent: "linear-gradient(135deg, #2a0d5e 0%, #4a1a8a 50%, #1c0a42 100%)",
-    image: null,
-  },
-  {
-    id: 4,
-    title: "Globalization",
-    accent: "linear-gradient(135deg, #5e1a0d 0%, #8a3a1a 50%, #421008 100%)",
-    image: null,
-  },
-  {
-    id: 5,
-    title: "Migration and Tourism",
-    accent: "linear-gradient(135deg, #3a2a0d 0%, #6b4f1a 50%, #2a1e08 100%)",
-    image: null,
-  },
-  {
-    id: 6,
-    title: "Global Trade",
-    accent: "linear-gradient(135deg, #0d3a5e 0%, #1a6b8a 50%, #08283f 100%)",
-    image: null,
-  },
-  {
-    id: 7,
-    title: "Human Security",
-    accent: "linear-gradient(135deg, #1a3d0d 0%, #2e6b1a 50%, #112808 100%)",
-    image: null,
-  },
-];
+import lessonsData from "../../../data/lessonsData.json";
+
+const lessons = lessonsData.lessons;
 
 const CardCover = ({ lesson }) => (
   <div className="lesson-card__cover" style={{ background: lesson.accent }}>
-    {lesson.image ? (
+    {lesson.img ? (
       <img 
-        src={lesson.image} 
+        src={lesson.img} 
         alt={lesson.title} 
         key={lesson.id} 
         className="carousel-fade-in" 
@@ -75,26 +34,32 @@ const CardCover = ({ lesson }) => (
   </div>
 );
 
-const LessonsCarousel = () => {
+const LessonsCarousel = ({ onSelectLesson }) => {
   const [activeIndex, setActiveIndex] = useState(1);
+  const [isPaused, setIsPaused] = useState(false);
   const total = lessons.length;
 
   const prevIdx = (activeIndex - 1 + total) % total;
   const nextIdx = (activeIndex + 1) % total;
 
   useEffect(() => {
+    if (isPaused) return; // Pause auto-advance when hovered
     const timer = setInterval(() => {
       setActiveIndex((current) => (current + 1) % total);
     }, 3000); // Auto-advance every 3 seconds
     return () => clearInterval(timer);
-  }, [total]);
+  }, [total, isPaused]);
 
   return (
     <section className="lessons-section" id="topics">
       <div className="lessons-inner">
         <h2 className="lessons-heading">Lessons</h2>
 
-        <div className="carousel-track">
+        <div 
+          className="carousel-track"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           {/* Left side card */}
           <div
             className="lesson-card lesson-card--side"
@@ -115,7 +80,14 @@ const LessonsCarousel = () => {
           </div>
 
           {/* Center featured card */}
-          <div className="lesson-card lesson-card--featured">
+          <div 
+            className="lesson-card lesson-card--featured clickable-featured-card"
+            onClick={() => onSelectLesson && onSelectLesson(lessons[activeIndex].id)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => e.key === "Enter" && onSelectLesson && onSelectLesson(lessons[activeIndex].id)}
+            title="Click to view details"
+          >
             <CardCover lesson={lessons[activeIndex]} />
             <div className="lesson-card__info">
               <p 

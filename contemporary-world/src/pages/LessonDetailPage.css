@@ -1,0 +1,153 @@
+.lesson-detail-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding-top: 80px; /* Offset for sticky navbar */
+  font-family: 'Inter', sans-serif;
+  color: #1a202c;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Premium Header Banner */
+.lesson-detail-banner {
+  background-color: #dbdbdb; /* Light grey matching mockup */
+  padding: 60px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #c9c9c9;
+}
+
+.banner-content {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image container */
+.banner-image-container {
+  width: 220px;
+  height: 140px;
+  margin-bottom: 30px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #c4c4c4;
+}
+
+.banner-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #c2c2c2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-image-placeholder svg {
+  width: 80px;
+  height: 80px;
+  opacity: 0.6;
+}
+
+/* Title */
+.lesson-detail-title {
+  font-family: 'Orbitron', 'Poppins', sans-serif; /* Keep a bit of the theme but mostly simple */
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #555555;
+  margin: 0;
+  line-height: 1.4;
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* Body Content */
+.lesson-detail-body {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  flex-grow: 1;
+}
+
+.lesson-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.subtopic-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtopic-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333333;
+  margin: 0 0 16px 0;
+  text-align: left;
+}
+
+.subtopic-content {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333333;
+  margin: 0;
+  text-align: justify;
+  text-indent: 2.5rem;
+}
+
+/* Error page style */
+.lesson-detail-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+  padding: 40px;
+}
+
+.lesson-detail-error h2 {
+  color: #ef4444;
+  margin-bottom: 20px;
+}
+
+.btn-back {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .lesson-detail-banner {
+    padding: 40px 15px 30px 15px;
+  }
+  
+  .banner-image-container {
+    width: 180px;
+    height: 110px;
+  }
+  
+  .lesson-detail-title {
+    font-size: 1.3rem;
+  }
+  
+  .lesson-detail-body {
+    padding: 30px 15px;
+  }
+}

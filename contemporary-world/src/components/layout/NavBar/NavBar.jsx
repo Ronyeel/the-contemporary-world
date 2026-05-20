@@ -2,13 +2,33 @@ import { useState, useEffect } from "react";
 import Logo from "../../common/Logo/Logo";
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavBar = ({ currentView, onNavigateHome }) => {
   const [activeTab, setActiveTab] = useState("Home");
   const [isSticky, setIsSticky] = useState(false);
   const navItems = ["Home", "Topics", "References", "About Us"];
 
+  const sectionMap = {
+    "Home": "home",
+    "Topics": "topics",
+    "References": "interactive-map",
+    "About Us": "intro"
+  };
+
+  useEffect(() => {
+    // If we're on a lesson page, it should always highlight 'Topics'
+    if (currentView && currentView.type === "lesson") {
+      setActiveTab("Topics");
+    }
+  }, [currentView]);
+
   useEffect(() => {
     const handleScroll = () => {
+      // If we're on a lesson detail view, we want the navbar to be always sticky/fixed
+      if (currentView && currentView.type === "lesson") {
+        setIsSticky(true);
+        return;
+      }
+
       const topicsEl = document.getElementById("topics");
       const scrollPosition = 
         window.pageYOffset || 
@@ -16,8 +36,6 @@ const NavBar = () => {
         document.body.scrollTop || 
         0;
 
-      // Safe threshold: Trigger sticky fixed layout if scroll position is past the Hero viewport height (minus navbar padding),
-      // OR if the Lessons section top border has scrolled up to the top viewport edge.
       let shouldBeSticky = scrollPosition >= window.innerHeight - 80;
 
       if (topicsEl) {
@@ -30,12 +48,10 @@ const NavBar = () => {
       setIsSticky(shouldBeSticky);
     };
 
-    // Listen to scroll events on both window and document to ensure event capture in all browser setups
     window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", handleScroll, { passive: true });
     document.addEventListener("scroll", handleScroll, { passive: true });
     
-    // Initial call to check positioning state on load
     handleScroll();
 
     return () => {
@@ -43,17 +59,32 @@ const NavBar = () => {
       window.removeEventListener("resize", handleScroll);
       document.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [currentView]);
+
+  const handleLogoClick = () => {
+    setActiveTab("Home");
+    if (onNavigateHome) {
+      onNavigateHome("home");
+    }
+  };
+
+  const handleNavLinkClick = (e, item) => {
+    e.preventDefault();
+    setActiveTab(item);
+    if (onNavigateHome) {
+      onNavigateHome(sectionMap[item]);
+    }
+  };
 
   return (
-    <nav className={`navbar ${isSticky ? "sticky" : ""}`}>
-      <Logo />
+    <nav className={`navbar ${isSticky || (currentView && currentView.type === "lesson") ? "sticky" : ""}`}>
+      <Logo onClick={handleLogoClick} />
       <ul className="nav-links">
         {navItems.map((item) => (
           <li key={item} className={activeTab === item ? "active" : ""}>
             <a 
-              href={`#${item.toLowerCase().replace(" ", "")}`} 
-              onClick={() => setActiveTab(item)}
+              href={`#${sectionMap[item]}`} 
+              onClick={(e) => handleNavLinkClick(e, item)}
             >
               {item}
             </a>

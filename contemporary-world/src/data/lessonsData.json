@@ -1,0 +1,120 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Global Cities & Global Demography",
+      "accent": "linear-gradient(135deg, #0f2c5e 0%, #1a4a8a 50%, #0a1e42 100%)",
+      "img": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1200&q=80",
+      "subtopics": [
+        {
+          "title": "The Rise of Global Cities",
+          "content": "A global city, also known as a power city or world city, acts as a primary node in the global economic network. Pioneered by sociologist Saskia Sassen, the concept highlights cities like New York, London, and Tokyo as centers of advanced producer services, global finance, and international corporate headquarters. These cities command the global economy, serving as key locations for financial services, accounting, legal services, and advertising agencies that facilitate transnational capital flows. They are highly interconnected hubs of communication and culture, attracting global talent but also experiencing severe socio-economic polarization between high-income elites and low-wage service workers."
+        },
+        {
+          "title": "Global Demography and the Transition Model",
+          "content": "Global demography studies the changing structure of human populations across the planet. The demographic transition model (DTM) outlines how nations move from high birth and death rates to low birth and death rates as they industrialize. While developed countries face demographic stagnation, low fertility rates, and rapidly aging populations (e.g., Japan, Italy), developing regions in Sub-Saharan Africa and South Asia experience a 'youth bulge'—a high proportion of young people entering the workforce. This demographic divergence drives international migration, challenges national pension systems, and shifts the center of gravity of the global workforce and consumer markets."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Global Food Security and Global Citizenship",
+      "accent": "linear-gradient(135deg, #0d3b1f 0%, #1a6e3a 50%, #0a2914 100%)",
+      "img": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80",
+      "subtopics": [
+        {
+          "title": "Challenges to Global Food Security",
+          "content": "Food security exists when all people, at all times, have physical, social, and economic access to sufficient, safe, and nutritious food. Today, global food security is threatened by climate change, soil degradation, water scarcity, and geopolitical conflicts that disrupt agricultural supply chains. Although the Green Revolution of the mid-20th century exponentially increased crop yields through high-yielding varieties and chemical fertilizers, its ecological costs have sparked a shift toward sustainable agriculture. Global institutions and NGOs work to balance food production with environmental preservation, combating food waste and structural inequalities in distribution."
+        },
+        {
+          "title": "Defining Global Citizenship",
+          "content": "Global citizenship is the idea that one's identity transcends national borders and that individuals belong to an emerging world community. A global citizen feels a sense of responsibility toward addressing global challenges such as climate change, human rights abuses, and extreme poverty. This concept challenges traditional state-centric models of citizenship, promoting transnational solidarity, intercultural understanding, and active civic participation in global affairs. Critics debate whether it is a privilege of the cosmopolitan elite or a necessary ethical framework for solving collective action problems in an interdependent world."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Global Connections: Media, Religion, and Technology",
+      "accent": "linear-gradient(135deg, #2a0d5e 0%, #4a1a8a 50%, #1c0a42 100%)",
+      "img": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+      "subtopics": [
+        {
+          "title": "Global Media Culture and Imperialism",
+          "content": "Global media culture is the instantaneous transmission of images, ideas, and values across the globe, creating a shared global consciousness. The debate over media imperialism suggests that Western (largely American) media conglomerates dominate global airwaves, potentially eroding local cultures. However, contemporary theorists point to cultural hybridization and 'glocalization'—where global media products are active, reinterpreted, and localized by audiences. Emerging media capitals like Mumbai (Bollywood), Seoul (Hallyu), and Lagos (Nollywood) demonstrate that media flows are increasingly multi-directional and decentralized."
+        },
+        {
+          "title": "The Globalization of Religion",
+          "content": "Religion and globalization have a complex, co-constitutive relationship. Globalization facilitates the rapid spread and transnational reorganization of religious groups, creating global diasporic communities. While some scholars predicted that globalization would lead to universal secularization, it has instead sparked religious revitalization and syncretism. Transnational religious movements leverage modern technologies to construct virtual congregations. Simultaneously, the friction between globalized modernity and traditional values sometimes breeds fundamentalist responses seeking to reclaim pure, localized religious identities."
+        },
+        {
+          "title": "Globalization of Technology and the Digital Divide",
+          "content": "The globalization of technology refers to the rapid diffusion of technological innovations, software, and digital infrastructure across borders. While high-speed internet, mobile communications, and cloud computing connect billions, they also exacerbate the 'digital divide'—the inequality of access to technology between developed and developing nations, as well as urban and rural areas. This divide impacts education, economic competitiveness, and political representation. Additionally, technological globalization has created new vulnerabilities, including state-sponsored cyberwarfare, privacy violations, and structural unemployment driven by automation and artificial intelligence."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Globalization",
+      "accent": "linear-gradient(135deg, #5e1a0d 0%, #8a3a1a 50%, #421008 100%)",
+      "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+      "subtopics": [
+        {
+          "title": "Conceptualizing Globalization",
+          "content": "Globalization is the expansion, intensification, and acceleration of social, economic, and political relations across world-space. It is a multi-dimensional process that cannot be reduced to economics alone. Scholars identify three primary dimensions: economic (global markets, finance, and trade), political (transnational governance, regional blocks, and human rights regimes), and cultural (flows of media, tourism, and languages). Theorists debate its historical origin—some tracing it back to the dawn of human migration, others to the European voyages of discovery in the 15th century, or the post-WWII establishment of the Bretton Woods system."
+        },
+        {
+          "title": "The Global Economy and Bretton Woods",
+          "content": "The modern global economy was structured by the 1944 Bretton Woods Conference, which established the International Monetary Fund (IMF) and the World Bank, later followed by the General Agreement on Tariffs and Trade (GATT, now the World Trade Organization). These institutions were designed to stabilize global currencies, rebuild war-torn economies, and promote free-market capitalism. Over the decades, globalization has enabled multinational corporations to build global value chains, outsourcing labor and production to reduce costs. While this has lifted hundreds of millions out of extreme poverty, it has also increased wealth inequality within nations and sparked anti-globalization populist movements."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Migration and Tourism",
+      "accent": "linear-gradient(135deg, #3a2a0d 0%, #6b4f1a 50%, #2a1e08 100%)",
+      "img": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80",
+      "subtopics": [
+        {
+          "title": "Push and Pull Factors of Migration",
+          "content": "International migration is driven by complex forces categorized into push factors (forces that compel people to leave their home country, such as war, economic hardship, political persecution, or environmental crises) and pull factors (attractions of the destination country, including employment opportunities, higher wages, safety, and family reunification). This movement shapes global politics, labor markets, and demographics. Migrant workers send billions of dollars in remittances back to developing economies, constituting a vital source of foreign income. Simultaneously, receiving countries grapple with integration policies, border control, and debates over cultural diversity."
+        },
+        {
+          "title": "Global Tourism and the Leisure Economy",
+          "content": "Global tourism is one of the world's largest economic sectors, reflecting the globalization of leisure, transport, and consumption. While tourism brings vital foreign exchange, infrastructure development, and employment to developing regions, it also carries substantial costs. Mass tourism can lead to the environmental degradation of fragile ecosystems, strain local infrastructure, and lead to the commodification and dilution of local cultures (a phenomenon known as 'staged authenticity'). Sustainable tourism and ecotourism aim to mitigate these impacts, ensuring that local communities benefit directly from global tourist flows."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Global Trade",
+      "accent": "linear-gradient(135deg, #0d3a5e 0%, #1a6b8a 50%, #08283f 100%)",
+      "img": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80",
+      "subtopics": [
+        {
+          "title": "The Architecture of Global Trade",
+          "content": "Global trade is governed by a network of bilateral and multilateral trade agreements, regional trade blocs (such as the EU, USMCA, and ASEAN), and the World Trade Organization. The dominant economic doctrine of neoliberalism promotes the elimination of tariffs, quotas, and trade barriers to allow goods and services to flow freely. Proponents argue this maximizes efficiency and lowers prices for consumers. Critics highlight that free trade can expose developing industries to harsh foreign competition, lead to deindustrialization in developed nations, and weaken labor and environmental standards as countries compete to attract investment."
+        },
+        {
+          "title": "Global Supply Chains and Shipping",
+          "content": "The physical backbone of global trade is the container ship. The invention of intermodal containerization in the mid-20th century dramatically lowered shipping costs and times, enabling the creation of global supply chains where a single product may contain parts manufactured in dozens of countries. Modern manufacturing relies on 'just-in-time' logistics, which minimizes inventory storage costs but leaves supply chains highly vulnerable to bottlenecks, geopolitical crises (e.g., Suez or Panama Canal disruptions), and natural disasters. The vulnerability of these networks has sparked discussions around 'reshoring' or 'nearshoring' critical manufacturing."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Human Security",
+      "accent": "linear-gradient(135deg, #1a3d0d 0%, #2e6b1a 50%, #112808 100%)",
+      "img": "https://images.unsplash.com/photo-1469571486040-7a3081ec8d80?auto=format&fit=crop&w=1200&q=80",
+      "subtopics": [
+        {
+          "title": "Redefining Security",
+          "content": "Introduced by the United Nations Development Programme (UNDP) in 1994, the concept of human security shifts the focus of security from the protection of national borders and state sovereignty (military security) to the protection and empowerment of individual human lives. Human security is defined by two main pillars: 'freedom from fear' (protection from physical violence, war, and state repression) and 'freedom from want' (protection from hunger, disease, poverty, and environmental disaster). It encompasses seven interrelated categories: economic, food, health, environmental, personal, community, and political security."
+        },
+        {
+          "title": "Global Threats to Human Security",
+          "content": "In a globalized world, threats to human security are increasingly transnational and cannot be resolved by any single nation-state. Pandemics (like COVID-19) highlight vulnerabilities in global health infrastructure, while climate change poses environmental and existential threats, displacing communities and intensifying competition for resources. Other threats include human trafficking, transnational organized crime, cyberthreats, and state fragility, which create humanitarian crises and force millions to flee. Addressing these threats requires international cooperation, humanitarian aid, and a commitment to sustainable development."
+        }
+      ]
+    }
+  ]
+}
