@@ -18,6 +18,9 @@
 /* Sticky state activated when scrolling past the Hero section */
 .navbar.sticky {
   position: fixed; /* Fixed to the top when scrolled past Hero */
+  top: 0;
+  left: 0;
+  width: 100%;
   background: rgba(10, 10, 10, 0.95); /* Elegant dark glass backdrop, almost solid black for contrast */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);

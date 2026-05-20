@@ -10,38 +10,32 @@ const NavBar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const topicsEl = document.getElementById("topics");
-      
+      const scrollPosition = 
+        window.pageYOffset || 
+        document.documentElement.scrollTop || 
+        document.body.scrollTop || 
+        0;
+
+      // Safe threshold: Trigger sticky fixed layout if scroll position is past the Hero viewport height (minus navbar padding),
+      // OR if the Lessons section top border has scrolled up to the top viewport edge.
+      let shouldBeSticky = scrollPosition >= window.innerHeight - 80;
+
       if (topicsEl) {
         const rect = topicsEl.getBoundingClientRect();
-        // Trigger sticky fixed layout as soon as the Lessons section (white background) reaches the top of viewport.
-        // We use 80px as the threshold (approx navbar height) so it switches exactly as the white section meets the navbar.
         if (rect.top <= 80) {
-          setIsSticky(true);
-        } else {
-          setIsSticky(false);
-        }
-      } else {
-        // Fallback using scroll height if topics element is not found
-        const scrollPosition = 
-          window.pageYOffset || 
-          document.documentElement.scrollTop || 
-          document.body.scrollTop || 
-          0;
-        
-        if (scrollPosition >= window.innerHeight - 80) {
-          setIsSticky(true);
-        } else {
-          setIsSticky(false);
+          shouldBeSticky = true;
         }
       }
+
+      setIsSticky(shouldBeSticky);
     };
 
-    // Listen on multiple targets to ensure scroll events fire instantly across all browsers and devices
+    // Listen to scroll events on both window and document to ensure event capture in all browser setups
     window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", handleScroll, { passive: true });
     document.addEventListener("scroll", handleScroll, { passive: true });
     
-    // Run immediately on load/mount to catch refreshed page states
+    // Initial call to check positioning state on load
     handleScroll();
 
     return () => {
