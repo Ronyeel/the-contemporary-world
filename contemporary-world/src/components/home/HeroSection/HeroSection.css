@@ -1,0 +1,206 @@
+/* HeroSection.css */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-black);
+  padding: var(--hero-padding-top) var(--hero-padding-x) var(--hero-padding-bottom) var(--hero-padding-x);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.hero-grid {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  z-index: 5;
+}
+
+/* Text content sits on top of the Earth */
+.hero-left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  z-index: 10;
+  max-width: 600px;
+  margin-left: -3vw; /* Shift to the left slightly */
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hero-title-gap);
+  margin-bottom: var(--hero-title-margin-bottom);
+  line-height: var(--hero-title-line-height);
+}
+
+.title-top {
+  font-family: 'Orbitron', var(--font-sans);
+  font-size: var(--hero-title-font-size);
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: var(--hero-title-letter-spacing);
+  white-space: nowrap;
+}
+
+.title-mid,
+.title-bottom {
+  font-family: 'Orbitron', var(--font-sans);
+  font-size: var(--hero-title-font-size);
+  font-weight: 800;
+  color: var(--color-blue);
+  letter-spacing: var(--hero-title-letter-spacing);
+  text-shadow: 0 0 40px var(--color-blue-glow);
+}
+
+.hero-desc {
+  font-family: 'Space Grotesk', var(--font-sans);
+  font-size: var(--hero-desc-font-size);
+  font-weight: 400;
+  line-height: var(--hero-desc-line-height);
+  color: var(--color-text-muted);
+  max-width: var(--hero-desc-max-width);
+  margin-bottom: var(--hero-desc-margin-bottom);
+}
+
+.hero-cta-buttons {
+  display: flex;
+  gap: var(--hero-cta-gap);
+}
+
+/* Earth sits behind the text as a background layer */
+.hero-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.earth-container {
+  position: absolute;
+  right: var(--earth-center-x);
+  top: var(--earth-top-desktop);
+  transform: translate(50%, -50%); /* Centered on the horizontal center axis, vertically centered */
+  width: var(--earth-size-desktop);
+  height: var(--earth-size-desktop);
+  min-width: var(--earth-min-width-desktop);
+  max-width: var(--earth-max-width-desktop);
+  max-height: var(--earth-max-width-desktop);
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+/* Cosmic deep-space backglow behind the planet */
+.earth-container::before {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-blue-glow-soft) 0%, var(--color-blue-glow-subtle) 50%, transparent 75%);
+  filter: blur(40px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .title-top,
+  .title-mid,
+  .title-bottom {
+    font-size: var(--hero-title-font-size-md);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-left {
+    max-width: 520px;
+  }
+
+  .earth-container {
+    right: var(--earth-center-x-tablet);
+    top: var(--earth-top-tablet);
+    width: var(--earth-size-tablet);
+    height: var(--earth-size-tablet);
+    min-width: var(--earth-min-width-tablet);
+    transform: translate(50%, -50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 150px;
+    align-items: center; /* Center vertically on tablet/mobile for visual balance */
+  }
+
+  .hero-left {
+    max-width: 100%;
+    align-items: center;
+    text-align: center; /* Center text on mobile/tablet for high-end look */
+    margin-left: 0; /* Reset shift on centered mobile view */
+  }
+
+  .title-top,
+  .title-mid,
+  .title-bottom {
+    font-size: var(--hero-title-font-size-sm);
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px; /* Don't stretch buttons too wide */
+    gap: 12px;
+  }
+
+  .hero-cta-buttons > * {
+    width: 100%;
+  }
+
+  .earth-container {
+    right: var(--earth-center-x-mobile);
+    top: var(--earth-top-mobile);
+    width: var(--earth-size-mobile);
+    height: var(--earth-size-mobile);
+    min-width: var(--earth-min-width-mobile);
+    transform: translate(50%, -50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding-top: 170px; /* More clearance for stacked mobile navbar */
+    padding-bottom: var(--clouds-height-mobile, 120px); /* Leave room for bottom clouds */
+  }
+
+  .title-top {
+    white-space: normal; /* Wrap text on extremely narrow mobile viewports to prevent clipping */
+    word-break: break-word;
+  }
+  
+  .hero-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+}

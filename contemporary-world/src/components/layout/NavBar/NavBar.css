@@ -1,0 +1,116 @@
+/* NavBar.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--navbar-padding-y) var(--navbar-padding-x);
+  background: var(--bg-nav);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  position: absolute;
+  right: var(--navbar-center-x);
+  transform: translateX(50%);
+  display: flex;
+  list-style: none;
+  gap: var(--navbar-gap);
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+  padding: 4px 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-family: var(--font-poppins);
+  font-size: var(--navbar-link-font-size);
+  font-weight: var(--navbar-link-font-weight);
+  transition: color 0.25s ease;
+}
+
+.nav-links li:hover a,
+.nav-links li.active a {
+  color: var(--color-white);
+}
+
+/* Bottom underline for active/hover */
+.nav-links li::after {
+  content: '';
+  position: absolute;
+  bottom: var(--navbar-active-line-bottom);
+  left: 0;
+  width: 0;
+  height: var(--navbar-active-line-height);
+  background: var(--color-blue);
+  transition: width 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 1px;
+  box-shadow: 0 0 8px var(--color-blue-shadow-hover);
+}
+
+.nav-links li.active::after,
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+/* Navbar Responsiveness */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 20px 6%;
+  }
+  .nav-links {
+    right: var(--navbar-center-x-tablet);
+    transform: translateX(50%);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 4%;
+    background: rgba(0, 0, 0, 0.85); /* Darker backdrop on mobile for better text visibility over the Earth */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .nav-links {
+    position: static;
+    transform: none;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    gap: 12px;
+    padding: 12px 4%;
+  }
+  
+  .nav-links {
+    gap: 14px;
+  }
+  
+  .nav-links a {
+    font-size: 0.88rem;
+  }
+}

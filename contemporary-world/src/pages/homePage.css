@@ -1,0 +1,10 @@
+/* homePage.css */
+
+.homepage-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  overflow: hidden;
+}

@@ -1,0 +1,68 @@
+{
+  "themes": [
+    { "id": "media", "label": "Media & Technology" },
+    { "id": "cities", "label": "Global Cities" },
+    { "id": "migration", "label": "Migration" },
+    { "id": "food", "label": "Food Security & Agriculture" }
+  ],
+  "themeData": {
+    "media": {
+      "legend": [
+        { "color": "#0088cc", "label": "High media/tech zones" },
+        { "color": "#00ccff", "label": "Emerging tech hubs" }
+      ],
+      "info": "Media and technology are the central nervous system of globalization, allowing instantaneous communication and the spread of culture and information across borders.",
+      "markers": [
+        { "id": "sv", "x": 18, "y": 40, "color": "#0088cc", "img": "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=600&q=80", "title": "United States Capitol, Washington D.C.", "desc": "The meeting place of the US Congress and a symbol of federal power, regulating global technology, internet policies, and antitrust actions.", "coords": "38.8899° N, 77.0090° W" },
+        { "id": "sf", "x": 28, "y": 38, "color": "#0088cc", "img": "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=600&q=80", "title": "United States Capitol, Washington D.C.", "desc": "The seat of legislative power shaping digital privacy acts, federal budgets, and international copyright treaties.", "coords": "38.8899° N, 77.0090° W" },
+        { "id": "lon", "x": 48, "y": 32, "color": "#0088cc", "img": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=80", "title": "London, UK", "desc": "Europe's leading center for creative industries, global broadcasting networks, and telecom nodes.", "coords": "51.5074° N, 0.1278° W" },
+        { "id": "bgl", "x": 72, "y": 55, "color": "#00ccff", "img": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=600&q=80", "title": "New Delhi, India", "desc": "The administrative heart of India, steering digital transformation initiatives and tech startup policies.", "coords": "28.6139° N, 77.2090° E" },
+        { "id": "tok", "x": 88, "y": 38, "color": "#0088cc", "img": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80", "title": "Tokyo, Japan", "desc": "A global powerhouse in hardware innovation, consumer electronics, and high-speed fiber infrastructure.", "coords": "35.6762° N, 139.6503° E" }
+      ]
+    },
+    "cities": {
+      "legend": [
+        { "color": "#0055ff", "label": "Developed/global cities" },
+        { "color": "#55aaff", "label": "Developing mega-cities" }
+      ],
+      "info": "Global cities act as primary nodes in the global economic network, serving as hubs for finance, culture, and international relations.",
+      "markers": [
+        { "id": "nyc", "x": 28, "y": 35, "color": "#0055ff", "img": "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=600&q=80", "title": "United States Capitol, Washington D.C.", "desc": "The legislative epicenter of the world's largest economy, hosting critical policy negotiations and international treaties.", "coords": "38.8899° N, 77.0090° W" },
+        { "id": "par", "x": 49, "y": 35, "color": "#0055ff", "img": "https://images.unsplash.com/photo-1431274172761-fca41d930114?auto=format&fit=crop&w=600&q=80", "title": "Paris, France", "desc": "A leading global capital of culture, fashion, international diplomacy, and tourism.", "coords": "48.8566° N, 2.3522° E" },
+        { "id": "dub", "x": 62, "y": 48, "color": "#0055ff", "img": "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=600&q=80", "title": "Abu Dhabi, UAE", "desc": "The wealthy federal capital of the UAE, driving massive investment funds and urban developments.", "coords": "24.4539° N, 54.3773° E" },
+        { "id": "mum", "x": 70, "y": 52, "color": "#55aaff", "img": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=600&q=80", "title": "New Delhi, India", "desc": "The historical and legislative capital, housing key government headquarters and foreign embassies.", "coords": "28.6139° N, 77.2090° E" },
+        { "id": "shg", "x": 82, "y": 42, "color": "#0055ff", "img": "https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=600&q=80", "title": "Beijing, China", "desc": "The political center of the world's second-largest economy, dictating global trade policies.", "coords": "39.9042° N, 116.4074° E" },
+        { "id": "sao", "x": 35, "y": 72, "color": "#55aaff", "img": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=600&q=80", "title": "Brasília, Brazil", "desc": "A master-planned federal capital, showcasing modernist architecture and centralized government systems.", "coords": "15.7975° S, 47.8919° W" }
+      ]
+    },
+    "migration": {
+      "legend": [
+        { "color": "#9900ff", "label": "Migration destinations" },
+        { "color": "#ff0000", "label": "Migration origin areas" }
+      ],
+      "info": "Migration shapes the contemporary world by blending cultures, driving economic shifts, and creating transnational communities.",
+      "markers": [
+        { "id": "us", "x": 25, "y": 40, "color": "#9900ff", "img": "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=600&q=80", "title": "United States Capitol, Washington D.C.", "desc": "The seat of the US Congress, where migration reforms, visa allocations, and international border security laws are legislated.", "coords": "38.8899° N, 77.0090° W" },
+        { "id": "eu", "x": 50, "y": 35, "color": "#9900ff", "img": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=600&q=80", "title": "Brussels, Belgium", "desc": "The administrative heart of the European Union, formulating refugee integration policies and Schengen Zone rules.", "coords": "50.8503° N, 4.3517° E" },
+        { "id": "au", "x": 85, "y": 80, "color": "#9900ff", "img": "https://images.unsplash.com/photo-1524820197278-540916411e20?auto=format&fit=crop&w=600&q=80", "title": "Canberra, Australia", "desc": "The federal capital managing skilled migration programs and humanitarian intakes.", "coords": "35.2809° S, 149.1300° E" },
+        { "id": "mx", "x": 22, "y": 50, "color": "#ff0000", "img": "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&w=600&q=80", "title": "Mexico City, Mexico", "desc": "A major transit hub for migratory flows connecting Central America to North America.", "coords": "19.4326° N, 99.1332° W" },
+        { "id": "sa", "x": 58, "y": 45, "color": "#ff0000", "img": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=600&q=80", "title": "Riyadh, Saudi Arabia", "desc": "A major capital city hosting millions of migrant workers from South and Southeast Asia.", "coords": "24.7136° N, 46.6753° E" },
+        { "id": "wa", "x": 48, "y": 58, "color": "#ff0000", "img": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=600&q=80", "title": "Zuma Rock, Abuja (Nigeria)", "desc": "The magnificent 725-metre high natural monolith near Abuja, featured on the 100 Naira banknote and acting as the majestic geographic gateway to Nigeria's capital.", "coords": "9.1292° N, 7.2307° E" }
+      ]
+    },
+    "food": {
+      "legend": [
+        { "color": "#00cc44", "label": "Agricultural/food regions" },
+        { "color": "#ff9900", "label": "Food insecure zones" }
+      ],
+      "info": "Global food security relies on a complex web of agricultural production, international trade, and climate stability. Unequal distribution remains a critical challenge.",
+      "markers": [
+        { "id": "mw", "x": 23, "y": 42, "color": "#00cc44", "img": "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=600&q=80", "title": "United States Capitol, Washington D.C.", "desc": "Where critical agricultural subsidies, US farm bills, and international food aid programs are signed into law.", "coords": "38.8899° N, 77.0090° W" },
+        { "id": "br", "x": 33, "y": 68, "color": "#00cc44", "img": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=600&q=80", "title": "Brasília, Brazil", "desc": "The federal seat directing agricultural initiatives, Amazon conservation policies, and soybean export trade.", "coords": "15.7975° S, 47.8919° W" },
+        { "id": "eu_ag", "x": 52, "y": 38, "color": "#00cc44", "img": "https://images.unsplash.com/photo-1561542320-9a18cd340469?auto=format&fit=crop&w=600&q=80", "title": "Kyiv, Ukraine", "desc": "The agricultural capital center of Europe's breadbasket, directing critical grain and sunflower oil supplies worldwide.", "coords": "50.4501° N, 30.5234° E" },
+        { "id": "ssa", "x": 52, "y": 65, "color": "#ff9900", "img": "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=600&q=80", "title": "Addis Ababa, Ethiopia", "desc": "The capital of East Africa's diplomatic hub, hosting foreign aid coordination centers for Horn of Africa food security.", "coords": "9.0300° N, 38.7400° E" },
+        { "id": "ye", "x": 60, "y": 52, "color": "#ff9900", "img": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80", "title": "Sana'a, Yemen", "desc": "A capital city under siege, facing severe humanitarian and supply-chain food security crises.", "coords": "15.3694° N, 44.1910° E" }
+      ]
+    }
+  }
+}
