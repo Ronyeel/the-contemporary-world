@@ -49,9 +49,17 @@ const lessons = [
 const CardCover = ({ lesson }) => (
   <div className="lesson-card__cover" style={{ background: lesson.accent }}>
     {lesson.image ? (
-      <img src={lesson.image} alt={lesson.title} />
+      <img 
+        src={lesson.image} 
+        alt={lesson.title} 
+        key={lesson.id} 
+        className="carousel-fade-in" 
+      />
     ) : (
-      <div className="lesson-card__placeholder">
+      <div 
+        className="lesson-card__placeholder carousel-fade-in" 
+        key={lesson.id}
+      >
         <div className="placeholder-icon">
           <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="24" cy="24" r="19" stroke="rgba(255,255,255,0.3)" strokeWidth="1.8"/>
@@ -97,7 +105,12 @@ const LessonsCarousel = () => {
           >
             <CardCover lesson={lessons[prevIdx]} />
             <div className="lesson-card__info">
-              <p className="lesson-card__title">{lessons[prevIdx].title}</p>
+              <p 
+                className="lesson-card__title carousel-fade-in" 
+                key={lessons[prevIdx].id}
+              >
+                {lessons[prevIdx].title}
+              </p>
             </div>
           </div>
 
@@ -105,7 +118,12 @@ const LessonsCarousel = () => {
           <div className="lesson-card lesson-card--featured">
             <CardCover lesson={lessons[activeIndex]} />
             <div className="lesson-card__info">
-              <p className="lesson-card__title">{lessons[activeIndex].title}</p>
+              <p 
+                className="lesson-card__title carousel-fade-in" 
+                key={lessons[activeIndex].id}
+              >
+                {lessons[activeIndex].title}
+              </p>
             </div>
           </div>
 
@@ -119,7 +137,12 @@ const LessonsCarousel = () => {
           >
             <CardCover lesson={lessons[nextIdx]} />
             <div className="lesson-card__info">
-              <p className="lesson-card__title">{lessons[nextIdx].title}</p>
+              <p 
+                className="lesson-card__title carousel-fade-in" 
+                key={lessons[nextIdx].id}
+              >
+                {lessons[nextIdx].title}
+              </p>
             </div>
           </div>
         </div>

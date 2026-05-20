@@ -119,6 +119,12 @@
   padding: 14px 4px 0;
   text-align: center;
   max-width: 200px;
+  min-height: 58px; /* Stable height to prevent layout shifts/reflows in surrounding sections when text wraps */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
 }
 
 .lesson-card__title {
@@ -128,6 +134,10 @@
   color: #334155;
   line-height: 1.45;
   margin: 0;
+}
+
+.lesson-card--featured .lesson-card__info {
+  min-height: 64px; /* Slightly taller for larger featured card font size */
 }
 
 .lesson-card--featured .lesson-card__title {
@@ -186,5 +196,26 @@
 
   .lesson-card__info {
     max-width: 140px;
+    min-height: 44px; /* Lower min-height for small font mobile layouts */
+  }
+
+  .lesson-card--featured .lesson-card__info {
+    min-height: 48px;
+  }
+}
+
+/* ── Content Fade-in Transitions ── */
+.carousel-fade-in {
+  animation: carouselFadeIn 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes carouselFadeIn {
+  from {
+    opacity: 0.3;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
