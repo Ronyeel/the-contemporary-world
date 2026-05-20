@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useRealTimeStat from '../../../hooks/useRealTimeStat';
 import './InteractiveMap.css';
 
@@ -15,6 +15,17 @@ const InteractiveMap = () => {
   const [activeTheme, setActiveTheme] = useState('media');
   const [activeMarker, setActiveMarker] = useState(null);
   const currentData = themeData[activeTheme];
+
+  useEffect(() => {
+    // Horizontally center the scrollable map panel on mobile screens initially
+    const mapPanel = document.querySelector('.map-center-panel');
+    if (mapPanel) {
+      const scrollAmount = (680 - mapPanel.clientWidth) / 2;
+      if (scrollAmount > 0) {
+        mapPanel.scrollLeft = scrollAmount;
+      }
+    }
+  }, []);
 
   // Tickers simulating live data
   const popStat = useRealTimeStat(8100234123, 2.4); 

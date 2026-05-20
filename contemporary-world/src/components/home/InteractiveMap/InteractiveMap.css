@@ -552,10 +552,40 @@
     height: 320px;
     width: 100%;
     box-sizing: border-box;
+    overflow-x: auto; /* Enable horizontal swiping/panning */
+    overflow-y: hidden; /* Lock vertical scrolling to prevent page scroll interference */
+    display: block; /* Switch to block layout to containment-scroll the absolute child canvas */
+    -webkit-overflow-scrolling: touch; /* Smooth inertia momentum on mobile browsers */
+  }
+
+  .map-center-panel::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .map-center-panel::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  
+  .map-center-panel::-webkit-scrollbar-thumb {
+    background: rgba(0, 136, 204, 0.3);
+    border-radius: 2px;
+  }
+
+  .map-canvas {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 680px; /* Expand the canvas to spread markers apart and make them easy to tap */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .map-base-img {
-    width: 95%;
+    width: 100%; /* Fill the expanded min-width canvas */
+    max-width: none;
+    height: auto;
+    opacity: 0.8;
   }
 
   .map-sidebar-right {
