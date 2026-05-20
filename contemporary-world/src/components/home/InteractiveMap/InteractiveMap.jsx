@@ -298,7 +298,10 @@ const InteractiveMap = () => {
         {activeStats.map((stat, i) => (
           <div className="stat-item" key={i}>
             <div className="stat-number">
-              {stat.prefix}{formatStatValue(stat.value, stat.formatType)}<span>{stat.suffix}</span>
+              <span className="stat-value-container">
+                {stat.prefix}{formatStatValue(stat.value, stat.formatType)}
+                <span className="stat-suffix">{stat.suffix}</span>
+              </span>
             </div>
             <div className="stat-label">{stat.label}</div>
           </div>

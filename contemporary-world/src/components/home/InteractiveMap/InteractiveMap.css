@@ -445,14 +445,24 @@
   line-height: 1;
   margin-bottom: 15px;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
+  align-items: center;
 }
 
-.stat-number span {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  margin-left: 5px;
-  margin-top: 5px;
+.stat-value-container {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.stat-suffix {
+  position: absolute;
+  left: 100%;
+  top: 0.1em;
+  font-size: clamp(1.2rem, 2.2vw, 2.2rem);
+  margin-left: 4px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .stat-label {
