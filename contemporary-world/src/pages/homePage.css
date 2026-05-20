@@ -6,5 +6,5 @@
   width: 100%;
   background-color: var(--color-black);
   color: var(--color-white);
-  overflow: hidden;
+  overflow-x: hidden;
 }

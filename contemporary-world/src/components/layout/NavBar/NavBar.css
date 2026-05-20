@@ -12,9 +12,10 @@
   background: transparent;
   z-index: 1000;
   box-sizing: border-box;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, padding 0.3s ease;
 }
 
+/* Sticky state triggered after scrolling past the Hero section */
 .navbar.sticky {
   position: fixed;
   background: var(--bg-nav);
@@ -22,6 +23,7 @@
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-color);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  padding: 16px var(--navbar-padding-x); /* Slightly more compact when sticky */
   animation: navbarSlideDown 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
@@ -90,6 +92,9 @@
   .navbar {
     padding: 20px 6%;
   }
+  .navbar.sticky {
+    padding: 14px 6%;
+  }
   .nav-links {
     right: var(--navbar-center-x-tablet);
     transform: translateX(50%);
@@ -102,9 +107,17 @@
     flex-direction: column;
     gap: 16px;
     padding: 16px 4%;
-    background: rgba(0, 0, 0, 0.85); /* Darker backdrop on mobile for better text visibility over the Earth */
+    background: transparent; /* Transparent on mobile initially */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  
+  .navbar.sticky {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9); /* High contrast dark background for readable mobile links */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    padding: 16px 4%;
   }
   
   .nav-links {
@@ -123,6 +136,9 @@
 @media (max-width: 480px) {
   .navbar {
     gap: 12px;
+    padding: 12px 4%;
+  }
+  .navbar.sticky {
     padding: 12px 4%;
   }
   
