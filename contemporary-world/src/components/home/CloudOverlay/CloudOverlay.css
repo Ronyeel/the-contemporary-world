@@ -1,59 +1,57 @@
 /* CloudOverlay.css */
 
 .clouds-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  height: 290px; /* Tall enough to display volumetric PNG clouds */
-  overflow: hidden;
+  height: 0; /* Zero height so it occupies no flow space and marks the exact boundary line */
+  overflow: visible; /* Let the huge clouds overflow above and below the boundary */
   pointer-events: none;
-  z-index: 8; /* Sits above Earth3D (z-index: 5) but below content/text grids */
+  z-index: 8; /* Overlay on top of Earth3D (z-index: 5) and hero contents */
 }
 
 .cloud-layer {
   position: absolute;
-  bottom: -35px; /* Sink the bottom slightly to ensure coverage */
-  height: 100%;
-  width: auto;
-  object-fit: contain;
+  height: auto;
   pointer-events: none;
 }
 
-/* Left Cloud Layer */
+/* Left Cloud Layer - Centered on the boundary line */
 .cloud-layer--1 {
   left: -8%;
-  width: 65%;
+  top: -190px; /* Vertically centered on the line (half of the cloud height) */
+  width: clamp(450px, 48vw, 750px);
   opacity: 0.95;
-  animation: floatLeft 8s ease-in-out infinite alternate;
+  animation: floatLeft 9s ease-in-out infinite alternate;
 }
 
-/* Right Cloud Layer */
+/* Right Cloud Layer - Centered on the boundary line */
 .cloud-layer--2 {
   right: -8%;
-  width: 65%;
+  top: -220px; /* Vertically centered on the line */
+  width: clamp(500px, 54vw, 850px);
   opacity: 0.95;
-  animation: floatRight 10s ease-in-out infinite alternate;
+  animation: floatRight 11s ease-in-out infinite alternate;
 }
 
-/* Bottom blend gradient to guarantee solid white transition to the white Lessons section */
+/* Blend overlay extending downwards into the white Lessons section to smooth out the bottom transition */
 .cloud-blend-overlay {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 45px;
-  background: linear-gradient(to top, #ffffff 15%, rgba(255, 255, 255, 0.8) 50%, transparent 100%);
+  height: 160px;
+  background: linear-gradient(to bottom, transparent, #ffffff 75%);
+  pointer-events: none;
   z-index: 3;
 }
 
-/* Premium micro-animations for floating clouds */
+/* Premium slow floating animations for atmospheric depth */
 @keyframes floatLeft {
   from {
     transform: translateY(0) scale(1) rotate(0deg);
   }
   to {
-    transform: translateY(-8px) scale(1.02) rotate(-0.5deg);
+    transform: translateY(-12px) scale(1.03) rotate(-0.8deg);
   }
 }
 
@@ -62,53 +60,60 @@
     transform: translateY(0) scale(1) rotate(0deg);
   }
   to {
-    transform: translateY(-12px) scale(1.03) rotate(0.5deg);
+    transform: translateY(-16px) scale(1.04) rotate(0.8deg);
   }
 }
 
-/* Responsiveness for Clouds Sizing */
+/* Responsiveness for Clouds Sizing and Position relative to boundary */
 @media (max-width: 1200px) {
-  .clouds-container {
-    height: 240px;
+  .cloud-layer--1 {
+    top: -160px;
+    width: clamp(380px, 45vw, 600px);
   }
-  .cloud-layer--1,
   .cloud-layer--2 {
-    width: 70%;
+    top: -190px;
+    width: clamp(420px, 50vw, 700px);
   }
 }
 
 @media (max-width: 1024px) {
-  .clouds-container {
-    height: 200px;
+  .cloud-layer--1 {
+    top: -140px;
+    width: clamp(350px, 50vw, 550px);
   }
-  .cloud-layer--1,
   .cloud-layer--2 {
-    width: 75%;
-    bottom: -20px;
+    top: -170px;
+    width: clamp(400px, 55vw, 650px);
+  }
+  .cloud-blend-overlay {
+    height: 120px;
   }
 }
 
 @media (max-width: 768px) {
-  .clouds-container {
-    height: 150px;
+  .cloud-layer--1 {
+    top: -100px;
+    width: clamp(260px, 55vw, 420px);
   }
-  .cloud-layer--1,
   .cloud-layer--2 {
-    width: 85%;
-    bottom: -15px;
+    top: -120px;
+    width: clamp(300px, 60vw, 480px);
   }
   .cloud-blend-overlay {
-    height: 25px;
+    height: 90px;
   }
 }
 
 @media (max-width: 480px) {
-  .clouds-container {
-    height: 110px;
+  .cloud-layer--1 {
+    top: -70px;
+    width: clamp(200px, 60vw, 320px);
   }
-  .cloud-layer--1,
   .cloud-layer--2 {
-    width: 95%;
-    bottom: -10px;
+    top: -80px;
+    width: clamp(240px, 65vw, 380px);
+  }
+  .cloud-blend-overlay {
+    height: 60px;
   }
 }

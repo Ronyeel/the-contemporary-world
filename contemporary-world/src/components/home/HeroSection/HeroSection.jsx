@@ -1,6 +1,5 @@
 import Button from "../../common/Button/Button";
 import Earth3D from "../Earth3D/Earth3D";
-import CloudOverlay from "../CloudOverlay/CloudOverlay";
 import "./HeroSection.css";
 
 const HeroSection = () => {
@@ -36,9 +35,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      
-      {/* Cloud Overlay at the bottom of the Hero section, transitioning to the Lessons section */}
-      <CloudOverlay />
     </section>
   );
 };
