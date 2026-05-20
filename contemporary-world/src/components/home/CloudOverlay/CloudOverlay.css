@@ -1,119 +1,181 @@
 /* CloudOverlay.css */
 
-.clouds-container {
+.clouds-wrapper {
   position: relative;
   width: 100%;
-  height: 0; /* Zero height so it occupies no flow space and marks the exact boundary line */
-  overflow: visible; /* Let the huge clouds overflow above and below the boundary */
+  height: 0; /* No page height impact, marks the exact boundary line */
+  overflow: visible;
   pointer-events: none;
-  z-index: 8; /* Overlay on top of Earth3D (z-index: 5) and hero contents */
+  z-index: 8;
+}
+
+.clouds-container {
+  position: absolute;
+  left: 0;
+  top: -150px; /* Vertically centered on the boundary line */
+  width: 100%;
+  height: 300px; /* Height constraint window to crop excessive cloud bottoms */
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .cloud-layer {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Centered vertically relative to the boundary line */
   height: auto;
   pointer-events: none;
 }
 
-/* Left Cloud Layer - Centered on the boundary line */
+/* Left Cloud Layer */
 .cloud-layer--1 {
   left: -8%;
-  top: -190px; /* Vertically centered on the line (half of the cloud height) */
-  width: clamp(450px, 48vw, 750px);
+  width: 50vw;
+  min-width: 600px;
   opacity: 0.95;
   animation: floatLeft 9s ease-in-out infinite alternate;
 }
 
-/* Right Cloud Layer - Centered on the boundary line */
-.cloud-layer--2 {
-  right: -8%;
-  top: -220px; /* Vertically centered on the line */
-  width: clamp(500px, 54vw, 850px);
-  opacity: 0.95;
-  animation: floatRight 11s ease-in-out infinite alternate;
+/* Center Cloud Layer to bridge any gaps and form a continuous banner */
+.cloud-layer--center {
+  left: 28%;
+  width: 44vw;
+  min-width: 500px;
+  opacity: 0.92;
+  animation: floatCenter 11s ease-in-out infinite alternate;
 }
 
-/* Blend overlay extending downwards into the white Lessons section to smooth out the bottom transition */
+/* Right Cloud Layer */
+.cloud-layer--2 {
+  right: -8%;
+  width: 50vw;
+  min-width: 600px;
+  opacity: 0.95;
+  animation: floatRight 10s ease-in-out infinite alternate;
+}
+
+/* Blending overlay to fade the bottom crop boundaries cleanly into white */
 .cloud-blend-overlay {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 160px;
-  background: linear-gradient(to bottom, transparent, #ffffff 75%);
+  height: 140px;
+  background: linear-gradient(to bottom, transparent, #ffffff 85%);
   pointer-events: none;
   z-index: 3;
 }
 
-/* Premium slow floating animations for atmospheric depth */
+/* Premium slow floating animations preserving vertical centering */
 @keyframes floatLeft {
   from {
-    transform: translateY(0) scale(1) rotate(0deg);
+    transform: translateY(-50%) scale(1) rotate(0deg);
   }
   to {
-    transform: translateY(-12px) scale(1.03) rotate(-0.8deg);
+    transform: translateY(-53%) scale(1.03) rotate(-0.5deg);
+  }
+}
+
+@keyframes floatCenter {
+  from {
+    transform: translateY(-50%) scale(1) rotate(0deg);
+  }
+  to {
+    transform: translateY(-47%) scale(1.02) rotate(0.4deg);
   }
 }
 
 @keyframes floatRight {
   from {
-    transform: translateY(0) scale(1) rotate(0deg);
+    transform: translateY(-50%) scale(1) rotate(0deg);
   }
   to {
-    transform: translateY(-16px) scale(1.04) rotate(0.8deg);
+    transform: translateY(-54%) scale(1.04) rotate(0.6deg);
   }
 }
 
 /* Responsiveness for Clouds Sizing and Position relative to boundary */
 @media (max-width: 1200px) {
+  .clouds-container {
+    height: 260px;
+    top: -130px;
+  }
   .cloud-layer--1 {
-    top: -160px;
-    width: clamp(380px, 45vw, 600px);
+    width: 52vw;
+    min-width: 500px;
+  }
+  .cloud-layer--center {
+    width: 46vw;
+    min-width: 450px;
   }
   .cloud-layer--2 {
-    top: -190px;
-    width: clamp(420px, 50vw, 700px);
+    width: 52vw;
+    min-width: 500px;
   }
 }
 
 @media (max-width: 1024px) {
+  .clouds-container {
+    height: 220px;
+    top: -110px;
+  }
   .cloud-layer--1 {
-    top: -140px;
-    width: clamp(350px, 50vw, 550px);
+    width: 55vw;
+    min-width: 450px;
+  }
+  .cloud-layer--center {
+    width: 48vw;
+    min-width: 400px;
   }
   .cloud-layer--2 {
-    top: -170px;
-    width: clamp(400px, 55vw, 650px);
+    width: 55vw;
+    min-width: 450px;
   }
   .cloud-blend-overlay {
-    height: 120px;
+    height: 100px;
   }
 }
 
 @media (max-width: 768px) {
+  .clouds-container {
+    height: 160px;
+    top: -80px;
+  }
   .cloud-layer--1 {
-    top: -100px;
-    width: clamp(260px, 55vw, 420px);
+    width: 60vw;
+    min-width: 320px;
+  }
+  .cloud-layer--center {
+    width: 52vw;
+    min-width: 280px;
   }
   .cloud-layer--2 {
-    top: -120px;
-    width: clamp(300px, 60vw, 480px);
+    width: 60vw;
+    min-width: 320px;
   }
   .cloud-blend-overlay {
-    height: 90px;
+    height: 70px;
   }
 }
 
 @media (max-width: 480px) {
+  .clouds-container {
+    height: 110px;
+    top: -55px;
+  }
   .cloud-layer--1 {
-    top: -70px;
-    width: clamp(200px, 60vw, 320px);
+    width: 65vw;
+    min-width: 220px;
+  }
+  .cloud-layer--center {
+    width: 58vw;
+    min-width: 200px;
   }
   .cloud-layer--2 {
-    top: -80px;
-    width: clamp(240px, 65vw, 380px);
+    width: 65vw;
+    min-width: 220px;
   }
   .cloud-blend-overlay {
-    height: 60px;
+    height: 50px;
   }
 }
