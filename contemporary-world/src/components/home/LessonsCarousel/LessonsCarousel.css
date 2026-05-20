@@ -121,7 +121,7 @@
   padding: 14px 4px 0;
   text-align: center;
   max-width: 200px;
-  min-height: 58px; /* Stable height to prevent layout shifts/reflows in surrounding sections when text wraps */
+  height: 72px; /* Fixed height for consistent card cover and title vertical alignment */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,10 +136,6 @@
   color: #334155;
   line-height: 1.45;
   margin: 0;
-}
-
-.lesson-card--featured .lesson-card__info {
-  min-height: 64px; /* Slightly taller for larger featured card font size */
 }
 
 .lesson-card--featured .lesson-card__title {
@@ -198,11 +194,7 @@
 
   .lesson-card__info {
     max-width: 140px;
-    min-height: 44px; /* Lower min-height for small font mobile layouts */
-  }
-
-  .lesson-card--featured .lesson-card__info {
-    min-height: 48px;
+    height: 52px; /* Fixed height for consistent alignment on mobile */
   }
 }
 
