@@ -13,16 +13,9 @@ const CloudOverlay = () => {
           alt="Transition Cloud Left" 
         />
         
-        {/* Cloud Layer 2: Center overlapping cloud */}
+        {/* Cloud Layer 2: Right side volumetric cloud */}
         <img 
           src={cloud2} 
-          className="cloud-layer cloud-layer--center" 
-          alt="Transition Cloud Center" 
-        />
-        
-        {/* Cloud Layer 3: Right side volumetric cloud */}
-        <img 
-          src={cloud1} 
           className="cloud-layer cloud-layer--2" 
           alt="Transition Cloud Right" 
         />

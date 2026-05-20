@@ -36,15 +36,6 @@
   animation: floatLeft 9s ease-in-out infinite alternate;
 }
 
-/* Center Cloud Layer to bridge any gaps and form a continuous banner */
-.cloud-layer--center {
-  left: 28%;
-  width: 44vw;
-  min-width: 500px;
-  opacity: 0.92;
-  animation: floatCenter 11s ease-in-out infinite alternate;
-}
-
 /* Right Cloud Layer */
 .cloud-layer--2 {
   right: -8%;
@@ -76,15 +67,6 @@
   }
 }
 
-@keyframes floatCenter {
-  from {
-    transform: translateY(-50%) scale(1) rotate(0deg);
-  }
-  to {
-    transform: translateY(-47%) scale(1.02) rotate(0.4deg);
-  }
-}
-
 @keyframes floatRight {
   from {
     transform: translateY(-50%) scale(1) rotate(0deg);
@@ -104,10 +86,6 @@
     width: 52vw;
     min-width: 500px;
   }
-  .cloud-layer--center {
-    width: 46vw;
-    min-width: 450px;
-  }
   .cloud-layer--2 {
     width: 52vw;
     min-width: 500px;
@@ -122,10 +100,6 @@
   .cloud-layer--1 {
     width: 55vw;
     min-width: 450px;
-  }
-  .cloud-layer--center {
-    width: 48vw;
-    min-width: 400px;
   }
   .cloud-layer--2 {
     width: 55vw;
@@ -145,10 +119,6 @@
     width: 60vw;
     min-width: 320px;
   }
-  .cloud-layer--center {
-    width: 52vw;
-    min-width: 280px;
-  }
   .cloud-layer--2 {
     width: 60vw;
     min-width: 320px;
@@ -166,10 +136,6 @@
   .cloud-layer--1 {
     width: 65vw;
     min-width: 220px;
-  }
-  .cloud-layer--center {
-    width: 58vw;
-    min-width: 200px;
   }
   .cloud-layer--2 {
     width: 65vw;
