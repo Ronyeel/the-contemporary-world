@@ -103,11 +103,74 @@ const InteractiveMap = () => {
     }
   };
 
-  // Tickers simulating live data
-  const popStat = useRealTimeStat(8100234123, 2.4); 
-  const netStat = useRealTimeStat(5350123987, 3.1); 
-  const migStat = useRealTimeStat(281432102, 0.05); 
-  const hunStat = useRealTimeStat(735123000, 0.1); 
+  // ── Theme-specific real-time stats (based on reliable official sources) ──
+  
+  // 1. Media & Technology
+  const mediaNet = useRealTimeStat(5430000000, 2.8);   // baseline 5.43 Billion internet users
+  const mediaSoc = useRealTimeStat(5040000000, 3.4);   // baseline 5.04 Billion active social profiles
+  const mediaMob = useRealTimeStat(8920000000, 4.1);   // baseline 8.92 Billion mobile subscriptions
+  const mediaDat = useRealTimeStat(328000000, 3.8);     // baseline 328 Million Terabytes daily
+
+  // 2. Global Cities
+  const citiesUrb = useRealTimeStat(5620, 0.0005);      // baseline 56.20% (multiplied by 100 to support decimals)
+  const citiesMeg = useRealTimeStat(582000000, 0.6);    // baseline 582 Million people in megacities
+  const citiesGdp = useRealTimeStat(8000, 0.0001);      // baseline 80.00% (multiplied by 100 to support decimals)
+  const citiesIot = useRealTimeStat(16700000000, 28.5); // baseline 16.7 Billion active IoT city devices
+
+  // 3. Migration
+  const migMig = useRealTimeStat(281400000, 0.08);      // baseline 281.4 Million international migrants
+  const migDis = useRealTimeStat(110400000, 0.05);      // baseline 110.4 Million displaced persons
+  const migRem = useRealTimeStat(860000000000, 180.0);  // baseline $860 Billion remittance outflow
+  const migBrd = useRealTimeStat(4120000, 1.2);         // baseline 4.12 Million daily border crossings
+
+  // 4. Food Security & Agriculture
+  const foodHun = useRealTimeStat(735000000, 0.1);      // baseline 735 Million people facing hunger
+  const foodLnd = useRealTimeStat(4850000000, 0.2);     // baseline 4.85 Billion hectares farmed
+  const foodWst = useRealTimeStat(1300000000, 12.5);    // baseline 1.3 Billion tons food wasted annually (YTD)
+  const foodFer = useRealTimeStat(190000000, 1.8);      // baseline 190 Million tons fertilizer used (YTD)
+
+  // Mapping configurations
+  const statsConfig = {
+    media: [
+      { value: mediaNet, formatType: 'billion', prefix: '', suffix: 'B+', label: 'Internet Users' },
+      { value: mediaSoc, formatType: 'billion', prefix: '', suffix: 'B+', label: 'Active Social Accounts' },
+      { value: mediaMob, formatType: 'billion', prefix: '', suffix: 'B+', label: 'Mobile Connections' },
+      { value: mediaDat, formatType: 'million', prefix: '', suffix: 'M+', label: 'Daily Data Generated (TB)' }
+    ],
+    cities: [
+      { value: citiesUrb, formatType: 'percent', prefix: '', suffix: '%', label: 'Global Urbanization Rate' },
+      { value: citiesMeg, formatType: 'million', prefix: '', suffix: 'M+', label: 'Megacity Residents' },
+      { value: citiesGdp, formatType: 'percent', prefix: '', suffix: '%', label: 'Global GDP from Cities' },
+      { value: citiesIot, formatType: 'billion', prefix: '', suffix: 'B+', label: 'Active IoT City Sensors' }
+    ],
+    migration: [
+      { value: migMig, formatType: 'million', prefix: '', suffix: 'M+', label: 'International Migrants' },
+      { value: migDis, formatType: 'million', prefix: '', suffix: 'M+', label: 'Forcibly Displaced Persons' },
+      { value: migRem, formatType: 'billion', prefix: '$', suffix: 'B+', label: 'Global Remittances (YTD)' },
+      { value: migBrd, formatType: 'million', prefix: '', suffix: 'M+', label: 'Daily Border Crossings' }
+    ],
+    food: [
+      { value: foodHun, formatType: 'million', prefix: '', suffix: 'M+', label: 'People Facing Hunger' },
+      { value: foodLnd, formatType: 'billion', prefix: '', suffix: 'B+', label: 'Hectares of Farmed Land' },
+      { value: foodWst, formatType: 'million', prefix: '', suffix: 'M+', label: 'Tons of Food Wasted (YTD)' },
+      { value: foodFer, formatType: 'million', prefix: '', suffix: 'M+', label: 'Tons of Fertilizer Applied' }
+    ]
+  };
+
+  const activeStats = statsConfig[activeTheme] || [];
+
+  const formatStatValue = (val, type) => {
+    if (type === 'billion') {
+      return (val / 1000000000).toFixed(2);
+    }
+    if (type === 'million') {
+      return (val / 1000000).toFixed(1);
+    }
+    if (type === 'percent') {
+      return (val / 100).toFixed(2);
+    }
+    return val.toLocaleString();
+  }; 
 
   return (
     <section className="map-section" id="interactive-map">
@@ -232,22 +295,14 @@ const InteractiveMap = () => {
 
       {/* Bottom Stats */}
       <div className="map-stats-bar">
-        <div className="stat-item">
-          <div className="stat-number">{formatNumber(popStat).substring(0, 1)}<span>+</span></div>
-          <div className="stat-label">Billion People</div>
-        </div>
-        <div className="stat-item">
-          <div className="stat-number">{formatNumber(netStat).substring(0, 1)}<span>+</span></div>
-          <div className="stat-label">Billion Internet<br/>Users</div>
-        </div>
-        <div className="stat-item">
-          <div className="stat-number">{formatNumber(migStat).substring(0, 3)}<span>+</span></div>
-          <div className="stat-label">Million Migrants</div>
-        </div>
-        <div className="stat-item">
-          <div className="stat-number">{formatNumber(hunStat).substring(0, 3)}<span>+</span></div>
-          <div className="stat-label">Million Face<br/>Hunger</div>
-        </div>
+        {activeStats.map((stat, i) => (
+          <div className="stat-item" key={i}>
+            <div className="stat-number">
+              {stat.prefix}{formatStatValue(stat.value, stat.formatType)}<span>{stat.suffix}</span>
+            </div>
+            <div className="stat-label">{stat.label}</div>
+          </div>
+        ))}
       </div>
     </section>
   );
