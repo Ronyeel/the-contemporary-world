@@ -26,13 +26,13 @@ const LessonDetailPage = ({ lessonId, onBack }) => {
         <div className="banner-content">
           {/* Cover Image Wrapper (Matching Mockup) */}
           <div className="banner-image-container">
-            <img 
-              src={lesson.img} 
-              alt={lesson.title} 
+            <img
+              src={lesson.img}
+              alt={lesson.title}
               className="banner-image"
             />
           </div>
-          
+
           {/* Title */}
           <h1 className="lesson-detail-title">{lesson.title}</h1>
         </div>
@@ -43,8 +43,13 @@ const LessonDetailPage = ({ lessonId, onBack }) => {
         <div className="lesson-detail-container">
           {lesson.subtopics.map((subtopic, index) => (
             <section key={index} className="subtopic-section">
-              <h3 className="subtopic-title">Sub Topic {index + 1}</h3>
-              <p className="subtopic-content">{subtopic.content}</p>
+              <h3 className="subtopic-title">{subtopic.title}</h3>
+              {Array.isArray(subtopic.content)
+                ? subtopic.content.map((line, i) => (
+                  <p key={i} className="subtopic-content">{line}</p>
+                ))
+                : <p className="subtopic-content">{subtopic.content}</p>
+              }
             </section>
           ))}
         </div>
