@@ -3,16 +3,26 @@ import "./LessonsCarousel.css";
 
 import lessonsData from "../../../data/lessonsData.json";
 
-import BookCard from "../../common/BookCard/BookCard";
+// Map the shared JSON data to the format expected by the flat carousel cards
+const lessons = lessonsData.lessons.map((lesson, index) => {
+  let cover = lesson.img || null;
+  // Map local high-res custom cover files if they match the lesson
+  if (lesson.id === 1) {
+    cover = "/book_cover1.png"; // Custom cover 1
+  } else if (lesson.id === 2) {
+    cover = "/book_cover2.png"; // Custom cover 2
+  } else if (lesson.id === 3) {
+    cover = "/book_cover3.png"; // Custom cover 3 (Cropped from mockup)
+  }
 
-const lessons = lessonsData.lessons.map((lesson, index) => ({
+  return {
     id: lesson.id,
     title: lesson.title,
-    subtitle: "",
-    cover: lesson.img || null,
+    cover: cover,
     color: lesson.accent.match(/#([0-9a-fA-F]{6})/g)?.[0] || "#14375a",
     accent: lesson.accent.match(/#([0-9a-fA-F]{6})/g)?.[1] || "#29aef0"
-}));
+  };
+});
 
 const LessonsCarousel = ({ onSelectLesson }) => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -41,35 +51,59 @@ const LessonsCarousel = ({ onSelectLesson }) => {
           onMouseLeave={() => setIsPaused(false)}
         >
           {/* Left side card */}
-          <BookCard
-            book={lessons[prevIdx]}
-            className="lesson-card--side"
+          <div
+            className={`lesson-card lesson-card--side`}
             onClick={() => setActiveIndex(prevIdx)}
             role="button"
             tabIndex={0}
             onKeyDown={(e) => e.key === "Enter" && setActiveIndex(prevIdx)}
-          />
+          >
+            <div className="lesson-card__cover-wrapper">
+              <img 
+                src={lessons[prevIdx].cover} 
+                alt={lessons[prevIdx].title} 
+                className="lesson-card__flat-cover" 
+              />
+            </div>
+            <p className="lesson-card__flat-title">{lessons[prevIdx].title}</p>
+          </div>
 
           {/* Center featured card */}
-          <BookCard
-            book={lessons[activeIndex]}
-            className="lesson-card--featured clickable-featured-card"
-            onClick={(book) => onSelectLesson && onSelectLesson(book.id)}
+          <div 
+            className="lesson-card lesson-card--featured clickable-featured-card"
+            onClick={() => onSelectLesson && onSelectLesson(lessons[activeIndex].id)}
             role="button"
             tabIndex={0}
             onKeyDown={(e) => e.key === "Enter" && onSelectLesson && onSelectLesson(lessons[activeIndex].id)}
             title="Click to view details"
-          />
+          >
+            <div className="lesson-card__cover-wrapper">
+              <img 
+                src={lessons[activeIndex].cover} 
+                alt={lessons[activeIndex].title} 
+                className="lesson-card__flat-cover" 
+              />
+            </div>
+            <p className="lesson-card__flat-title">{lessons[activeIndex].title}</p>
+          </div>
 
           {/* Right side card */}
-          <BookCard
-            book={lessons[nextIdx]}
-            className="lesson-card--side"
+          <div
+            className={`lesson-card lesson-card--side`}
             onClick={() => setActiveIndex(nextIdx)}
             role="button"
             tabIndex={0}
             onKeyDown={(e) => e.key === "Enter" && setActiveIndex(nextIdx)}
-          />
+          >
+            <div className="lesson-card__cover-wrapper">
+              <img 
+                src={lessons[nextIdx].cover} 
+                alt={lessons[nextIdx].title} 
+                className="lesson-card__flat-cover" 
+              />
+            </div>
+            <p className="lesson-card__flat-title">{lessons[nextIdx].title}</p>
+          </div>
         </div>
       </div>
     </section>

@@ -21,131 +21,127 @@
   font-weight: 700;
   margin-bottom: 60px;
   line-height: 1;
-  color: #00a2ff;
+  color: #0099ee; /* Premium tech blue matching the mockup */
   position: relative;
   z-index: 10;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.01em;
 }
 
 /* ── Carousel Track ── */
 .carousel-track {
   display: flex;
-  align-items: center; /* Vertically center the book covers */
+  align-items: center; /* Vertically center the card covers */
   justify-content: center;
   gap: 40px;
-  min-height: 420px; /* Leave enough room for scaled books and shadows */
+  min-height: 480px; /* Room for shadows and scaled states */
 }
 
-/* ── Book Card Container Scoping ── */
-.lessons-section .book-card {
-  height: 360px; /* Constrain container height to align text labels */
+/* ── Flat Card Container ── */
+.lessons-section .lesson-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  width: 240px; /* Consistent spacing */
-  transition: opacity 0.35s ease;
+  justify-content: flex-start;
+  width: 250px;
+  cursor: pointer;
+  outline: none;
   background: transparent;
   border: none;
   padding: 0;
   box-sizing: border-box;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
 }
 
-/* Base style for book scene in carousel */
-.lessons-section .book-scene {
-  margin: auto 0; /* Vertically center in the flex card container */
-  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
-  transform-origin: center center;
+/* Cover Image Wrapper to clip corners beautifully */
+.lessons-section .lesson-card__cover-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3.2 / 4.4; /* Perfect poster/book ratio matching the mockup */
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  box-sizing: border-box;
+  transition: box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), outline 0.3s ease;
 }
 
-/* ── Side Cards ── */
+/* The actual flat cover image */
+.lessons-section .lesson-card__flat-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Side Cards (Left & Right) ── */
 .lessons-section .lesson-card--side {
-  opacity: 0.6;
+  opacity: 0.75;
+  transform: scale(0.85); /* Scaled down precisely */
 }
 
 .lessons-section .lesson-card--side:hover {
   opacity: 0.95;
+  transform: scale(0.88);
 }
 
-.lessons-section .lesson-card--side .book-scene {
-  transform: scale(0.85); /* Scaled down */
-}
-
-/* Smaller, tighter shadow for side cards */
-.lessons-section .lesson-card--side .book-body {
-  box-shadow:
-    0 12px 28px rgba(0, 0, 0, 0.25),
-    0 8px 10px rgba(0, 0, 0, 0.15);
+/* Soft, deep drop shadow for side cards matching mockup */
+.lessons-section .lesson-card--side .lesson-card__cover-wrapper {
+  box-shadow: 
+    0 15px 35px -5px rgba(0, 0, 0, 0.35),
+    0 8px 16px -8px rgba(0, 0, 0, 0.25);
 }
 
 /* ── Featured Center Card ── */
 .lessons-section .lesson-card--featured {
   opacity: 1;
-  cursor: pointer;
   z-index: 10;
+  transform: scale(1.15); /* Scaled up taller and wider, exactly like the mockup */
 }
 
-.lessons-section .lesson-card--featured .book-scene {
-  transform: scale(1.18); /* Scaled up */
+/* Ultra-soft, elevated drop shadow for the featured card */
+.lessons-section .lesson-card--featured .lesson-card__cover-wrapper {
+  box-shadow: 
+    0 35px 70px -10px rgba(0, 0, 0, 0.5),
+    0 20px 30px -15px rgba(0, 0, 0, 0.35),
+    0 0 50px rgba(0, 0, 0, 0.08);
 }
 
-/* Heavy, ultra-soft shadow for featured center card to create elevation */
-.lessons-section .lesson-card--featured .book-body {
-  box-shadow:
-    0 30px 60px -10px rgba(0, 0, 0, 0.55),
-    0 18px 36px -18px rgba(0, 0, 0, 0.45),
-    0 0 50px rgba(0, 0, 0, 0.12);
+/* Smooth zoom-in hover response for featured center card */
+.lessons-section .lesson-card--featured:hover {
+  transform: scale(1.18) translateY(-4px);
 }
 
-/* Micro-animation when hovering over the active book */
-.lessons-section .lesson-card--featured:hover .book-body {
-  transform: rotateY(-18deg) rotateX(3deg) translateY(-8px) scale(1.02);
-  box-shadow:
-    0 38px 75px -8px rgba(0, 0, 0, 0.6),
-    0 22px 44px -16px rgba(0, 0, 0, 0.5),
-    0 0 60px rgba(0, 0, 0, 0.18);
+.lessons-section .lesson-card--featured:hover .lesson-card__cover-wrapper {
+  box-shadow: 
+    0 40px 85px -8px rgba(0, 0, 0, 0.55),
+    0 25px 45px -10px rgba(0, 0, 0, 0.4);
 }
 
-/* ── Text Labels below book ── */
-.lessons-section .book-label-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.92rem;
-  font-weight: 600;
+/* ── Interactive Hover Highlight (Subtle elevate instead of outline, matching the mockup literally) ── */
+.lessons-section .lesson-card:hover .lesson-card__cover-wrapper {
+  /* Keep it borderless and premium, exactly matching the mockup */
+}
+
+/* ── Flat Text Labels ── */
+.lessons-section .lesson-card__flat-title {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700; /* Extremely clean, bold centered text matching mockup */
   color: #1a1a2e;
   line-height: 1.45;
-  margin: 16px 0 0;
+  margin: 22px 0 0;
   text-align: center;
   max-width: 220px;
-  height: 48px; /* Fixed height for up to two lines of text to ensure layout stays aligned */
+  height: 48px; /* Restrict height to prevent layout shifts */
   display: flex;
   align-items: flex-start;
   justify-content: center;
   transition: color 0.25s ease;
+  letter-spacing: -0.01em;
 }
 
-.lessons-section .book-label-sub {
-  display: none; /* Hide subtitle lines since we are using unified titles in the carousel */
-}
-
-.lessons-section .book-card:hover .book-label-title {
+/* Hover label color change */
+.lessons-section .lesson-card:hover .lesson-card__flat-title {
   color: #0099ee;
-}
-
-/* ── Content Fade-in Transitions ── */
-.carousel-fade-in {
-  animation: carouselFadeIn 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
-
-@keyframes carouselFadeIn {
-  from {
-    opacity: 0.3;
-    transform: scale(0.97);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 /* ── Responsiveness ── */
@@ -166,26 +162,34 @@
 
   .carousel-track {
     gap: 20px;
-    min-height: 340px;
+    min-height: 380px;
   }
 
-  .lessons-section .book-card {
-    height: 300px;
+  .lessons-section .lesson-card {
     width: 190px;
   }
 
-  .lessons-section .lesson-card--side .book-scene {
-    transform: scale(0.72);
+  .lessons-section .lesson-card--side {
+    transform: scale(0.75);
   }
 
-  .lessons-section .lesson-card--featured .book-scene {
+  .lessons-section .lesson-card--side:hover {
+    transform: scale(0.78);
+  }
+
+  .lessons-section .lesson-card--featured {
     transform: scale(1.02);
   }
 
-  .lessons-section .book-label-title {
-    font-size: 0.82rem;
+  .lessons-section .lesson-card--featured:hover {
+    transform: scale(1.05) translateY(-2px);
+  }
+
+  .lessons-section .lesson-card__flat-title {
+    font-size: 0.85rem;
     max-width: 170px;
     height: 40px;
+    margin-top: 16px;
   }
 }
 
@@ -196,26 +200,33 @@
 
   .carousel-track {
     gap: 10px;
-    min-height: 290px;
+    min-height: 320px;
   }
 
-  .lessons-section .book-card {
-    height: 260px;
-    width: 130px;
+  .lessons-section .lesson-card {
+    width: 120px;
   }
 
-  .lessons-section .lesson-card--side .book-scene {
-    transform: scale(0.55);
+  .lessons-section .lesson-card--side {
+    transform: scale(0.6);
   }
 
-  .lessons-section .lesson-card--featured .book-scene {
-    transform: scale(0.8);
+  .lessons-section .lesson-card--side:hover {
+    transform: scale(0.62);
   }
 
-  .lessons-section .book-label-title {
+  .lessons-section .lesson-card--featured {
+    transform: scale(0.85);
+  }
+
+  .lessons-section .lesson-card--featured:hover {
+    transform: scale(0.88) translateY(-1px);
+  }
+
+  .lessons-section .lesson-card__flat-title {
     font-size: 0.72rem;
-    max-width: 120px;
+    max-width: 110px;
     height: 36px;
-    margin-top: 10px;
+    margin-top: 12px;
   }
 }
