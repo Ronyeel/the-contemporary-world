@@ -19,15 +19,6 @@ const LessonDetailPage = ({ lessonId, onBack }) => {
     );
   }
 
-  let cover = lesson.img || null;
-  if (lesson.id === 1) {
-    cover = "/book_cover1.png";
-  } else if (lesson.id === 2) {
-    cover = "/book_cover2.png";
-  } else if (lesson.id === 3) {
-    cover = "/book_cover3.png";
-  }
-
   return (
     <div className="lesson-detail-page">
       {/* Premium Header Banner (Matching Mockup) */}
@@ -36,7 +27,7 @@ const LessonDetailPage = ({ lessonId, onBack }) => {
           {/* Cover Image Wrapper (Matching Mockup) */}
           <div className="banner-image-container">
             <img 
-              src={cover} 
+              src={lesson.img} 
               alt={lesson.title} 
               className="banner-image"
             />

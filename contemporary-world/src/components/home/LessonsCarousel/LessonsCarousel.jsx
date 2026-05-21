@@ -4,21 +4,11 @@ import "./LessonsCarousel.css";
 import lessonsData from "../../../data/lessonsData.json";
 
 // Map the shared JSON data to the format expected by the flat carousel cards
-const lessons = lessonsData.lessons.map((lesson, index) => {
-  let cover = lesson.img || null;
-  // Map local high-res custom cover files if they match the lesson
-  if (lesson.id === 1) {
-    cover = "/book_cover1.png"; // Custom cover 1
-  } else if (lesson.id === 2) {
-    cover = "/book_cover2.png"; // Custom cover 2
-  } else if (lesson.id === 3) {
-    cover = "/book_cover3.png"; // Custom cover 3 (Cropped from mockup)
-  }
-
+const lessons = lessonsData.lessons.map((lesson) => {
   return {
     id: lesson.id,
     title: lesson.title,
-    cover: cover,
+    cover: lesson.img || null,
     color: lesson.accent.match(/#([0-9a-fA-F]{6})/g)?.[0] || "#14375a",
     accent: lesson.accent.match(/#([0-9a-fA-F]{6})/g)?.[1] || "#29aef0"
   };

@@ -4,25 +4,16 @@ import "./topicPage.css";
 import lessonsData from "../data/lessonsData.json";
 
 // Map the shared JSON data to the format expected by the 3D book card
-const BOOKS = lessonsData.lessons.map((lesson, index) => {
-    let cover = lesson.img || null;
-    if (lesson.id === 1) {
-        cover = "/book_cover1.png";
-    } else if (lesson.id === 2) {
-        cover = "/book_cover2.png";
-    } else if (lesson.id === 3) {
-        cover = "/book_cover3.png";
-    }
-    return {
-        id: lesson.id,
-        title: lesson.title.split(":")[0] || lesson.title,
-        subtitle: lesson.title.includes(":") ? lesson.title.split(":")[1].trim() : `Chapter ${index + 1}`,
-        cover: cover,
-        // Extract base colors from the linear-gradient accent for the 3D effects
-        color: lesson.accent.match(/#([0-9a-fA-F]{6})/g)?.[0] || "#14375a",
-        accent: lesson.accent.match(/#([0-9a-fA-F]{6})/g)?.[1] || "#29aef0"
-    };
-});
+// Map the shared JSON data to the format expected by the 3D book card
+const BOOKS = lessonsData.lessons.map((lesson, index) => ({
+    id: lesson.id,
+    title: lesson.title.split(":")[0] || lesson.title,
+    subtitle: lesson.title.includes(":") ? lesson.title.split(":")[1].trim() : `Chapter ${index + 1}`,
+    cover: lesson.img || null,
+    // Extract base colors from the linear-gradient accent for the 3D effects
+    color: lesson.accent.match(/#([0-9a-fA-F]{6})/g)?.[0] || "#14375a",
+    accent: lesson.accent.match(/#([0-9a-fA-F]{6})/g)?.[1] || "#29aef0"
+}));
 
 import BookCard from "../components/common/BookCard/BookCard";
 
