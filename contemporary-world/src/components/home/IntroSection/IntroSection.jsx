@@ -34,7 +34,6 @@ const IntroSection = ({ onNavigate }) => {
           <div className="intro-card-layout">
             {/* Left — colored description card */}
             <div className="intro-desc-card">
-              <span className="intro-desc-label">About the Subject</span>
               <h3 className="intro-desc-title">The Contemporary World</h3>
               <p className="intro-desc-body">
                 The Contemporary World studies how power, culture, technology,

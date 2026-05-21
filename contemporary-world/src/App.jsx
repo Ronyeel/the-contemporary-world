@@ -5,6 +5,7 @@ import TopicsPage from "./pages/topicPage.jsx";  // capital T, matches the file
 import LessonDetailPage from "./pages/LessonDetailPage";
 import ReferencesPage from "./pages/referencesPage.jsx";
 import Footer from "./components/layout/Footer/Footer";
+import Chatbot from "./components/common/Chatbot/Chatbot";
 
 function App() {
   const [currentView, setCurrentView] = useState({ type: "home", lessonId: null });
@@ -65,6 +66,7 @@ function App() {
       <NavBar currentView={currentView} onNavigateHome={handleNavigateHome} />
       {renderView()}
       <Footer onNavigateHome={handleNavigateHome} />
+      <Chatbot />
     </div>
   );
 }

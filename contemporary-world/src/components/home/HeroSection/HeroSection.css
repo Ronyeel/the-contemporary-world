@@ -144,70 +144,116 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    padding-top: 150px;
-    align-items: center; /* Center vertically on tablet/mobile for visual balance */
+    padding-top: 130px;
+    padding-bottom: 100px;
+    align-items: flex-start; /* Flow naturally, don't force vertical centering if too tall */
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
   }
 
   .hero-left {
-    max-width: 100%;
+    display: contents;
+  }
+
+  .hero-right {
+    display: contents;
+  }
+
+  .hero-title {
+    order: 1;
     align-items: center;
-    text-align: center; /* Center text on mobile/tablet for high-end look */
-    margin-left: 0; /* Reset shift on centered mobile view */
+    text-align: center;
+    margin-bottom: 16px;
   }
 
   .title-top,
   .title-mid,
   .title-bottom {
     font-size: var(--hero-title-font-size-sm);
+    white-space: normal;
+    text-align: center;
+  }
+
+  .earth-container {
+    order: 2;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: min(105vw, 500px);
+    height: min(105vw, 500px);
+    min-width: unset;
+    max-width: none;
+    max-height: none;
+    margin: 15px auto 28px auto;
+    pointer-events: auto;
   }
 
   .hero-desc {
+    order: 3;
+    text-align: center; /* Properly center text content on mobile/tablet */
+    max-width: min(80vw, 320px); /* Center-align the text block block-wise */
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    color: #ffffff; /* Extremely bright white for readable high-contrast text */
-    text-shadow: 
-      0 2px 10px rgba(0, 0, 0, 0.95), 
-      0 0 20px rgba(0, 0, 0, 0.85),
-      0 0 35px rgba(0, 0, 0, 0.7); /* Layered black glows to isolate text from background */
-    font-weight: 500; /* Enhance font weight slightly for readability */
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 28px;
+    text-shadow: none; /* No longer overlapping earth, so no need for heavy glow shadow */
+    line-height: 1.6;
   }
 
   .hero-cta-buttons {
+    order: 4;
     flex-direction: column;
     width: 100%;
-    max-width: 320px; /* Don't stretch buttons too wide */
+    max-width: min(80vw, 320px); /* Center-align the buttons block-wise */
     gap: 12px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-cta-buttons > * {
     width: 100%;
   }
-
-  .earth-container {
-    left: 50%;
-    right: auto;
-    top: var(--earth-top-mobile);
-    width: var(--earth-size-mobile);
-    height: var(--earth-size-mobile);
-    min-width: var(--earth-min-width-mobile);
-    transform: translate(-50%, -50%);
-  }
 }
 
 @media (max-width: 480px) {
   .hero-section {
-    padding-top: 170px; /* More clearance for stacked mobile navbar */
-    padding-bottom: var(--clouds-height-mobile, 120px); /* Leave room for bottom clouds */
+    padding-top: 120px;
+    padding-bottom: var(--clouds-height-mobile, 100px);
+  }
+  
+  .hero-title {
+    margin-bottom: 12px;
   }
 
-  .title-top {
-    white-space: normal; /* Wrap text on extremely narrow mobile viewports to prevent clipping */
-    word-break: break-word;
+  .title-top,
+  .title-mid,
+  .title-bottom {
+    font-size: 1.6rem; /* Crisp, readable size for small mobile screens */
+  }
+
+  .earth-container {
+    width: min(115vw, 430px);
+    height: min(115vw, 430px);
+    margin: 10px auto 24px auto;
   }
   
   .hero-desc {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 28px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    max-width: min(85vw, 300px);
+  }
+  
+  .hero-cta-buttons {
+    max-width: min(85vw, 300px);
   }
 }
