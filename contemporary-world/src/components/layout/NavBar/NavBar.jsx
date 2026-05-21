@@ -11,38 +11,37 @@ const NavBar = ({ currentView, onNavigateHome }) => {
     "Home": "home",
     "Topics": "topics",
     "References": "interactive-map",
-    "About Us": "intro"
+    "About Us": "intro",
   };
 
+  // ── Sync active tab whenever the view changes ──────────────────
   useEffect(() => {
-    // If we're on a lesson page, it should always highlight 'Topics'
-    if (currentView && currentView.type === "lesson") {
-      setActiveTab("Topics");
-    }
+    if (!currentView) return;
+    if (currentView.type === "lesson") { setActiveTab("Topics"); return; }
+    if (currentView.type === "topics") { setActiveTab("Topics"); return; }
+    if (currentView.type === "home") { setActiveTab("Home"); return; }
   }, [currentView]);
 
+  // ── Sticky logic ───────────────────────────────────────────────
   useEffect(() => {
     const handleScroll = () => {
-      // If we're on a lesson detail view, we want the navbar to be always sticky/fixed
-      if (currentView && currentView.type === "lesson") {
+      if (currentView && (currentView.type === "lesson" || currentView.type === "topics")) {
         setIsSticky(true);
         return;
       }
 
-      const topicsEl = document.getElementById("topics");
-      const scrollPosition = 
-        window.pageYOffset || 
-        document.documentElement.scrollTop || 
-        document.body.scrollTop || 
+      const scrollPosition =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
         0;
 
       let shouldBeSticky = scrollPosition >= window.innerHeight - 80;
 
+      const topicsEl = document.getElementById("topics");
       if (topicsEl) {
         const rect = topicsEl.getBoundingClientRect();
-        if (rect.top <= 80) {
-          shouldBeSticky = true;
-        }
+        if (rect.top <= 80) shouldBeSticky = true;
       }
 
       setIsSticky(shouldBeSticky);
@@ -50,40 +49,36 @@ const NavBar = ({ currentView, onNavigateHome }) => {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", handleScroll, { passive: true });
-    document.addEventListener("scroll", handleScroll, { passive: true });
-    
     handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
-      document.removeEventListener("scroll", handleScroll);
     };
   }, [currentView]);
 
   const handleLogoClick = () => {
     setActiveTab("Home");
-    if (onNavigateHome) {
-      onNavigateHome("home");
-    }
+    if (onNavigateHome) onNavigateHome("");   // empty string → go home, scroll to top
   };
 
   const handleNavLinkClick = (e, item) => {
     e.preventDefault();
     setActiveTab(item);
-    if (onNavigateHome) {
-      onNavigateHome(sectionMap[item]);
-    }
+    if (onNavigateHome) onNavigateHome(sectionMap[item]);
   };
 
+  const isOnNonHome =
+    currentView && (currentView.type === "lesson" || currentView.type === "topics");
+
   return (
-    <nav className={`navbar ${isSticky || (currentView && currentView.type === "lesson") ? "sticky" : ""}`}>
+    <nav className={`navbar ${isSticky || isOnNonHome ? "sticky" : ""}`}>
       <Logo onClick={handleLogoClick} />
       <ul className="nav-links">
         {navItems.map((item) => (
           <li key={item} className={activeTab === item ? "active" : ""}>
-            <a 
-              href={`#${sectionMap[item]}`} 
+            <a
+              href={`#${sectionMap[item]}`}
               onClick={(e) => handleNavLinkClick(e, item)}
             >
               {item}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import NavBar from "./components/layout/NavBar/NavBar";
 import HomePage from "./pages/homePage";
+import TopicsPage from "./pages/topicPage.jsx";  // capital T, matches the file
 import LessonDetailPage from "./pages/LessonDetailPage";
 import Footer from "./components/layout/Footer/Footer";
 
@@ -12,35 +13,47 @@ function App() {
   };
 
   const handleNavigateHome = (sectionId = "") => {
+    // "topics" → show the Topics page
+    if (sectionId === "topics") {
+      setCurrentView({ type: "topics", lessonId: null });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    // Everything else → go to the home page
     setCurrentView({ type: "home", lessonId: null });
-    
-    if (sectionId) {
-      // Delay slightly to let the Home DOM mount, then scroll to section
+
+    if (sectionId && sectionId !== "home") {
+      // Scroll to a specific section on the home page
       setTimeout(() => {
         const el = document.getElementById(sectionId);
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-        }
+        if (el) el.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
+  const renderView = () => {
+    switch (currentView.type) {
+      case "topics":
+        return <TopicsPage onSelectLesson={handleSelectLesson} />;
+      case "lesson":
+        return (
+          <LessonDetailPage
+            lessonId={currentView.lessonId}
+            onBack={() => handleNavigateHome("topics")}
+          />
+        );
+      default:
+        return <HomePage onSelectLesson={handleSelectLesson} />;
+    }
+  };
+
   return (
     <div className="app-container">
-      <NavBar 
-        currentView={currentView} 
-        onNavigateHome={handleNavigateHome} 
-      />
-      {currentView.type === "home" ? (
-        <HomePage onSelectLesson={handleSelectLesson} />
-      ) : (
-        <LessonDetailPage 
-          lessonId={currentView.lessonId} 
-          onBack={() => handleNavigateHome("topics")} 
-        />
-      )}
+      <NavBar currentView={currentView} onNavigateHome={handleNavigateHome} />
+      {renderView()}
       <Footer onNavigateHome={handleNavigateHome} />
     </div>
   );
