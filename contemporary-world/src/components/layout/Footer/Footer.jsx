@@ -49,7 +49,7 @@ const Footer = ({ onNavigateHome }) => {
             <ul className="footer-links">
               <li><a href="#home" onClick={(e) => handleFooterLinkClick(e, "home")}>Home</a></li>
               <li><a href="#topics" onClick={(e) => handleFooterLinkClick(e, "topics")}>Topics</a></li>
-              <li><a href="#reference" onClick={(e) => handleFooterLinkClick(e, "interactive-map")}>Reference</a></li>
+              <li><a href="#references" onClick={(e) => handleFooterLinkClick(e, "references")}>Reference</a></li>
               <li><a href="#about" onClick={(e) => handleFooterLinkClick(e, "intro")}>About Us</a></li>
             </ul>
           </div>

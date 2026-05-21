@@ -6,14 +6,14 @@ import VisualJourney from "../components/home/VisualJourney/VisualJourney";
 import InteractiveMap from "../components/home/InteractiveMap/InteractiveMap";
 import "./homePage.css";
 
-const HomePage = ({ onSelectLesson }) => {
+const HomePage = ({ onSelectLesson, onNavigate }) => {
   return (
     <div className="homepage-container">
-      <HeroSection />
+      <HeroSection onNavigate={onNavigate} />
       {/* Positioned on the boundary line between Hero and Lessons */}
       <CloudOverlay />
       <LessonsCarousel onSelectLesson={onSelectLesson} />
-      <IntroSection />
+      <IntroSection onNavigate={onNavigate} />
       <VisualJourney />
       <InteractiveMap />
     </div>

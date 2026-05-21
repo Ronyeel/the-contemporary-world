@@ -6,11 +6,9 @@ import mapData from './mapData.json';
 
 const { themes, themeData } = mapData;
 
-// Formatter to add commas
-const formatNumber = (num) => {
-  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-};
-
+// ── ASCII dot-matrix world map ──
+// Each row maps to a latitude band; dot positions align with the marker % coordinate system.
+// Uses · for land mass, space for ocean. ~100 cols × 36 rows.
 const InteractiveMap = () => {
   const [activeTheme, setActiveTheme] = useState('media');
   const [activeMarker, setActiveMarker] = useState(null);
@@ -285,7 +283,7 @@ const InteractiveMap = () => {
               transition: 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform-origin 0.8s ease'
             }}
           >
-            <img src="/dotted-map.png" alt="World Map" className="map-base-img" />
+            <img src="/dotted-map.svg" alt="World Map" className="map-base-img" />
             
             {/* Markers overlay */}
             <div className="map-markers-layer">

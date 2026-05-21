@@ -3,6 +3,7 @@ import NavBar from "./components/layout/NavBar/NavBar";
 import HomePage from "./pages/homePage";
 import TopicsPage from "./pages/topicPage.jsx";  // capital T, matches the file
 import LessonDetailPage from "./pages/LessonDetailPage";
+import ReferencesPage from "./pages/referencesPage.jsx";
 import Footer from "./components/layout/Footer/Footer";
 
 function App() {
@@ -16,6 +17,13 @@ function App() {
     // "topics" → show the Topics page
     if (sectionId === "topics") {
       setCurrentView({ type: "topics", lessonId: null });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    // "references" → show the References page
+    if (sectionId === "references") {
+      setCurrentView({ type: "references", lessonId: null });
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
@@ -38,6 +46,8 @@ function App() {
     switch (currentView.type) {
       case "topics":
         return <TopicsPage onSelectLesson={handleSelectLesson} />;
+      case "references":
+        return <ReferencesPage />;
       case "lesson":
         return (
           <LessonDetailPage
@@ -46,7 +56,7 @@ function App() {
           />
         );
       default:
-        return <HomePage onSelectLesson={handleSelectLesson} />;
+        return <HomePage onSelectLesson={handleSelectLesson} onNavigate={handleNavigateHome} />;
     }
   };
 

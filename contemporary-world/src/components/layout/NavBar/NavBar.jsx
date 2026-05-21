@@ -4,32 +4,39 @@ import "./NavBar.css";
 
 const NavBar = ({ currentView, onNavigateHome }) => {
   const [activeTab, setActiveTab] = useState("Home");
+  const [prevViewType, setPrevViewType] = useState(currentView?.type);
   const [isSticky, setIsSticky] = useState(false);
   const navItems = ["Home", "Topics", "References", "About Us"];
 
   const sectionMap = {
     "Home": "home",
     "Topics": "topics",
-    "References": "interactive-map",
+    "References": "references",
     "About Us": "intro",
   };
 
   // ── Sync active tab whenever the view changes ──────────────────
-  useEffect(() => {
-    if (!currentView) return;
-    if (currentView.type === "lesson") { setActiveTab("Topics"); return; }
-    if (currentView.type === "topics") { setActiveTab("Topics"); return; }
-    if (currentView.type === "home") { setActiveTab("Home"); return; }
-  }, [currentView]);
+  if (currentView && currentView.type !== prevViewType) {
+    setPrevViewType(currentView.type);
+    if (currentView.type === "lesson" || currentView.type === "topics") {
+      setActiveTab("Topics");
+    } else if (currentView.type === "references") {
+      setActiveTab("References");
+    } else if (currentView.type === "home") {
+      setActiveTab("Home");
+    }
+  }
 
   // ── Sticky logic ───────────────────────────────────────────────
   useEffect(() => {
     const handleScroll = () => {
+      // Force sticky state immediately for sub-pages like Lesson Details and Topics list
       if (currentView && (currentView.type === "lesson" || currentView.type === "topics")) {
         setIsSticky(true);
         return;
       }
 
+      // Treat References and Home dynamically based on scroll offset
       const scrollPosition =
         window.pageYOffset ||
         document.documentElement.scrollTop ||

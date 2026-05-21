@@ -305,7 +305,9 @@
   border-radius: 12px;
   position: relative;
   overflow: auto; /* Allow overflow scroll (hidden scrollbars via CSS below) */
-  display: block; /* Switch to block to containment scroll the fixed canvas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffff;
   cursor: grab;
   user-select: none;
@@ -326,8 +328,9 @@
 
 .map-canvas {
   position: relative;
-  width: 1300px; /* Fixed larger size for a wide panning battlefield map */
-  height: 680px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -340,8 +343,7 @@
   height: 100%;
   object-fit: contain;
   opacity: 0.8;
-  mix-blend-mode: multiply; /* Ensure dots blend cleanly onto white */
-  pointer-events: none; /* Disable default browser image drag */
+  pointer-events: none;
   user-select: none;
 }
 
@@ -604,7 +606,9 @@
     width: 100%;
     box-sizing: border-box;
     overflow: auto; /* Enable vertical, horizontal and diagonal swiping/panning */
-    display: block; /* Switch to block layout to containment-scroll the absolute child canvas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     -webkit-overflow-scrolling: touch; /* Smooth inertia momentum on mobile browsers */
   }
 
@@ -624,8 +628,9 @@
 
   .map-canvas {
     position: relative;
-    width: 900px; /* Fixed canvas width on tablet for 2D pan */
-    height: 470px; /* Fixed canvas height on tablet for Y/diagonal pan */
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -633,7 +638,7 @@
   }
 
   .map-base-img {
-    width: 100%; /* Fill the expanded min-width canvas */
+    width: 100%;
     max-width: none;
     height: 100%;
     object-fit: contain;
@@ -664,8 +669,9 @@
     overflow: auto;
   }
   .map-canvas {
-    width: 750px; /* Smaller canvas for phone viewports to allow responsive 2D pan */
-    height: 390px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
   }
   .map-stats-bar {
     gap: 20px;

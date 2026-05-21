@@ -2,7 +2,7 @@ import Button from "../../common/Button/Button";
 import Earth3D from "../Earth3D/Earth3D";
 import "./HeroSection.css";
 
-const HeroSection = () => {
+const HeroSection = ({ onNavigate }) => {
   return (
     <section className="hero-section" id="home">
       <div className="hero-grid">
@@ -20,8 +20,11 @@ const HeroSection = () => {
           </p>
           
           <div className="hero-cta-buttons">
-            <Button variant="primary" href="#topics">
-              Explore Lessons
+            <Button 
+              variant="primary" 
+              onClick={() => onNavigate && onNavigate("topics")}
+            >
+              Explore Topics
             </Button>
             <Button variant="secondary" href="#references">
               Start Reading
