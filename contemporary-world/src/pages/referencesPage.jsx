@@ -6,7 +6,7 @@ const ReferencesPage = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const { references, loading, error } = useReferences(activeFilter);
 
-  const filters = ["All", "Books", "Journals"];
+  const filters = ["All", "Books", "Journals", "Websites"];
 
   const handleFilterClick = (e, filter) => {
     e.preventDefault();

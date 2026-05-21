@@ -9,11 +9,15 @@ export const useReferences = (categoryFilter = "All") => {
   const [references, setReferences] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [prevFilter, setPrevFilter] = useState(categoryFilter);
 
-  useEffect(() => {
+  if (categoryFilter !== prevFilter) {
+    setPrevFilter(categoryFilter);
     setLoading(true);
     setError(null);
+  }
 
+  useEffect(() => {
     // Simulate API fetch delay
     const timer = setTimeout(() => {
       try {
@@ -25,7 +29,7 @@ export const useReferences = (categoryFilter = "All") => {
         }
         setReferences(filtered);
         setLoading(false);
-      } catch (err) {
+      } catch {
         setError("Failed to fetch references from the API.");
         setLoading(false);
       }

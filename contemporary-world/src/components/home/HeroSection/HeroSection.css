@@ -164,6 +164,12 @@
   .hero-desc {
     margin-left: auto;
     margin-right: auto;
+    color: #ffffff; /* Extremely bright white for readable high-contrast text */
+    text-shadow: 
+      0 2px 10px rgba(0, 0, 0, 0.95), 
+      0 0 20px rgba(0, 0, 0, 0.85),
+      0 0 35px rgba(0, 0, 0, 0.7); /* Layered black glows to isolate text from background */
+    font-weight: 500; /* Enhance font weight slightly for readability */
   }
 
   .hero-cta-buttons {
@@ -178,12 +184,13 @@
   }
 
   .earth-container {
-    right: var(--earth-center-x-mobile);
+    left: 50%;
+    right: auto;
     top: var(--earth-top-mobile);
     width: var(--earth-size-mobile);
     height: var(--earth-size-mobile);
     min-width: var(--earth-min-width-mobile);
-    transform: translate(50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
 

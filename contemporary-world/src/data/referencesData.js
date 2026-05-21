@@ -10,14 +10,6 @@ export const referencesData = [
     url: "https://www.nber.org/papers/w21906",
   },
   {
-    id: 2,
-    category: "Journals",
-    label: "Global Inequality",
-    title: "Global Inequality: A New Approach for the Age of Globalization",
-    author: "Branko Milanovic",
-    url: "https://www.hup.harvard.edu/books/9780674737136",
-  },
-  {
     id: 3,
     category: "Journals",
     label: "Migration Studies",
@@ -73,7 +65,7 @@ export const referencesData = [
     label: "The World Is Flat",
     title: "The World Is Flat: A Brief History of the Twenty-First Century",
     author: "Thomas L. Friedman",
-    url: "https://us.macmillan.com/books/9780374292881/theworldisflat30",
+    url: "https://us.macmillan.com/books/9780374292881/theworldisflat",
   },
   {
     id: 10,
