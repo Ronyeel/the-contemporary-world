@@ -7,8 +7,8 @@ import BookCard from "../../common/BookCard/BookCard";
 
 const lessons = lessonsData.lessons.map((lesson, index) => ({
     id: lesson.id,
-    title: lesson.title.split(":")[0] || lesson.title,
-    subtitle: lesson.title.includes(":") ? lesson.title.split(":")[1].trim() : `Chapter ${index + 1}`,
+    title: lesson.title,
+    subtitle: "",
     cover: lesson.img || null,
     color: lesson.accent.match(/#([0-9a-fA-F]{6})/g)?.[0] || "#14375a",
     accent: lesson.accent.match(/#([0-9a-fA-F]{6})/g)?.[1] || "#29aef0"
