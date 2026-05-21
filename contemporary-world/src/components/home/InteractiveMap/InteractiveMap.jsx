@@ -151,7 +151,11 @@ const InteractiveMap = () => {
     }
     
     if (deltaX < 10 && deltaY < 10) {
-      setActiveMarker(marker);
+      if (activeMarker?.id === marker.id) {
+        setActiveMarker(null);
+      } else {
+        setActiveMarker(marker);
+      }
     }
   };
 

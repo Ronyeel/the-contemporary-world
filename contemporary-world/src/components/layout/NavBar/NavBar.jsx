@@ -12,7 +12,7 @@ const NavBar = ({ currentView, onNavigateHome }) => {
     "Home": "home",
     "Topics": "topics",
     "References": "references",
-    "About Us": "intro",
+    "About Us": "about",
   };
 
   // ── Sync active tab whenever the view changes ──────────────────
@@ -22,6 +22,8 @@ const NavBar = ({ currentView, onNavigateHome }) => {
       setActiveTab("Topics");
     } else if (currentView.type === "references") {
       setActiveTab("References");
+    } else if (currentView.type === "about") {
+      setActiveTab("About Us");
     } else if (currentView.type === "home") {
       setActiveTab("Home");
     }

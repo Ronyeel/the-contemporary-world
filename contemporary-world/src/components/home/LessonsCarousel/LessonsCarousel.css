@@ -33,7 +33,7 @@
   align-items: center; /* Vertically center the card covers */
   justify-content: center;
   gap: 40px;
-  min-height: 480px; /* Room for shadows and scaled states */
+  min-height: 540px; /* Room for shadows and scaled states */
 }
 
 /* ── Flat Card Container ── */
@@ -42,7 +42,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 250px;
+  width: 290px;
   cursor: pointer;
   outline: none;
   background: transparent;
@@ -162,11 +162,11 @@
 
   .carousel-track {
     gap: 20px;
-    min-height: 380px;
+    min-height: 420px;
   }
 
   .lessons-section .lesson-card {
-    width: 190px;
+    width: 220px;
   }
 
   .lessons-section .lesson-card--side {
@@ -200,11 +200,11 @@
 
   .carousel-track {
     gap: 10px;
-    min-height: 320px;
+    min-height: 360px;
   }
 
   .lessons-section .lesson-card {
-    width: 120px;
+    width: 150px;
   }
 
   .lessons-section .lesson-card--side {

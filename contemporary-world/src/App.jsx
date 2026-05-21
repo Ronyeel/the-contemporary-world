@@ -4,6 +4,7 @@ import HomePage from "./pages/homePage";
 import TopicsPage from "./pages/topicPage.jsx";  // capital T, matches the file
 import LessonDetailPage from "./pages/LessonDetailPage";
 import ReferencesPage from "./pages/referencesPage.jsx";
+import AboutPage from "./pages/aboutPage.jsx";
 import Footer from "./components/layout/Footer/Footer";
 import Chatbot from "./components/common/Chatbot/Chatbot";
 
@@ -29,6 +30,13 @@ function App() {
       return;
     }
 
+    // "about" → show the About Us page
+    if (sectionId === "about") {
+      setCurrentView({ type: "about", lessonId: null });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
     // Everything else → go to the home page
     setCurrentView({ type: "home", lessonId: null });
 
@@ -49,6 +57,8 @@ function App() {
         return <TopicsPage onSelectLesson={handleSelectLesson} />;
       case "references":
         return <ReferencesPage />;
+      case "about":
+        return <AboutPage />;
       case "lesson":
         return (
           <LessonDetailPage

@@ -62,7 +62,8 @@
 /* Tooltip */
 .chatbot-tooltip {
   position: absolute;
-  right: 75px;
+  right: 100px;
+  bottom: 44px;
   background: rgba(10, 10, 10, 0.88);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -79,7 +80,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.chatbot-fab:hover .chatbot-tooltip {
+.chat-closed .chatbot-fab:hover + .chatbot-tooltip {
   opacity: 1;
   transform: translateX(0);
 }

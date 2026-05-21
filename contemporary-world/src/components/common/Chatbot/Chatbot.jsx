@@ -105,11 +105,11 @@ const Chatbot = () => {
   return (
     <div className={`chatbot-wrapper ${isOpen ? "chat-open" : "chat-closed"}`}>
       {/* Floating Action Button (FAB) */}
-      <button 
-        className="chatbot-fab" 
+      <button
+        className="chatbot-fab"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle chat assistant"
-        title="Ask KyleGPT"
+        data-tooltip="Ask KyleGPT"
       >
         {isOpen ? (
           // Close Icon
@@ -121,8 +121,8 @@ const Chatbot = () => {
           // KyleGPT Image Icon
           <img src="/kylegpt.png" alt="KyleGPT" className="fab-icon-img" />
         )}
-        {!isOpen && <span className="chatbot-tooltip">Ask KyleGPT</span>}
       </button>
+      <span className="chatbot-tooltip">Ask KyleGPT</span>
 
       {/* Floating Chat Panel */}
       <div className="chatbot-panel">
