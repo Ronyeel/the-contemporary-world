@@ -36,13 +36,7 @@ const NavBar = ({ currentView, onNavigateHome }) => {
         document.body.scrollTop ||
         0;
 
-      let shouldBeSticky = scrollPosition >= window.innerHeight - 80;
-
-      const topicsEl = document.getElementById("topics");
-      if (topicsEl) {
-        const rect = topicsEl.getBoundingClientRect();
-        if (rect.top <= 80) shouldBeSticky = true;
-      }
+      const shouldBeSticky = scrollPosition >= 50;
 
       setIsSticky(shouldBeSticky);
     };
