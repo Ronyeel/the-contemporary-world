@@ -1,78 +1,20 @@
 import { useState } from "react";
 import "./topicPage.css";
 
-const BOOKS = [
-    { id: 1, title: "Global Connection:", subtitle: "Media Religion and Technology", cover: "/book_cover1.png", color: "#14375a", accent: "#29aef0" },
-    { id: 2, title: "Globalization of Religion", subtitle: "Chapter 2", cover: null, color: "#2a1848", accent: "#9c6ef5" },
-    { id: 3, title: "Globalization of Technology", subtitle: "Chapter 3", cover: null, color: "#123828", accent: "#28d98a" },
-    { id: 4, title: "Migration and Society", subtitle: "Chapter 4", cover: null, color: "#3a1410", accent: "#ff6040" },
-    { id: 5, title: "Global Trade Networks", subtitle: "Chapter 5", cover: null, color: "#102838", accent: "#38b0e8" },
-    { id: 6, title: "Environmental Challenges", subtitle: "Chapter 6", cover: null, color: "#102810", accent: "#48d448" },
-];
+import lessonsData from "../data/lessonsData.json";
 
-const BookCard = ({ book, onClick }) => (
-    <div className="book-card" onClick={() => onClick(book)}>
+// Map the shared JSON data to the format expected by the 3D book card
+const BOOKS = lessonsData.lessons.map((lesson, index) => ({
+    id: lesson.id,
+    title: lesson.title.split(":")[0] || lesson.title,
+    subtitle: lesson.title.includes(":") ? lesson.title.split(":")[1].trim() : `Chapter ${index + 1}`,
+    cover: lesson.img || null,
+    // Extract base colors from the linear-gradient accent for the 3D effects
+    color: lesson.accent.match(/#([0-9a-fA-F]{6})/g)?.[0] || "#14375a",
+    accent: lesson.accent.match(/#([0-9a-fA-F]{6})/g)?.[1] || "#29aef0"
+}));
 
-        {/* Camera / perspective wrapper */}
-        <div className="book-root">
-            <div className="book-3d">
-
-                {/* ── FRONT face ── */}
-                <div className="book-face book-front">
-                    {book.cover ? (
-                        <img src={book.cover} alt={book.title} className="book-cover-img" />
-                    ) : (
-                        <div
-                            className="book-placeholder"
-                            style={{ "--bk-color": book.color, "--bk-accent": book.accent }}
-                        >
-                            <div className="bk-logo-row">
-                                <span className="bk-logo-dot">C</span>
-                                <span className="bk-logo-label">Contemporary<br />World</span>
-                            </div>
-                            <div className="bk-globe-area">
-                                <div className="bk-globe" />
-                            </div>
-                            <div className="bk-lines"><span /><span /><span /></div>
-                            <div className="bk-footer">
-                                <p className="bk-title">{book.title}</p>
-                                <p className="bk-sub">{book.subtitle}</p>
-                            </div>
-                        </div>
-                    )}
-                    <div className="book-glare" />
-                </div>
-
-                {/* ── BACK face (hidden but needed for GPU layer) ── */}
-                <div className="book-face book-back" />
-
-                {/* ── SPINE (left edge) ── */}
-                <div
-                    className="book-spine"
-                    style={{
-                        background: `linear-gradient(to right, ${book.color}99 0%, ${book.color} 40%, ${book.color}cc 100%)`,
-                        filter: "brightness(0.5)",
-                    }}
-                >
-                    <span className="spine-label">{book.title}</span>
-                </div>
-
-                {/* ── RIGHT page stack ── */}
-                <div className="book-pages" />
-
-                {/* ── TOP page stack ── */}
-                <div className="book-top" />
-
-            </div>
-        </div>
-
-        {/* Shadow beneath book */}
-        <div className="book-shadow" />
-
-        <p className="book-label-title">{book.title}</p>
-        <p className="book-label-sub">{book.subtitle}</p>
-    </div>
-);
+import BookCard from "../components/common/BookCard/BookCard";
 
 const TopicsPage = ({ onSelectLesson }) => {
     const [search, setSearch] = useState("");
@@ -85,11 +27,6 @@ const TopicsPage = ({ onSelectLesson }) => {
 
     return (
         <div className="topics-page" id="topics">
-
-            <div className="topics-hero">
-                <h1 className="topics-hero-title">Topics to Read</h1>
-                <p className="topics-hero-sub">One World: Understanding Global Issues and Development</p>
-            </div>
 
             <div className="topics-search-wrapper">
                 <div className="topics-search-bar">
