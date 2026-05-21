@@ -19,26 +19,27 @@ const LessonDetailPage = ({ lessonId, onBack }) => {
     );
   }
 
+  let cover = lesson.img || null;
+  if (lesson.id === 1) {
+    cover = "/book_cover1.png";
+  } else if (lesson.id === 2) {
+    cover = "/book_cover2.png";
+  } else if (lesson.id === 3) {
+    cover = "/book_cover3.png";
+  }
+
   return (
     <div className="lesson-detail-page">
       {/* Premium Header Banner (Matching Mockup) */}
       <div className="lesson-detail-banner">
         <div className="banner-content">
-          {/* Large Image Card Placeholder */}
+          {/* Cover Image Wrapper (Matching Mockup) */}
           <div className="banner-image-container">
-            {lesson.img ? (
-              <img 
-                src={lesson.img} 
-                alt={lesson.title} 
-                className="banner-image"
-              />
-            ) : (
-              <div className="banner-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#9ca3af">
-                  <path d="M4 19V5C4 3.89543 4.89543 3 6 3H18C19.1046 3 20 3.89543 20 5V19M4 19C4 20.1046 4.89543 21 6 21H18C19.1046 21 20 20.1046 20 19M4 19L9.17157 13.8284C9.95262 13.0474 11.219 13.0474 12 13.8284L20 21M14 9C14 10.1046 13.1046 11 12 11C10.8954 11 10 10.1046 10 9C10 7.89543 10.8954 7 12 7C13.1046 7 14 7.89543 14 9Z" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-            )}
+            <img 
+              src={cover} 
+              alt={lesson.title} 
+              className="banner-image"
+            />
           </div>
           
           {/* Title */}
