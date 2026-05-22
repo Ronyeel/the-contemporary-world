@@ -1,7 +1,7 @@
 .lesson-detail-page {
   background-color: #ffffff;
   min-height: 100vh;
-  padding-top: 80px; /* Offset for sticky navbar */
+  padding-top: 80px;
   font-family: 'Inter', sans-serif;
   color: #1a202c;
   display: flex;
@@ -10,7 +10,7 @@
 
 /* Premium Header Banner */
 .lesson-detail-banner {
-  background-color: #dbdbdb; /* Light grey matching mockup */
+  background-color: #dbdbdb;
   padding: 60px 20px 40px 20px;
   display: flex;
   flex-direction: column;
@@ -27,14 +27,13 @@
   align-items: center;
 }
 
-/* Cover Image Container (Vertical Book Poster Style) */
 .banner-image-container {
   width: 170px;
   height: 234px;
   margin-bottom: 30px;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 
+  box-shadow:
     0 15px 30px -5px rgba(0, 0, 0, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.15);
   background-color: #e2e8f0;
@@ -47,9 +46,8 @@
   display: block;
 }
 
-/* Title */
 .lesson-detail-title {
-  font-family: 'Orbitron', 'Poppins', sans-serif; /* Keep a bit of the theme but mostly simple */
+  font-family: 'Orbitron', 'Poppins', sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
   color: #555555;
@@ -78,25 +76,111 @@
   flex-direction: column;
 }
 
+/* Images */
+.subtopic-image-container,
+.content-image-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.subtopic-image,
+.content-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  object-fit: contain;
+  background-color: #f3f4f6;
+}
+
+.subtopic-image-caption,
+.content-image-caption {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-align: center;
+  font-style: italic;
+  max-width: 80%;
+  line-height: 1.5;
+}
+
+/* Subtopic title (e.g. "Global Cities") */
 .subtopic-title {
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
-  font-weight: 600;
-  color: #333333;
+  font-weight: 700;
+  color: #111827;
   margin: 0 0 16px 0;
   text-align: left;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
 }
 
+/* Regular paragraph — indented, justified */
 .subtopic-content {
   font-size: 1rem;
-  line-height: 1.8;
-  color: #333333;
-  margin: 0;
+  line-height: 1.85;
+  color: #374151;
+  margin: 0 0 8px 0;
   text-align: justify;
   text-indent: 2.5rem;
 }
 
-/* Error page style */
+/* Sub-headings (e.g. "Characteristics of Global Cities") */
+.content-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 16px 0 6px 0;
+  text-indent: 0;
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* Bullet items — hanging indent with dash */
+.content-bullet {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #374151;
+  margin: 2px 0 2px 3.5rem;
+  padding-left: 1rem;
+  text-indent: -1rem;
+  text-align: left;
+}
+
+.content-bullet::before {
+  content: "– ";
+  color: #6b7280;
+  font-weight: 600;
+}
+
+/* Numbered items — hanging indent */
+.content-numbered {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #374151;
+  margin: 4px 0 4px 3.5rem;
+  padding-left: 1.25rem;
+  text-indent: -1.25rem;
+  text-align: left;
+  counter-increment: list-counter;
+}
+
+.content-numbered::before {
+  content: counter(list-counter) ". ";
+  color: #374151;
+  font-weight: 600;
+}
+
+.subtopic-section {
+  counter-reset: list-counter;
+}
+
+/* Error state */
 .lesson-detail-error {
   display: flex;
   flex-direction: column;
@@ -122,23 +206,32 @@
   font-weight: 600;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
   .lesson-detail-banner {
     padding: 40px 15px 30px 15px;
   }
-  
+
   .banner-image-container {
     width: 130px;
     height: 180px;
     margin-bottom: 20px;
   }
-  
+
   .lesson-detail-title {
     font-size: 1.3rem;
   }
-  
+
   .lesson-detail-body {
     padding: 30px 15px;
+  }
+
+  .subtopic-content {
+    text-indent: 1.5rem;
+  }
+
+  .content-bullet,
+  .content-numbered {
+    margin-left: 2rem;
   }
 }

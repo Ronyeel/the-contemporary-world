@@ -26,10 +26,10 @@ const Footer = ({ onNavigateHome }) => {
                     <feComposite in="SourceGraphic" in2="blur" operator="over" />
                   </filter>
                 </defs>
-                <path 
-                  d="M23 10.5C21.2 8.7 18.7 7.5 16 7.5C10.8 7.5 6.5 11.8 6.5 17C6.5 22.2 10.8 26.5 16 26.5C18.7 26.5 21.2 25.3 23 23.5" 
-                  stroke="url(#footer-logo-grad)" 
-                  strokeWidth="3.5" 
+                <path
+                  d="M23 10.5C21.2 8.7 18.7 7.5 16 7.5C10.8 7.5 6.5 11.8 6.5 17C6.5 22.2 10.8 26.5 16 26.5C18.7 26.5 21.2 25.3 23 23.5"
+                  stroke="url(#footer-logo-grad)"
+                  strokeWidth="3.5"
                   strokeLinecap="round"
                   filter="url(#footer-logo-glow)"
                 />
@@ -38,7 +38,7 @@ const Footer = ({ onNavigateHome }) => {
               <span className="footer-title">Contemporary World</span>
             </div>
             <p className="footer-desc">
-              A curated collection of topics discussed in Contemporary World — covering how 
+              A curated collection of topics discussed in Contemporary World — covering how
               globalization, migration, trade, and technology shape our lives today.
             </p>
           </div>
@@ -57,6 +57,7 @@ const Footer = ({ onNavigateHome }) => {
           {/* Column 3: Instructor */}
           <div className="footer-col">
             <h4 className="footer-col-title">Instructor</h4>
+            <h5 className="instructor-name">Jevrech Pearl Narido</h5>
             {/* Kept empty as per design image */}
           </div>
 

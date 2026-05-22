@@ -15,20 +15,28 @@ const lessons = lessonsData.lessons.map((lesson) => {
 });
 
 const LessonsCarousel = ({ onSelectLesson }) => {
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const total = lessons.length;
 
-  const prevIdx = (activeIndex - 1 + total) % total;
-  const nextIdx = (activeIndex + 1) % total;
-
   useEffect(() => {
-    if (isPaused) return; // Pause auto-advance when hovered
+    if (isPaused) return;
     const timer = setInterval(() => {
       setActiveIndex((current) => (current + 1) % total);
-    }, 3000); // Auto-advance every 3 seconds
+    }, 3000);
     return () => clearInterval(timer);
   }, [total, isPaused]);
+
+  const getCardClass = (index) => {
+    let diff = (index - activeIndex) % total;
+    if (diff < -Math.floor(total / 2)) diff += total;
+    if (diff > Math.floor(total / 2)) diff -= total;
+
+    if (diff === 0) return 'lesson-card--center clickable-featured-card';
+    if (diff === 1 || (diff === -(total - 1) && total > 2)) return 'lesson-card--right';
+    if (diff === -1 || (diff === (total - 1) && total > 2)) return 'lesson-card--left';
+    return diff > 0 ? 'lesson-card--hidden-right' : 'lesson-card--hidden-left';
+  };
 
   return (
     <section className="lessons-section" id="topics">
@@ -40,60 +48,45 @@ const LessonsCarousel = ({ onSelectLesson }) => {
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          {/* Left side card */}
-          <div
-            className={`lesson-card lesson-card--side`}
-            onClick={() => setActiveIndex(prevIdx)}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => e.key === "Enter" && setActiveIndex(prevIdx)}
-          >
-            <div className="lesson-card__cover-wrapper">
-              <img 
-                src={lessons[prevIdx].cover} 
-                alt={lessons[prevIdx].title} 
-                className="lesson-card__flat-cover" 
-              />
-            </div>
-            <p className="lesson-card__flat-title">{lessons[prevIdx].title}</p>
-          </div>
+          {lessons.map((lesson, index) => {
+            const cardClass = getCardClass(index);
+            const isFeatured = cardClass.includes('center');
 
-          {/* Center featured card */}
-          <div 
-            className="lesson-card lesson-card--featured clickable-featured-card"
-            onClick={() => onSelectLesson && onSelectLesson(lessons[activeIndex].id)}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => e.key === "Enter" && onSelectLesson && onSelectLesson(lessons[activeIndex].id)}
-            title="Click to view details"
-          >
-            <div className="lesson-card__cover-wrapper">
-              <img 
-                src={lessons[activeIndex].cover} 
-                alt={lessons[activeIndex].title} 
-                className="lesson-card__flat-cover" 
-              />
-            </div>
-            <p className="lesson-card__flat-title">{lessons[activeIndex].title}</p>
-          </div>
-
-          {/* Right side card */}
-          <div
-            className={`lesson-card lesson-card--side`}
-            onClick={() => setActiveIndex(nextIdx)}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => e.key === "Enter" && setActiveIndex(nextIdx)}
-          >
-            <div className="lesson-card__cover-wrapper">
-              <img 
-                src={lessons[nextIdx].cover} 
-                alt={lessons[nextIdx].title} 
-                className="lesson-card__flat-cover" 
-              />
-            </div>
-            <p className="lesson-card__flat-title">{lessons[nextIdx].title}</p>
-          </div>
+            return (
+              <div
+                key={lesson.id}
+                className={`lesson-card ${cardClass}`}
+                onClick={() => {
+                  if (isFeatured) {
+                    onSelectLesson && onSelectLesson(lesson.id);
+                  } else {
+                    setActiveIndex(index);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    if (isFeatured) {
+                      onSelectLesson && onSelectLesson(lesson.id);
+                    } else {
+                      setActiveIndex(index);
+                    }
+                  }
+                }}
+                title={isFeatured ? "Click to view details" : ""}
+              >
+                <div className="lesson-card__cover-wrapper">
+                  <img 
+                    src={lesson.cover} 
+                    alt={lesson.title} 
+                    className="lesson-card__flat-cover" 
+                  />
+                </div>
+                <p className="lesson-card__flat-title">{lesson.title}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

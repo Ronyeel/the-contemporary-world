@@ -29,10 +29,11 @@
 
 /* ── Carousel Track ── */
 .carousel-track {
+  position: relative;
   display: flex;
   align-items: center; /* Vertically center the card covers */
   justify-content: center;
-  gap: 40px;
+  gap: 0; /* Gap is managed by absolute positioning translates */
   min-height: 540px; /* Room for shadows and scaled states */
 }
 
@@ -49,7 +50,7 @@
   border: none;
   padding: 0;
   box-sizing: border-box;
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease;
 }
 
 /* Cover Image Wrapper to clip corners beautifully */
@@ -72,33 +73,68 @@
   display: block;
 }
 
-/* ── Side Cards (Left & Right) ── */
-.lessons-section .lesson-card--side {
-  opacity: 0.75;
-  transform: scale(0.85); /* Scaled down precisely */
+/* Base styling for absolute positioning */
+.lessons-section .lesson-card {
+  position: absolute;
 }
 
-.lessons-section .lesson-card--side:hover {
+/* ── Hidden Cards ── */
+.lessons-section .lesson-card--hidden-left {
+  opacity: 0;
+  transform: translateX(-200%) scale(0.5);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.lessons-section .lesson-card--hidden-right {
+  opacity: 0;
+  transform: translateX(200%) scale(0.5);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── Side Cards (Left & Right) ── */
+.lessons-section .lesson-card--left,
+.lessons-section .lesson-card--right {
+  opacity: 0.75;
+  z-index: 5;
+}
+
+.lessons-section .lesson-card--left {
+  transform: translateX(-120%) scale(0.85);
+}
+
+.lessons-section .lesson-card--right {
+  transform: translateX(120%) scale(0.85);
+}
+
+.lessons-section .lesson-card--left:hover {
   opacity: 0.95;
-  transform: scale(0.88);
+  transform: translateX(-120%) scale(0.88);
+}
+
+.lessons-section .lesson-card--right:hover {
+  opacity: 0.95;
+  transform: translateX(120%) scale(0.88);
 }
 
 /* Soft, deep drop shadow for side cards matching mockup */
-.lessons-section .lesson-card--side .lesson-card__cover-wrapper {
+.lessons-section .lesson-card--left .lesson-card__cover-wrapper,
+.lessons-section .lesson-card--right .lesson-card__cover-wrapper {
   box-shadow: 
     0 15px 35px -5px rgba(0, 0, 0, 0.35),
     0 8px 16px -8px rgba(0, 0, 0, 0.25);
 }
 
 /* ── Featured Center Card ── */
-.lessons-section .lesson-card--featured {
+.lessons-section .lesson-card--center {
   opacity: 1;
   z-index: 10;
-  transform: scale(1.15); /* Scaled up taller and wider, exactly like the mockup */
+  transform: translateX(0) scale(1.15); /* Scaled up taller and wider, exactly like the mockup */
 }
 
 /* Ultra-soft, elevated drop shadow for the featured card */
-.lessons-section .lesson-card--featured .lesson-card__cover-wrapper {
+.lessons-section .lesson-card--center .lesson-card__cover-wrapper {
   box-shadow: 
     0 35px 70px -10px rgba(0, 0, 0, 0.5),
     0 20px 30px -15px rgba(0, 0, 0, 0.35),
@@ -106,11 +142,11 @@
 }
 
 /* Smooth zoom-in hover response for featured center card */
-.lessons-section .lesson-card--featured:hover {
-  transform: scale(1.18) translateY(-4px);
+.lessons-section .lesson-card--center:hover {
+  transform: translateX(0) scale(1.18) translateY(-4px);
 }
 
-.lessons-section .lesson-card--featured:hover .lesson-card__cover-wrapper {
+.lessons-section .lesson-card--center:hover .lesson-card__cover-wrapper {
   box-shadow: 
     0 40px 85px -8px rgba(0, 0, 0, 0.55),
     0 25px 45px -10px rgba(0, 0, 0, 0.4);
@@ -169,20 +205,28 @@
     width: 220px;
   }
 
-  .lessons-section .lesson-card--side {
-    transform: scale(0.75);
+  .lessons-section .lesson-card--left {
+    transform: translateX(-100%) scale(0.75);
   }
 
-  .lessons-section .lesson-card--side:hover {
-    transform: scale(0.78);
+  .lessons-section .lesson-card--right {
+    transform: translateX(100%) scale(0.75);
   }
 
-  .lessons-section .lesson-card--featured {
-    transform: scale(1.02);
+  .lessons-section .lesson-card--left:hover {
+    transform: translateX(-100%) scale(0.78);
   }
 
-  .lessons-section .lesson-card--featured:hover {
-    transform: scale(1.05) translateY(-2px);
+  .lessons-section .lesson-card--right:hover {
+    transform: translateX(100%) scale(0.78);
+  }
+
+  .lessons-section .lesson-card--center {
+    transform: translateX(0) scale(1.02);
+  }
+
+  .lessons-section .lesson-card--center:hover {
+    transform: translateX(0) scale(1.05) translateY(-2px);
   }
 
   .lessons-section .lesson-card__flat-title {
@@ -207,20 +251,28 @@
     width: 150px;
   }
 
-  .lessons-section .lesson-card--side {
-    transform: scale(0.6);
+  .lessons-section .lesson-card--left {
+    transform: translateX(-80%) scale(0.6);
   }
 
-  .lessons-section .lesson-card--side:hover {
-    transform: scale(0.62);
+  .lessons-section .lesson-card--right {
+    transform: translateX(80%) scale(0.6);
   }
 
-  .lessons-section .lesson-card--featured {
-    transform: scale(0.85);
+  .lessons-section .lesson-card--left:hover {
+    transform: translateX(-80%) scale(0.62);
   }
 
-  .lessons-section .lesson-card--featured:hover {
-    transform: scale(0.88) translateY(-1px);
+  .lessons-section .lesson-card--right:hover {
+    transform: translateX(80%) scale(0.62);
+  }
+
+  .lessons-section .lesson-card--center {
+    transform: translateX(0) scale(0.85);
+  }
+
+  .lessons-section .lesson-card--center:hover {
+    transform: translateX(0) scale(0.88) translateY(-1px);
   }
 
   .lessons-section .lesson-card__flat-title {
