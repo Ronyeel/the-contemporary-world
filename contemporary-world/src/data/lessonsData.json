@@ -2,9 +2,10 @@
   "lessons": [
     {
       "id": 1,
-      "title": "Global Connections",
-      "accent": "linear-gradient(135deg, #2a0d5e 0%, #4a1a8a 50%, #1c0a42 100%)",
-      "img": "/book_cover1.png",
+      "title": "Global Cities & Global Demography",
+      "accent": "linear-gradient(135deg, #0f2c5e 0%, #1a4a8a 50%, #0a1e42 100%)",
+      "img": "/cover_nics.png",
+      "images": [],
       "subtopics": [
         {
           "title": "Lesson 16: Global Media Culture",
@@ -654,6 +655,7 @@
       "title": "Global Cities & Global Demography",
       "accent": "linear-gradient(135deg, #0f2c5e 0%, #1a4a8a 50%, #0a1e42 100%)",
       "img": "/cover_nics.png",
+      "images": [],
       "subtopics": [
         {
           "title": "Lesson 21: Global Cities",
@@ -1592,6 +1594,8 @@
       "id": 6,
       "title": "Global Food Security and Global Citizenship",
       "accent": "linear-gradient(135deg, #0d3b1f 0%, #1a6e3a 50%, #0a2914 100%)",
+      "image": "/globalFoodSecurity.jpg",
+      "imageCaption": "Illustration for Food Security",
       "img": "/book_cover6.png",
       "subtopics": [
         {
@@ -2029,6 +2033,8 @@
         },
         {
           "title": "Global Citizenship",
+          "image": "/globalCitizenship.jpg",
+          "imageCaption": "Illustration for Global Citizenship",
           "content": [
             {
               "type": "heading",
