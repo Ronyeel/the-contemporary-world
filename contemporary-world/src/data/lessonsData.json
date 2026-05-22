@@ -7,18 +7,11 @@
       "img": "/cover_nics.png",
       "subtopics": [
         {
-          "title": "Global Cities",
-          "image": "https://picsum.photos/id/429/800/400",
-          "imageCaption": "A view of a modern global city skyline.",
+          "title": "Lesson 21: Global Cities",
           "content": [
             {
               "type": "paragraph",
               "text": "Global cities are major centers of global economic activities and locations where multinational corporate headquarters are concentrated. Examples include New York, London, Tokyo, Paris, and Singapore."
-            },
-            {
-              "type": "image",
-              "url": "https://picsum.photos/id/354/600/300",
-              "caption": "Urban infrastructure is a key component."
             },
             {
               "type": "paragraph",
@@ -110,11 +103,7 @@
             },
             {
               "type": "paragraph",
-              "text": "The GPCI ranks cities according to their ability to attract people, capital, and enterprises."
-            },
-            {
-              "type": "paragraph",
-              "text": "It measures:"
+              "text": "The GPCI ranks cities according to their ability to attract people, capital, and enterprises. It measures:"
             },
             {
               "type": "bullet",
@@ -195,11 +184,16 @@
             {
               "type": "paragraph",
               "text": "Examples include Los Angeles, Mumbai, Manila, and Bangkok."
+            },
+            {
+              "type": "image",
+              "url": "/lesson1.1.jpg"
             }
           ]
         },
         {
-          "title": "Global Demography",
+          "title": "Lesson 22: Global Demography",
+          "image": "/lesson1.jpg",
           "content": [
             {
               "type": "paragraph",
@@ -266,6 +260,10 @@
               "text": "Positive Checks"
             },
             {
+              "type": "paragraph",
+              "text": "Natural events that reduce population:"
+            },
+            {
               "type": "bullet",
               "text": "Famine"
             },
@@ -280,6 +278,10 @@
             {
               "type": "heading",
               "text": "Preventive Checks"
+            },
+            {
+              "type": "paragraph",
+              "text": "Social actions that slow population growth:"
             },
             {
               "type": "bullet",
@@ -312,11 +314,6 @@
             {
               "type": "heading",
               "text": "Stage 1: Preindustrial"
-            },
-            {
-              "type": "image",
-              "url": "https://picsum.photos/id/15/600/300",
-              "caption": "A visual representation of Global Demography concepts."
             },
             {
               "type": "bullet",
@@ -656,11 +653,6 @@
               "text": "Food Prices"
             },
             {
-              "type": "image",
-              "url": "https://picsum.photos/id/25/600/300",
-              "caption": "A visual representation of Global Food Security concepts."
-            },
-            {
               "type": "paragraph",
               "text": "Food prices greatly affect people's ability to access nutritious and sufficient food. When food prices rise, low-income families often struggle to buy enough healthy food, increasing the risk of hunger and malnutrition."
             },
@@ -876,9 +868,7 @@
               "type": "paragraph",
               "text": "Collective action is essential in building stronger and more sustainable food systems. Through sustainable agriculture, effective government programs, reduced food waste, and global cooperation, countries can work together toward a healthier, hunger-free, and sustainable future for all."
             }
-          ],
-          "image": "https://picsum.photos/id/23/800/400",
-          "imageCaption": "Illustration for Global Food Security"
+          ]
         },
         {
           "title": "Global Citizenship",
@@ -1214,11 +1204,6 @@
             {
               "type": "paragraph",
               "text": "Global citizenship teaches that actions in one country may affect people in other parts of the world."
-            },
-            {
-              "type": "image",
-              "url": "https://picsum.photos/id/34/600/300",
-              "caption": "A visual representation of Global Citizenship concepts."
             },
             {
               "type": "heading",
@@ -1567,7 +1552,9 @@
       "img": "/book_cover1.png",
       "subtopics": [
         {
-          "title": "Global Media Culture",
+          "title": "Lesson 16: Global Media Culture",
+          "image": "/lesson3_illustration1.png",
+          "imageCaption": "Illustration for Global Media Culture",
           "content": [
             {
               "type": "paragraph",
@@ -1610,11 +1597,6 @@
               "text": "Filipinos are active consumers of media. Television remains widely watched, while internet and social media use increased because of digital access. Young people commonly use platforms such as YouTube, Instagram, Snapchat, Facebook, and Twitter for communication, information, entertainment, and self-expression."
             },
             {
-              "type": "image",
-              "url": "https://picsum.photos/id/43/600/300",
-              "caption": "A visual representation of Global Media Culture concepts."
-            },
-            {
               "type": "paragraph",
               "text": "Global media cultures continuously challenge identity, nationality, religion, norms, and ways of life. The media drives global integration by increasing economic and political integration among countries."
             },
@@ -1653,13 +1635,15 @@
             {
               "type": "bullet",
               "text": "Cultural integrity"
+            },
+            {
+              "type": "image",
+              "url": "/lesson3_media_inline.png"
             }
-          ],
-          "image": "https://picsum.photos/id/37/800/400",
-          "imageCaption": "Illustration for Global Media Culture"
+          ]
         },
         {
-          "title": "Globalization of Religion",
+          "title": "Lesson 17: Globalization of Religion",
           "content": [
             {
               "type": "paragraph",
@@ -1684,11 +1668,6 @@
             {
               "type": "bullet",
               "text": "Religious modernity"
-            },
-            {
-              "type": "image",
-              "url": "https://picsum.photos/id/53/600/300",
-              "caption": "A visual representation of Globalization of Religion concepts."
             },
             {
               "type": "paragraph",
@@ -1717,11 +1696,17 @@
             {
               "type": "numbered",
               "text": "Transnationalization – identifying with a global religious community beyond national borders."
+            },
+            {
+              "type": "image",
+              "url": "/lesson3_religion.png"
             }
           ]
         },
         {
-          "title": "Globalization of Technology",
+          "title": "Lesson 18: Globalization of Technology",
+          "image": "/lesson3_illustration2.png",
+          "imageCaption": "Illustration for Globalization of Technology",
           "content": [
             {
               "type": "paragraph",
@@ -1766,11 +1751,6 @@
             {
               "type": "bullet",
               "text": "Early adopters accept technologies with guidance."
-            },
-            {
-              "type": "image",
-              "url": "https://picsum.photos/id/63/600/300",
-              "caption": "A visual representation of Globalization of Technology concepts."
             },
             {
               "type": "bullet",
@@ -1819,10 +1799,12 @@
             {
               "type": "bullet",
               "text": "Nanotechnology for atomic and molecular manipulation"
+            },
+            {
+              "type": "image",
+              "url": "/lesson3_tech_inline.png"
             }
-          ],
-          "image": "https://picsum.photos/id/57/800/400",
-          "imageCaption": "Illustration for Globalization of Technology"
+          ]
         }
       ]
     },
@@ -1834,6 +1816,8 @@
       "subtopics": [
         {
           "title": "Globalization of Lifestyle",
+          "image": "/lesson4_lifestyle.png",
+          "imageCaption": "Illustration for Globalization of Lifestyle",
           "content": [
             {
               "type": "paragraph",
@@ -1856,19 +1840,19 @@
               "text": "Lifestyle can be analyzed through four levels:"
             },
             {
-              "type": "bullet",
+              "type": "numbered",
               "text": "Global Scale – examines prevailing lifestyles worldwide and how lifestyles flow across territories."
             },
             {
-              "type": "bullet",
+              "type": "numbered",
               "text": "National Scale – focuses on how countries regulate and influence lifestyles through policies and programs."
             },
             {
-              "type": "bullet",
+              "type": "numbered",
               "text": "Positional/Subcultural Scale – looks at how family, friends, neighbors, and communities shape lifestyle."
             },
             {
-              "type": "bullet",
+              "type": "numbered",
               "text": "Individual Scale – focuses on personality, preferences, aspirations, fears, and identity."
             },
             {
@@ -1906,11 +1890,6 @@
             {
               "type": "paragraph",
               "text": "Globalization strongly influences lifestyle through food, music, sports, fashion, and other cultural practices."
-            },
-            {
-              "type": "image",
-              "url": "https://picsum.photos/id/73/600/300",
-              "caption": "A visual representation of Globalization of Lifestyle concepts."
             },
             {
               "type": "heading",
@@ -1984,12 +1963,12 @@
               "type": "paragraph",
               "text": "The increase in Olympic viewership was connected to developments in media, satellite broadcasting, digital streaming, social media, and global connectivity."
             }
-          ],
-          "image": "https://picsum.photos/id/72/800/400",
-          "imageCaption": "Illustration for Globalization of Lifestyle"
+          ]
         },
         {
           "title": "Globalization of Education",
+          "image": "/lesson4_education.png",
+          "imageCaption": "Illustration for Globalization of Education",
           "content": [
             {
               "type": "paragraph",
@@ -2100,11 +2079,6 @@
               "text": "DAAD"
             },
             {
-              "type": "image",
-              "url": "https://picsum.photos/id/82/600/300",
-              "caption": "A visual representation of Globalization of Education concepts."
-            },
-            {
               "type": "bullet",
               "text": "Rhodes Scholarship"
             },
@@ -2137,15 +2111,15 @@
               "text": "Types of International Students"
             },
             {
-              "type": "bullet",
+              "type": "numbered",
               "text": "Internationally Mobile Students"
             },
             {
-              "type": "bullet",
+              "type": "numbered",
               "text": "Foreign Students"
             },
             {
-              "type": "bullet",
+              "type": "numbered",
               "text": "Credit-Mobile Students"
             },
             {
@@ -2227,7 +2201,9 @@
       "img": "book_cover7.png",
       "subtopics": [
         {
-          "title": "Global Migration",
+          "title": "Lesson 23: Global Migration",
+          "image": "/g4.jpg",
+          "imageCaption": "Migrants crossing borders in search of better opportunities.",
           "content": [
             {
               "type": "paragraph",
@@ -2240,6 +2216,10 @@
             {
               "type": "heading",
               "text": "Reasons for Migration"
+            },
+            {
+              "type": "paragraph",
+              "text": "People migrate due to:"
             },
             {
               "type": "bullet",
@@ -2282,11 +2262,6 @@
               "text": "Migration is a key feature of the 21st century and contributes to development. It affects multiple areas such as:"
             },
             {
-              "type": "image",
-              "url": "https://picsum.photos/id/87/600/300",
-              "caption": "A visual representation of Global Migration concepts."
-            },
-            {
               "type": "bullet",
               "text": "Health"
             },
@@ -2320,7 +2295,7 @@
             },
             {
               "type": "numbered",
-              "text": "Forced Migrants – leave due to war, persecution, or crises. Includes asylum seekers (waiting for protection status) and refugees (cannot return home due to fear of persecution)."
+              "text": "Forced Migrants – leave due to war, persecution, or crises. Includes: Asylum seekers – waiting for protection status; Refugees – cannot return home due to fear of persecution."
             },
             {
               "type": "heading",
@@ -2342,12 +2317,12 @@
               "type": "bullet",
               "text": "Human-made crises (conflicts, disasters)"
             }
-          ],
-          "image": "https://picsum.photos/id/83/800/400",
-          "imageCaption": "Illustration for Global Migration"
+          ]
         },
         {
-          "title": "Overseas Filipino Workers",
+          "title": "Overseas Filipino Employment (OFWs)",
+          "image": "/g4.1.jpg",
+          "imageCaption": "Overseas Filipino Workers contributing to global workforce.",
           "content": [
             {
               "type": "heading",
@@ -2376,11 +2351,6 @@
             {
               "type": "bullet",
               "text": "Unemployment and low wages"
-            },
-            {
-              "type": "image",
-              "url": "https://picsum.photos/id/93/600/300",
-              "caption": "A visual representation of Overseas Filipino Workers concepts."
             },
             {
               "type": "bullet",
@@ -2444,11 +2414,6 @@
               "text": "6 Key Concepts for Better Understanding Global Health (Koplan, et al.)"
             },
             {
-              "type": "image",
-              "url": "https://picsum.photos/id/98/600/300",
-              "caption": "A visual representation of Global Health concepts."
-            },
-            {
               "type": "bullet",
               "text": "Collaborative (or collective)"
             },
@@ -2472,9 +2437,7 @@
               "type": "bullet",
               "text": "Health for all"
             }
-          ],
-          "image": "https://picsum.photos/id/94/800/400",
-          "imageCaption": "Illustration for Global Health"
+          ]
         },
         {
           "title": "Toward A Sustainable World",
@@ -2606,11 +2569,6 @@
             {
               "type": "bullet",
               "text": "Goal 3 – Good Health and Well-being"
-            },
-            {
-              "type": "image",
-              "url": "https://picsum.photos/id/102/600/300",
-              "caption": "A visual representation of Toward A Sustainable World concepts."
             },
             {
               "type": "bullet",

@@ -53,22 +53,46 @@ const LessonDetailPage = ({ lessonId, onBack }) => {
               )}
 
               {Array.isArray(subtopic.content)
-                ? subtopic.content.map((item, i) =>
-                  item.type === "heading" ? (
-                    <p key={i} className="content-heading">{item.text}</p>
-                  ) : item.type === "bullet" ? (
-                    <p key={i} className="content-bullet">{item.text}</p>
-                  ) : item.type === "numbered" ? (
-                    <p key={i} className="content-numbered">{item.text}</p>
-                  ) : item.type === "image" ? (
-                    <div key={i} className="content-image-container">
-                      <img src={item.url} alt={item.caption || "Content image"} className="content-image" />
-                      {item.caption && <p className="content-image-caption">{item.caption}</p>}
-                    </div>
-                  ) : (
-                    <p key={i} className="subtopic-content">{item.text}</p>
-                  )
-                )
+                ? (() => {
+                    const elements = [];
+                    let i = 0;
+                    while (i < subtopic.content.length) {
+                      const item = subtopic.content[i];
+                      if (item.type === "numbered") {
+                        // Group consecutive numbered items
+                        const numberedItems = [];
+                        while (i < subtopic.content.length && subtopic.content[i].type === "numbered") {
+                          numberedItems.push(subtopic.content[i]);
+                          i++;
+                        }
+                        elements.push(
+                          <div key={`num-group-${i}`} className="numbered-group">
+                            {numberedItems.map((ni, j) => (
+                              <p key={j} className="content-numbered">{ni.text}</p>
+                            ))}
+                          </div>
+                        );
+                      } else if (item.type === "heading") {
+                        elements.push(<p key={i} className="content-heading">{item.text}</p>);
+                        i++;
+                      } else if (item.type === "bullet") {
+                        elements.push(<p key={i} className="content-bullet">{item.text}</p>);
+                        i++;
+                      } else if (item.type === "image") {
+                        elements.push(
+                          <div key={i} className="content-image-container">
+                            <img src={item.url} alt={item.caption || "Content image"} className="content-image" />
+                            {item.caption && <p className="content-image-caption">{item.caption}</p>}
+                          </div>
+                        );
+                        i++;
+                      } else {
+                        elements.push(<p key={i} className="subtopic-content">{item.text}</p>);
+                        i++;
+                      }
+                    }
+                    return elements;
+                  })()
                 : <p className="subtopic-content">{subtopic.content}</p>
               }
             </section>
