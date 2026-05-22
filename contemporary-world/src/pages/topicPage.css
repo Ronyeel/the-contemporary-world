@@ -29,11 +29,18 @@
     letter-spacing: 0.04em;
 }
 
+/* ── Section ────────────────────────────────────────────────── */
+.topics-section {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 125px 32px 100px;
+}
+
 /* ── Search ─────────────────────────────────────────────────── */
 .topics-search-wrapper {
     display: flex;
     justify-content: center;
-    padding: 28px 24px 4px;
+    margin-bottom: 32px;
 }
 
 .topics-search-bar {
@@ -42,10 +49,9 @@
     gap: 10px;
     background: #fff;
     border: 1.5px solid #dde1ec;
-    border-radius: 50px;
-    padding: 10px 20px;
+    border-radius: 8px;
+    padding: 10px 16px;
     width: 100%;
-    max-width: 720px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -88,13 +94,7 @@
     color: #555;
 }
 
-/* ── Section ────────────────────────────────────────────────── */
-.topics-section {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 40px 32px 100px;
-}
-
+/* ── Title ──────────────────────────────────────────────────── */
 .topics-section-title {
     font-size: 1.4rem;
     font-weight: 800;
@@ -122,4 +122,3 @@
         grid-template-columns: 1fr;
     }
 }
-
