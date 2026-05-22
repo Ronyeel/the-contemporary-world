@@ -5,657 +5,6 @@
       "title": "Global Cities & Global Demography",
       "accent": "linear-gradient(135deg, #0f2c5e 0%, #1a4a8a 50%, #0a1e42 100%)",
       "img": "/cover_nics.png",
-      "images": [],
-      "subtopics": [
-        {
-          "title": "Lesson 16: Global Media Culture",
-          "image": "/lesson3_illustration1.png",
-          "imageCaption": "Illustration for Global Media Culture",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Culture is the way of life of people, including material culture (clothes, buildings, objects) and non-material culture (beliefs, traditions, practices). It is expressed through symbols, language, values, beliefs, and norms."
-            },
-            {
-              "type": "paragraph",
-              "text": "Media culture refers to culture that emerges because of mass media and the interaction between media and culture. Global media culture explores the relationship between media, culture, and globalization. The media allows people to imagine themselves as part of one world and supports globalization in economic, political, and cultural aspects."
-            },
-            {
-              "type": "paragraph",
-              "text": "According to Lule (2014), media developed through five stages:"
-            },
-            {
-              "type": "numbered",
-              "text": "Oral Communication – language allowed humans to communicate and share information."
-            },
-            {
-              "type": "numbered",
-              "text": "Script – enabled communication across larger spaces and longer periods."
-            },
-            {
-              "type": "numbered",
-              "text": "Printing Press – allowed reproduction and circulation of printed materials."
-            },
-            {
-              "type": "numbered",
-              "text": "Electronic Media – includes telegraphs, telephones, radio, film, and television."
-            },
-            {
-              "type": "numbered",
-              "text": "Digital Media – digitized content transmitted through the internet and computer networks."
-            },
-            {
-              "type": "paragraph",
-              "text": "Nick Stevenson explained that modern culture is largely transmitted through mass media, making media and culture closely connected."
-            },
-            {
-              "type": "paragraph",
-              "text": "Filipinos are active consumers of media. Television remains widely watched, while internet and social media use increased because of digital access. Young people commonly use platforms such as YouTube, Instagram, Snapchat, Facebook, and Twitter for communication, information, entertainment, and self-expression."
-            },
-            {
-              "type": "paragraph",
-              "text": "Global media cultures continuously challenge identity, nationality, religion, norms, and ways of life. The media drives global integration by increasing economic and political integration among countries."
-            },
-            {
-              "type": "paragraph",
-              "text": "There are three perspectives on global cultural flow:"
-            },
-            {
-              "type": "bullet",
-              "text": "Cultural Differentialism – cultures remain different despite globalization."
-            },
-            {
-              "type": "bullet",
-              "text": "Cultural Hybridization – local and global cultures blend together."
-            },
-            {
-              "type": "bullet",
-              "text": "Cultural Convergence – globalization creates cultural homogeneity and may lead to cultural imperialism."
-            },
-            {
-              "type": "paragraph",
-              "text": "Issues in media culture include:"
-            },
-            {
-              "type": "bullet",
-              "text": "Access"
-            },
-            {
-              "type": "bullet",
-              "text": "Production and consumption"
-            },
-            {
-              "type": "bullet",
-              "text": "Inclusion and participation"
-            },
-            {
-              "type": "bullet",
-              "text": "Cultural integrity"
-            },
-            {
-              "type": "image",
-              "url": "/lesson3_media_inline.png"
-            }
-          ]
-        },
-        {
-          "title": "Lesson 17: Globalization of Religion",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Religion is a unified system of beliefs and practices related to faith, sacred values, and morality. Secularization refers to the diminishing role of religion in society, while glocalization of religion refers to the blending of universal and local religious beliefs."
-            },
-            {
-              "type": "paragraph",
-              "text": "According to a 2010 Pew Research Center study, about 84% of the world population belongs to a religious group. Christianity and Islam are the two largest religious groups globally."
-            },
-            {
-              "type": "paragraph",
-              "text": "Religion has different meanings depending on academic definitions and personal experiences. In the age of globalization, religious beliefs and practices spread across societies through increased communication and interaction."
-            },
-            {
-              "type": "paragraph",
-              "text": "Secularization involves the separation of church and state and the movement toward a more secular society. Two perspectives discussed are:"
-            },
-            {
-              "type": "bullet",
-              "text": "Post-secularity"
-            },
-            {
-              "type": "bullet",
-              "text": "Religious modernity"
-            },
-            {
-              "type": "paragraph",
-              "text": "Globalization also encourages religious pluralism and tolerance because people bring their religious beliefs when they move to different places. Religious tolerance allows people to practice their beliefs peacefully."
-            },
-            {
-              "type": "paragraph",
-              "text": "Religious fundamentalism is the belief in absolute religious truths that must strictly be followed. It may lead to conflict and hostility toward different beliefs."
-            },
-            {
-              "type": "paragraph",
-              "text": "Glocalization of religion refers to the interaction between universal religion and local culture. The four forms are:"
-            },
-            {
-              "type": "numbered",
-              "text": "Vernacularization – using local language to spread religion."
-            },
-            {
-              "type": "numbered",
-              "text": "Indigenization – blending religion with local customs."
-            },
-            {
-              "type": "numbered",
-              "text": "Nationalization – connecting religion with national identity."
-            },
-            {
-              "type": "numbered",
-              "text": "Transnationalization – identifying with a global religious community beyond national borders."
-            },
-            {
-              "type": "image",
-              "url": "/lesson3_religion.png"
-            }
-          ]
-        },
-        {
-          "title": "Lesson 18: Globalization of Technology",
-          "image": "/tech.jpg",
-          "imageCaption": "Illustration for Globalization of Technology",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Technology is a technique, process, or material good created through science to solve human problems. Technology diffusion refers to the flow of technology across borders."
-            },
-            {
-              "type": "paragraph",
-              "text": "Technology involves physical systems, information, and knowledge. The Fourth Industrial Revolution describes an era where people move between online and offline lives, with developments such as:"
-            },
-            {
-              "type": "bullet",
-              "text": "Artificial intelligence (AI)"
-            },
-            {
-              "type": "bullet",
-              "text": "Robotics"
-            },
-            {
-              "type": "bullet",
-              "text": "Internet connectivity"
-            },
-            {
-              "type": "bullet",
-              "text": "Creator-entrepreneurs"
-            },
-            {
-              "type": "paragraph",
-              "text": "These advancements make life easier but also create challenges such as job market changes, cybersecurity risks, and increased dependence on machines."
-            },
-            {
-              "type": "paragraph",
-              "text": "Technology diffusion occurs together with economic, political, and cultural globalization. Technologies become global commodities, such as cars and weapons, showing the connection between technology and international trade and politics."
-            },
-            {
-              "type": "paragraph",
-              "text": "According to Rogers' Diffusion of Innovation theory:"
-            },
-            {
-              "type": "bullet",
-              "text": "Innovators quickly try new technologies."
-            },
-            {
-              "type": "bullet",
-              "text": "Early adopters accept technologies with guidance."
-            },
-            {
-              "type": "bullet",
-              "text": "Laggards prefer traditional methods."
-            },
-            {
-              "type": "paragraph",
-              "text": "Technological trends in globalization include:"
-            },
-            {
-              "type": "bullet",
-              "text": "Internet of Things (IoT)"
-            },
-            {
-              "type": "bullet",
-              "text": "Telemedicine"
-            },
-            {
-              "type": "bullet",
-              "text": "Online meetings and classes"
-            },
-            {
-              "type": "bullet",
-              "text": "Improved transportation systems"
-            },
-            {
-              "type": "bullet",
-              "text": "Aviation advancements using AI, drones, digital twins, and mobile computing"
-            },
-            {
-              "type": "paragraph",
-              "text": "Green architecture and renewable energy aim to address environmental problems. Carbon credits are used in carbon trade to manage emissions."
-            },
-            {
-              "type": "paragraph",
-              "text": "The Philippines joined global space technology development through the launch of Diwata-1 and Diwata-2 satellites for climate and disaster management."
-            },
-            {
-              "type": "paragraph",
-              "text": "Modern technology also includes:"
-            },
-            {
-              "type": "bullet",
-              "text": "Artificial intelligence and humanoid robots"
-            },
-            {
-              "type": "bullet",
-              "text": "Nanotechnology for atomic and molecular manipulation"
-            },
-            {
-              "type": "image",
-              "url": "/lesson3_tech_inline.png"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "title": "Globalization of LifeStyle and Education",
-      "accent": "linear-gradient(135deg, #5e1a0d 0%, #8a3a1a 50%, #421008 100%)",
-      "img": "book_cover5.png",
-      "subtopics": [
-        {
-          "title": "Globalization of Lifestyle",
-          "image": "/lesson4_lifestyle.png",
-          "imageCaption": "Illustration for Globalization of Lifestyle",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Lifestyle refers to the way people live their everyday lives and the factors influencing it. According to Mikael Jensen (2007), lifestyle is multidimensional, pluralistic, and crosscutting. It includes:"
-            },
-            {
-              "type": "bullet",
-              "text": "How people carry out daily activities"
-            },
-            {
-              "type": "bullet",
-              "text": "Factors affecting health and well-being"
-            },
-            {
-              "type": "bullet",
-              "text": "Patterns of consumption"
-            },
-            {
-              "type": "paragraph",
-              "text": "Lifestyle can be analyzed through four levels:"
-            },
-            {
-              "type": "numbered",
-              "text": "Global Scale – examines prevailing lifestyles worldwide and how lifestyles flow across territories."
-            },
-            {
-              "type": "numbered",
-              "text": "National Scale – focuses on how countries regulate and influence lifestyles through policies and programs."
-            },
-            {
-              "type": "numbered",
-              "text": "Positional/Subcultural Scale – looks at how family, friends, neighbors, and communities shape lifestyle."
-            },
-            {
-              "type": "numbered",
-              "text": "Individual Scale – focuses on personality, preferences, aspirations, fears, and identity."
-            },
-            {
-              "type": "paragraph",
-              "text": "Veal's (1993) seven dimensions of lifestyle analysis include:"
-            },
-            {
-              "type": "bullet",
-              "text": "Activities or behaviors"
-            },
-            {
-              "type": "bullet",
-              "text": "Attitudes and values"
-            },
-            {
-              "type": "bullet",
-              "text": "Individual processes"
-            },
-            {
-              "type": "bullet",
-              "text": "Group processes"
-            },
-            {
-              "type": "bullet",
-              "text": "Coherence"
-            },
-            {
-              "type": "bullet",
-              "text": "Recognizability"
-            },
-            {
-              "type": "bullet",
-              "text": "Choice"
-            },
-            {
-              "type": "paragraph",
-              "text": "Globalization strongly influences lifestyle through food, music, sports, fashion, and other cultural practices."
-            },
-            {
-              "type": "heading",
-              "text": "Food"
-            },
-            {
-              "type": "paragraph",
-              "text": "The Philippines' biodiversity allows diverse food choices. Food reflects culture, economic activities, household practices, and resources. Globalization has changed food systems and diets through:"
-            },
-            {
-              "type": "bullet",
-              "text": "Food access"
-            },
-            {
-              "type": "bullet",
-              "text": "Food availability"
-            },
-            {
-              "type": "bullet",
-              "text": "Food quality"
-            },
-            {
-              "type": "paragraph",
-              "text": "According to Elizabeth Black (2016), urbanization and foreign investments are major causes of these changes. Fast food consumption increases in urban areas, while imported and exported processed foods affect traditional diets."
-            },
-            {
-              "type": "heading",
-              "text": "Music"
-            },
-            {
-              "type": "paragraph",
-              "text": "Music helps people express emotions, ideas, and realities. Globalization increases interaction among musical traditions, creating exchanges and blending cultures. Genres like reggae and jazz emerged from African and European influences."
-            },
-            {
-              "type": "paragraph",
-              "text": "In the Philippines, Western music influence began during Spanish colonization through sacred music. Despite indigenous genres like kundiman, Western traditions remain influential. Digital platforms such as Spotify, SoundCloud, and YouTube made music sharing faster and more accessible."
-            },
-            {
-              "type": "heading",
-              "text": "Sports"
-            },
-            {
-              "type": "paragraph",
-              "text": "Sports play an important role in globalization and identity formation among nations. International competitions like the Olympics show how sports operate globally."
-            },
-            {
-              "type": "paragraph",
-              "text": "The presentation discussed several Olympic Games:"
-            },
-            {
-              "type": "bullet",
-              "text": "Atlanta 1996"
-            },
-            {
-              "type": "bullet",
-              "text": "Sydney 2000"
-            },
-            {
-              "type": "bullet",
-              "text": "Athens 2004"
-            },
-            {
-              "type": "bullet",
-              "text": "Beijing 2008"
-            },
-            {
-              "type": "bullet",
-              "text": "London 2012"
-            },
-            {
-              "type": "paragraph",
-              "text": "The increase in Olympic viewership was connected to developments in media, satellite broadcasting, digital streaming, social media, and global connectivity."
-            }
-          ]
-        },
-        {
-          "title": "Globalization of Education",
-          "image": "/lesson4_education.png",
-          "imageCaption": "Illustration for Globalization of Education",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Education is the process of teaching and learning and involves the transfer of knowledge, skills, beliefs, and values."
-            },
-            {
-              "type": "bullet",
-              "text": "Equivalency – comparing educational achievement with academic requirements."
-            },
-            {
-              "type": "bullet",
-              "text": "Qualifications framework – standards used to evaluate educational qualifications between countries."
-            },
-            {
-              "type": "paragraph",
-              "text": "Globalization in education refers to the growing interconnectedness of educational systems worldwide through exchanges of ideas, students, technology, and curricula."
-            },
-            {
-              "type": "paragraph",
-              "text": "Positive effects include:"
-            },
-            {
-              "type": "bullet",
-              "text": "Access to resources and information"
-            },
-            {
-              "type": "bullet",
-              "text": "International research partnerships"
-            },
-            {
-              "type": "bullet",
-              "text": "Cultural exchange"
-            },
-            {
-              "type": "bullet",
-              "text": "Economic opportunities and workforce mobility"
-            },
-            {
-              "type": "bullet",
-              "text": "Improved educational quality"
-            },
-            {
-              "type": "bullet",
-              "text": "Development of global citizenship skills"
-            },
-            {
-              "type": "heading",
-              "text": "Transnational Education"
-            },
-            {
-              "type": "paragraph",
-              "text": "Transnational education allows institutions from one country to provide education to students in another country without requiring relocation."
-            },
-            {
-              "type": "paragraph",
-              "text": "Types include:"
-            },
-            {
-              "type": "bullet",
-              "text": "Branch campuses"
-            },
-            {
-              "type": "bullet",
-              "text": "Joint or dual degrees"
-            },
-            {
-              "type": "bullet",
-              "text": "Franchising"
-            },
-            {
-              "type": "bullet",
-              "text": "Online or distance learning"
-            },
-            {
-              "type": "bullet",
-              "text": "Articulation programs"
-            },
-            {
-              "type": "heading",
-              "text": "Scholarship Programs"
-            },
-            {
-              "type": "paragraph",
-              "text": "Scholarships for international students include:"
-            },
-            {
-              "type": "bullet",
-              "text": "Fulbright Program"
-            },
-            {
-              "type": "bullet",
-              "text": "Chevening Scholarships"
-            },
-            {
-              "type": "bullet",
-              "text": "Erasmus+"
-            },
-            {
-              "type": "bullet",
-              "text": "Australia Awards"
-            },
-            {
-              "type": "bullet",
-              "text": "Eiffel Excellence"
-            },
-            {
-              "type": "bullet",
-              "text": "DAAD"
-            },
-            {
-              "type": "bullet",
-              "text": "Rhodes Scholarship"
-            },
-            {
-              "type": "bullet",
-              "text": "Gates Cambridge"
-            },
-            {
-              "type": "bullet",
-              "text": "Schwarzman Scholars"
-            },
-            {
-              "type": "bullet",
-              "text": "Knight-Hennessy"
-            },
-            {
-              "type": "paragraph",
-              "text": "Scholarships may be:"
-            },
-            {
-              "type": "bullet",
-              "text": "Merit-based"
-            },
-            {
-              "type": "bullet",
-              "text": "Needs-based"
-            },
-            {
-              "type": "heading",
-              "text": "Types of International Students"
-            },
-            {
-              "type": "numbered",
-              "text": "Internationally Mobile Students"
-            },
-            {
-              "type": "numbered",
-              "text": "Foreign Students"
-            },
-            {
-              "type": "numbered",
-              "text": "Credit-Mobile Students"
-            },
-            {
-              "type": "paragraph",
-              "text": "Global student mobility continues to grow, with countries such as the USA, UK, Australia, Canada, and Germany serving as major destinations."
-            },
-            {
-              "type": "heading",
-              "text": "Open and Distance Education"
-            },
-            {
-              "type": "paragraph",
-              "text": "Technology allows learning to happen virtually through:"
-            },
-            {
-              "type": "bullet",
-              "text": "Online university programs"
-            },
-            {
-              "type": "bullet",
-              "text": "MOOCs"
-            },
-            {
-              "type": "bullet",
-              "text": "Virtual classrooms"
-            },
-            {
-              "type": "bullet",
-              "text": "Learning management systems like Google Classroom and Moodle"
-            },
-            {
-              "type": "paragraph",
-              "text": "Distance education became especially important during emergencies and crises because it allows classes to continue online."
-            },
-            {
-              "type": "heading",
-              "text": "Equivalency and Qualifications Frameworks"
-            },
-            {
-              "type": "paragraph",
-              "text": "ASEAN integration created the need for comparable educational standards across Southeast Asia."
-            },
-            {
-              "type": "paragraph",
-              "text": "The ASEAN Qualifications Reference Framework (AQRF) aims to:"
-            },
-            {
-              "type": "bullet",
-              "text": "Support recognition of qualifications"
-            },
-            {
-              "type": "bullet",
-              "text": "Encourage lifelong learning"
-            },
-            {
-              "type": "bullet",
-              "text": "Validate non-formal education"
-            },
-            {
-              "type": "bullet",
-              "text": "Promote worker and learner mobility"
-            },
-            {
-              "type": "bullet",
-              "text": "Improve qualifications systems"
-            },
-            {
-              "type": "bullet",
-              "text": "Enhance transparency and trust among ASEAN member states"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Global Cities & Global Demography",
-      "accent": "linear-gradient(135deg, #0f2c5e 0%, #1a4a8a 50%, #0a1e42 100%)",
-      "img": "/cover_nics.png",
-      "images": [],
       "subtopics": [
         {
           "title": "Lesson 21: Global Cities",
@@ -1083,519 +432,9 @@
       ]
     },
     {
-      "id": 4,
-      "title": "Global Migration and Overseas Filipino Workers",
-      "accent": "linear-gradient(135deg, #3a2a0d 0%, #6b4f1a 50%, #2a1e08 100%)",
-      "img": "book_cover7.png",
-      "subtopics": [
-        {
-          "title": "Lesson 23: Global Migration",
-          "image": "/g4.jpg",
-          "imageCaption": "Migrants crossing borders in search of better opportunities.",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Global migration refers to the movement of people from one place to another, either temporarily or permanently. A migrant is any person who moves across borders or within a country away from their usual residence."
-            },
-            {
-              "type": "paragraph",
-              "text": "It is a complex global phenomenon connected to economic, social, political, and environmental factors. Migration influences geopolitics, trade, cultural exchange, and provides opportunities for countries and communities."
-            },
-            {
-              "type": "heading",
-              "text": "Reasons for Migration"
-            },
-            {
-              "type": "paragraph",
-              "text": "People migrate due to:"
-            },
-            {
-              "type": "bullet",
-              "text": "Economic opportunities (jobs, better income)"
-            },
-            {
-              "type": "bullet",
-              "text": "Social factors (family reunification, education)"
-            },
-            {
-              "type": "bullet",
-              "text": "Political factors (conflict, persecution, human rights violations)"
-            },
-            {
-              "type": "bullet",
-              "text": "Environmental factors (natural disasters, climate change)"
-            },
-            {
-              "type": "heading",
-              "text": "Global Migration Trends"
-            },
-            {
-              "type": "bullet",
-              "text": "Migrants increased from 173 million (2000) to 258 million (2017)"
-            },
-            {
-              "type": "bullet",
-              "text": "3.4% of the world population were migrants in 2017"
-            },
-            {
-              "type": "bullet",
-              "text": "Around 68 million people are forcibly displaced, including refugees, asylum seekers, and internally displaced persons"
-            },
-            {
-              "type": "heading",
-              "text": "Migration and Sustainable Development Goals (SDGs)"
-            },
-            {
-              "type": "paragraph",
-              "text": "Migration is a key feature of the 21st century and contributes to development. It affects multiple areas such as:"
-            },
-            {
-              "type": "bullet",
-              "text": "Health"
-            },
-            {
-              "type": "bullet",
-              "text": "Education"
-            },
-            {
-              "type": "bullet",
-              "text": "Gender equality"
-            },
-            {
-              "type": "bullet",
-              "text": "Work and economy"
-            },
-            {
-              "type": "bullet",
-              "text": "Cities and environment"
-            },
-            {
-              "type": "paragraph",
-              "text": "Migration helps improve opportunities, but migrants also face challenges like limited healthcare access, trafficking risks, and discrimination."
-            },
-            {
-              "type": "heading",
-              "text": "Categories of Migrants"
-            },
-            {
-              "type": "numbered",
-              "text": "Labor/Economic Migrants – move voluntarily for jobs, financial stability, or family reunification."
-            },
-            {
-              "type": "numbered",
-              "text": "Forced Migrants – leave due to war, persecution, or crises. Includes: Asylum seekers – waiting for protection status; Refugees – cannot return home due to fear of persecution."
-            },
-            {
-              "type": "heading",
-              "text": "Drivers of Migration"
-            },
-            {
-              "type": "paragraph",
-              "text": "Migration is driven by:"
-            },
-            {
-              "type": "bullet",
-              "text": "Economic and demographic factors (poverty, job opportunities)"
-            },
-            {
-              "type": "bullet",
-              "text": "Environmental factors (climate vulnerability)"
-            },
-            {
-              "type": "bullet",
-              "text": "Human-made crises (conflicts, disasters)"
-            }
-          ]
-        },
-        {
-          "title": "Overseas Filipino Employment (OFWs)",
-          "image": "/g4.1.jpg",
-          "imageCaption": "Overseas Filipino Workers contributing to global workforce.",
-          "content": [
-            {
-              "type": "heading",
-              "text": "History"
-            },
-            {
-              "type": "bullet",
-              "text": "Began during the Spanish period (galleon trade)"
-            },
-            {
-              "type": "bullet",
-              "text": "Expanded in the 1970s due to Middle East construction demand"
-            },
-            {
-              "type": "bullet",
-              "text": "By 2005, over a million Filipinos were deployed yearly"
-            },
-            {
-              "type": "heading",
-              "text": "Reasons Filipinos Work Abroad"
-            },
-            {
-              "type": "bullet",
-              "text": "Poverty"
-            },
-            {
-              "type": "bullet",
-              "text": "Unemployment and low wages"
-            },
-            {
-              "type": "bullet",
-              "text": "Career growth and skill enhancement"
-            },
-            {
-              "type": "bullet",
-              "text": "Personal ambition and curiosity"
-            },
-            {
-              "type": "heading",
-              "text": "Risks of Overseas Employment"
-            },
-            {
-              "type": "bullet",
-              "text": "Abuse, violence, trafficking, and discrimination"
-            },
-            {
-              "type": "bullet",
-              "text": "Weakening of family ties and relationships"
-            },
-            {
-              "type": "heading",
-              "text": "Laws for OFWs"
-            },
-            {
-              "type": "paragraph",
-              "text": "Various laws and regulations exist to protect overseas Filipino workers, including the Migrant Workers and Overseas Filipinos Act of 1995 and other policies governing recruitment, welfare, and employment."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "title": "Global Health and Toward A Sustainable World",
-      "accent": "linear-gradient(135deg, #0d3a5e 0%, #1a6b8a 50%, #08283f 100%)",
-      "img": "victa.png",
-      "subtopics": [
-        {
-          "title": "Global Health",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Health is defined as a state of complete physical, mental, and social well-being, and not merely the absence of disease or infirmity."
-            },
-            {
-              "type": "paragraph",
-              "text": "Global Health is an area for study, research, and practice that places a priority on improving health and achieving health equity for all people worldwide."
-            },
-            {
-              "type": "paragraph",
-              "text": "Social Determinants of Health are the conditions in which people are born, grow, live, work, and age. Such circumstances are influenced by the distribution of money, power, and resources at global, national, and local levels. These are most often responsible for health inequities in countries."
-            },
-            {
-              "type": "paragraph",
-              "text": "Sustainable Development Goals (SDGs) are 17 interconnected global goals that aim to end poverty, protect the planet, reduce inequality, and promote peace and prosperity for all through collective and sustainable action."
-            },
-            {
-              "type": "heading",
-              "text": "6 Key Concepts for Better Understanding Global Health (Koplan, et al.)"
-            },
-            {
-              "type": "bullet",
-              "text": "Collaborative (or collective)"
-            },
-            {
-              "type": "bullet",
-              "text": "Transnational"
-            },
-            {
-              "type": "bullet",
-              "text": "Research"
-            },
-            {
-              "type": "bullet",
-              "text": "Action"
-            },
-            {
-              "type": "bullet",
-              "text": "Promoting (or improving)"
-            },
-            {
-              "type": "bullet",
-              "text": "Health for all"
-            }
-          ]
-        },
-        {
-          "title": "Toward A Sustainable World",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Sustainable development is that which meets the needs of the present without compromising the ability of future generations to meet their own needs. — Dr. Gro Harlem Brundtland, Prime Minister of Norway (WCED, 1987)"
-            },
-            {
-              "type": "paragraph",
-              "text": "The term sustainable development was first coined in 1987 during the World Commission on Environment and Development (WCED). It arose from the recognition that economic and social needs must be balanced with the capacity of the environment to provide."
-            },
-            {
-              "type": "paragraph",
-              "text": "Global actors and governments must enact policies that account for the entwined aspects of social, cultural, economic development, and environmental protection."
-            },
-            {
-              "type": "heading",
-              "text": "Definitions by Different Organizations"
-            },
-            {
-              "type": "heading",
-              "text": "World Bank (1992)"
-            },
-            {
-              "type": "paragraph",
-              "text": "Sustainable development means considering the costs and benefits of developmental and environmental policies, and focusing on meticulous economic analysis to reinforce environmental protection."
-            },
-            {
-              "type": "heading",
-              "text": "IUCN, WWF, UNEP (1987)"
-            },
-            {
-              "type": "paragraph",
-              "text": "Sustainable development is about the conservation of ecological processes, the safeguarding of genetic diversity, and the balanced utilization of species and ecosystems."
-            },
-            {
-              "type": "heading",
-              "text": "Edward Barbier (1987)"
-            },
-            {
-              "type": "paragraph",
-              "text": "Sustainable economic development is about improving the poor people's standard of living — enhanced food sources, real income, education, health services, water supply, and sanitation; only indirectly concerned with cumulative economic growth."
-            },
-            {
-              "type": "heading",
-              "text": "United Nations Department of Economic & Social Affairs (2013)"
-            },
-            {
-              "type": "paragraph",
-              "text": "Global sustainable development requires significant price corrections, conserving natural abilities, reducing inequalities, adding environmental accounting, rerouting finance to the real economy, and sharing income and employment to increase well-being, especially of the poorest."
-            },
-            {
-              "type": "heading",
-              "text": "The UK Government's 5-Principle Approach"
-            },
-            {
-              "type": "numbered",
-              "text": "Living Within Environmental Limits"
-            },
-            {
-              "type": "numbered",
-              "text": "Ensuring a Strong, Healthy and Just Society"
-            },
-            {
-              "type": "numbered",
-              "text": "Achieving a Sustainable Economy"
-            },
-            {
-              "type": "numbered",
-              "text": "Promoting Good Governance"
-            },
-            {
-              "type": "numbered",
-              "text": "Using Sound Science Responsibly"
-            },
-            {
-              "type": "heading",
-              "text": "Millennium Development Goals (MDGs) & Sustainable Development Goals (SDGs)"
-            },
-            {
-              "type": "heading",
-              "text": "The 8 MDGs (Targeted for 2015)"
-            },
-            {
-              "type": "bullet",
-              "text": "To eradicate extreme poverty and hunger"
-            },
-            {
-              "type": "bullet",
-              "text": "To achieve universal primary education"
-            },
-            {
-              "type": "bullet",
-              "text": "To promote gender equality and empower women"
-            },
-            {
-              "type": "bullet",
-              "text": "To reduce child mortality"
-            },
-            {
-              "type": "bullet",
-              "text": "To improve maternal health"
-            },
-            {
-              "type": "bullet",
-              "text": "To combat HIV/AIDS, malaria, and other diseases"
-            },
-            {
-              "type": "bullet",
-              "text": "To ensure environmental sustainability"
-            },
-            {
-              "type": "bullet",
-              "text": "To develop a global partnership for development"
-            },
-            {
-              "type": "heading",
-              "text": "The 17 SDGs (Targeted for 2030)"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 1 – No Poverty"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 2 – Zero Hunger"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 3 – Good Health and Well-being"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 4 – Quality Education"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 5 – Gender Equality"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 6 – Clean Water and Sanitation"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 7 – Affordable and Clean Energy"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 8 – Decent Work and Economic Growth"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 9 – Industry, Innovation, and Infrastructure"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 10 – Reduced Inequality"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 11 – Sustainable Cities and Communities"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 12 – Responsible Consumption and Production"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 13 – Climate Action"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 14 – Life Below Water"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 15 – Life on Land"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 16 – Peace, Justice and Strong Institutions"
-            },
-            {
-              "type": "bullet",
-              "text": "Goal 17 – Partnerships to Achieve the Goals"
-            },
-            {
-              "type": "heading",
-              "text": "Challenges to Sustainable Development"
-            },
-            {
-              "type": "bullet",
-              "text": "Poverty – the lack and deprivation of basic needs measured through income, education, nutrition, housing, and clean water."
-            },
-            {
-              "type": "bullet",
-              "text": "Income Inequality – the widening gap between rich and poor despite economic growth."
-            },
-            {
-              "type": "bullet",
-              "text": "Unsustainable Patterns of Production and Consumption – over-extraction, overproduction, and disposal beyond the Earth's limits."
-            },
-            {
-              "type": "bullet",
-              "text": "Environmental Destruction – caused by over-harvesting, pollution, and resource exploitation."
-            },
-            {
-              "type": "paragraph",
-              "text": "Key environmental indicators for the Philippines include:"
-            },
-            {
-              "type": "bullet",
-              "text": "Declining forest cover"
-            },
-            {
-              "type": "bullet",
-              "text": "Over-extraction of mineral wealth"
-            },
-            {
-              "type": "bullet",
-              "text": "Agricultural land decline"
-            },
-            {
-              "type": "bullet",
-              "text": "Freshwater contamination"
-            },
-            {
-              "type": "bullet",
-              "text": "Marine ecosystem depletion"
-            },
-            {
-              "type": "bullet",
-              "text": "Urban ecosystem destruction"
-            },
-            {
-              "type": "heading",
-              "text": "Economic Globalization and Sustainable Development"
-            },
-            {
-              "type": "paragraph",
-              "text": "Economic globalization under neoliberalism may threaten sustainable development through:"
-            },
-            {
-              "type": "bullet",
-              "text": "Unconstrained extraction of resources"
-            },
-            {
-              "type": "bullet",
-              "text": "Creation of global markets for endless growth"
-            },
-            {
-              "type": "bullet",
-              "text": "Exploitation of cheap labor and raw materials"
-            },
-            {
-              "type": "paragraph",
-              "text": "Structural adjustment policies and privatization may weaken protection of social services and natural resources. Global civil society and mass movements continue to promote sustainable development through protests, legal actions, negotiations, and alliance-building."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 6,
+      "id": 2,
       "title": "Global Food Security and Global Citizenship",
       "accent": "linear-gradient(135deg, #0d3b1f 0%, #1a6e3a 50%, #0a2914 100%)",
-      "image": "/globalFoodSecurity.jpg",
-      "imageCaption": "Illustration for Food Security",
       "img": "/book_cover6.png",
       "subtopics": [
         {
@@ -1668,6 +507,11 @@
             {
               "type": "paragraph",
               "text": "The Global Hunger Index (GHI) is an international tool used to measure and track hunger levels globally. It combines several indicators to provide a comprehensive assessment of hunger and malnutrition in different countries."
+            },
+            {
+              "type": "image",
+              "url": "/globalFoodSecurity.jpg",
+              "caption": "Illustration for Food Security"
             },
             {
               "type": "heading",
@@ -2703,6 +1547,1164 @@
             {
               "type": "paragraph",
               "text": "Thousands of people, including children, were killed during the conflict. The crisis demonstrates the importance of human rights protection, global responsibility, and international humanitarian assistance."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Global Connections",
+      "accent": "linear-gradient(135deg, #2a0d5e 0%, #4a1a8a 50%, #1c0a42 100%)",
+      "img": "/book_cover1.png",
+      "subtopics": [
+        {
+          "title": "Lesson 16: Global Media Culture",
+          "image": "/lesson3_illustration1.png",
+          "imageCaption": "Illustration for Global Media Culture",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Culture is the way of life of people, including material culture (clothes, buildings, objects) and non-material culture (beliefs, traditions, practices). It is expressed through symbols, language, values, beliefs, and norms."
+            },
+            {
+              "type": "paragraph",
+              "text": "Media culture refers to culture that emerges because of mass media and the interaction between media and culture. Global media culture explores the relationship between media, culture, and globalization. The media allows people to imagine themselves as part of one world and supports globalization in economic, political, and cultural aspects."
+            },
+            {
+              "type": "paragraph",
+              "text": "According to Lule (2014), media developed through five stages:"
+            },
+            {
+              "type": "numbered",
+              "text": "Oral Communication – language allowed humans to communicate and share information."
+            },
+            {
+              "type": "numbered",
+              "text": "Script – enabled communication across larger spaces and longer periods."
+            },
+            {
+              "type": "numbered",
+              "text": "Printing Press – allowed reproduction and circulation of printed materials."
+            },
+            {
+              "type": "numbered",
+              "text": "Electronic Media – includes telegraphs, telephones, radio, film, and television."
+            },
+            {
+              "type": "numbered",
+              "text": "Digital Media – digitized content transmitted through the internet and computer networks."
+            },
+            {
+              "type": "paragraph",
+              "text": "Nick Stevenson explained that modern culture is largely transmitted through mass media, making media and culture closely connected."
+            },
+            {
+              "type": "paragraph",
+              "text": "Filipinos are active consumers of media. Television remains widely watched, while internet and social media use increased because of digital access. Young people commonly use platforms such as YouTube, Instagram, Snapchat, Facebook, and Twitter for communication, information, entertainment, and self-expression."
+            },
+            {
+              "type": "paragraph",
+              "text": "Global media cultures continuously challenge identity, nationality, religion, norms, and ways of life. The media drives global integration by increasing economic and political integration among countries."
+            },
+            {
+              "type": "paragraph",
+              "text": "There are three perspectives on global cultural flow:"
+            },
+            {
+              "type": "bullet",
+              "text": "Cultural Differentialism – cultures remain different despite globalization."
+            },
+            {
+              "type": "bullet",
+              "text": "Cultural Hybridization – local and global cultures blend together."
+            },
+            {
+              "type": "bullet",
+              "text": "Cultural Convergence – globalization creates cultural homogeneity and may lead to cultural imperialism."
+            },
+            {
+              "type": "paragraph",
+              "text": "Issues in media culture include:"
+            },
+            {
+              "type": "bullet",
+              "text": "Access"
+            },
+            {
+              "type": "bullet",
+              "text": "Production and consumption"
+            },
+            {
+              "type": "bullet",
+              "text": "Inclusion and participation"
+            },
+            {
+              "type": "bullet",
+              "text": "Cultural integrity"
+            },
+            {
+              "type": "image",
+              "url": "/lesson3_media_inline.png"
+            }
+          ]
+        },
+        {
+          "title": "Lesson 17: Globalization of Religion",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Religion is a unified system of beliefs and practices related to faith, sacred values, and morality. Secularization refers to the diminishing role of religion in society, while glocalization of religion refers to the blending of universal and local religious beliefs."
+            },
+            {
+              "type": "paragraph",
+              "text": "According to a 2010 Pew Research Center study, about 84% of the world population belongs to a religious group. Christianity and Islam are the two largest religious groups globally."
+            },
+            {
+              "type": "paragraph",
+              "text": "Religion has different meanings depending on academic definitions and personal experiences. In the age of globalization, religious beliefs and practices spread across societies through increased communication and interaction."
+            },
+            {
+              "type": "paragraph",
+              "text": "Secularization involves the separation of church and state and the movement toward a more secular society. Two perspectives discussed are:"
+            },
+            {
+              "type": "bullet",
+              "text": "Post-secularity"
+            },
+            {
+              "type": "bullet",
+              "text": "Religious modernity"
+            },
+            {
+              "type": "paragraph",
+              "text": "Globalization also encourages religious pluralism and tolerance because people bring their religious beliefs when they move to different places. Religious tolerance allows people to practice their beliefs peacefully."
+            },
+            {
+              "type": "paragraph",
+              "text": "Religious fundamentalism is the belief in absolute religious truths that must strictly be followed. It may lead to conflict and hostility toward different beliefs."
+            },
+            {
+              "type": "paragraph",
+              "text": "Glocalization of religion refers to the interaction between universal religion and local culture. The four forms are:"
+            },
+            {
+              "type": "numbered",
+              "text": "Vernacularization – using local language to spread religion."
+            },
+            {
+              "type": "numbered",
+              "text": "Indigenization – blending religion with local customs."
+            },
+            {
+              "type": "numbered",
+              "text": "Nationalization – connecting religion with national identity."
+            },
+            {
+              "type": "numbered",
+              "text": "Transnationalization – identifying with a global religious community beyond national borders."
+            },
+            {
+              "type": "image",
+              "url": "/lesson3_religion.png"
+            }
+          ]
+        },
+        {
+          "title": "Lesson 18: Globalization of Technology",
+          "image": "/tech.jpg",
+          "imageCaption": "Illustration for Globalization of Technology",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Technology is a technique, process, or material good created through science to solve human problems. Technology diffusion refers to the flow of technology across borders."
+            },
+            {
+              "type": "paragraph",
+              "text": "Technology involves physical systems, information, and knowledge. The Fourth Industrial Revolution describes an era where people move between online and offline lives, with developments such as:"
+            },
+            {
+              "type": "bullet",
+              "text": "Artificial intelligence (AI)"
+            },
+            {
+              "type": "bullet",
+              "text": "Robotics"
+            },
+            {
+              "type": "bullet",
+              "text": "Internet connectivity"
+            },
+            {
+              "type": "bullet",
+              "text": "Creator-entrepreneurs"
+            },
+            {
+              "type": "paragraph",
+              "text": "These advancements make life easier but also create challenges such as job market changes, cybersecurity risks, and increased dependence on machines."
+            },
+            {
+              "type": "paragraph",
+              "text": "Technology diffusion occurs together with economic, political, and cultural globalization. Technologies become global commodities, such as cars and weapons, showing the connection between technology and international trade and politics."
+            },
+            {
+              "type": "paragraph",
+              "text": "According to Rogers' Diffusion of Innovation theory:"
+            },
+            {
+              "type": "bullet",
+              "text": "Innovators quickly try new technologies."
+            },
+            {
+              "type": "bullet",
+              "text": "Early adopters accept technologies with guidance."
+            },
+            {
+              "type": "bullet",
+              "text": "Laggards prefer traditional methods."
+            },
+            {
+              "type": "paragraph",
+              "text": "Technological trends in globalization include:"
+            },
+            {
+              "type": "bullet",
+              "text": "Internet of Things (IoT)"
+            },
+            {
+              "type": "bullet",
+              "text": "Telemedicine"
+            },
+            {
+              "type": "bullet",
+              "text": "Online meetings and classes"
+            },
+            {
+              "type": "bullet",
+              "text": "Improved transportation systems"
+            },
+            {
+              "type": "bullet",
+              "text": "Aviation advancements using AI, drones, digital twins, and mobile computing"
+            },
+            {
+              "type": "paragraph",
+              "text": "Green architecture and renewable energy aim to address environmental problems. Carbon credits are used in carbon trade to manage emissions."
+            },
+            {
+              "type": "paragraph",
+              "text": "The Philippines joined global space technology development through the launch of Diwata-1 and Diwata-2 satellites for climate and disaster management."
+            },
+            {
+              "type": "paragraph",
+              "text": "Modern technology also includes:"
+            },
+            {
+              "type": "bullet",
+              "text": "Artificial intelligence and humanoid robots"
+            },
+            {
+              "type": "bullet",
+              "text": "Nanotechnology for atomic and molecular manipulation"
+            },
+            {
+              "type": "image",
+              "url": "/lesson3_tech_inline.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Globalization of LifeStyle and Education",
+      "accent": "linear-gradient(135deg, #5e1a0d 0%, #8a3a1a 50%, #421008 100%)",
+      "img": "book_cover5.png",
+      "subtopics": [
+        {
+          "title": "Globalization of Lifestyle",
+          "image": "/lesson4_lifestyle.png",
+          "imageCaption": "Illustration for Globalization of Lifestyle",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Lifestyle refers to the way people live their everyday lives and the factors influencing it. According to Mikael Jensen (2007), lifestyle is multidimensional, pluralistic, and crosscutting. It includes:"
+            },
+            {
+              "type": "bullet",
+              "text": "How people carry out daily activities"
+            },
+            {
+              "type": "bullet",
+              "text": "Factors affecting health and well-being"
+            },
+            {
+              "type": "bullet",
+              "text": "Patterns of consumption"
+            },
+            {
+              "type": "paragraph",
+              "text": "Lifestyle can be analyzed through four levels:"
+            },
+            {
+              "type": "numbered",
+              "text": "Global Scale – examines prevailing lifestyles worldwide and how lifestyles flow across territories."
+            },
+            {
+              "type": "numbered",
+              "text": "National Scale – focuses on how countries regulate and influence lifestyles through policies and programs."
+            },
+            {
+              "type": "numbered",
+              "text": "Positional/Subcultural Scale – looks at how family, friends, neighbors, and communities shape lifestyle."
+            },
+            {
+              "type": "numbered",
+              "text": "Individual Scale – focuses on personality, preferences, aspirations, fears, and identity."
+            },
+            {
+              "type": "paragraph",
+              "text": "Veal's (1993) seven dimensions of lifestyle analysis include:"
+            },
+            {
+              "type": "bullet",
+              "text": "Activities or behaviors"
+            },
+            {
+              "type": "bullet",
+              "text": "Attitudes and values"
+            },
+            {
+              "type": "bullet",
+              "text": "Individual processes"
+            },
+            {
+              "type": "bullet",
+              "text": "Group processes"
+            },
+            {
+              "type": "bullet",
+              "text": "Coherence"
+            },
+            {
+              "type": "bullet",
+              "text": "Recognizability"
+            },
+            {
+              "type": "bullet",
+              "text": "Choice"
+            },
+            {
+              "type": "paragraph",
+              "text": "Globalization strongly influences lifestyle through food, music, sports, fashion, and other cultural practices."
+            },
+            {
+              "type": "heading",
+              "text": "Food"
+            },
+            {
+              "type": "paragraph",
+              "text": "The Philippines' biodiversity allows diverse food choices. Food reflects culture, economic activities, household practices, and resources. Globalization has changed food systems and diets through:"
+            },
+            {
+              "type": "bullet",
+              "text": "Food access"
+            },
+            {
+              "type": "bullet",
+              "text": "Food availability"
+            },
+            {
+              "type": "bullet",
+              "text": "Food quality"
+            },
+            {
+              "type": "paragraph",
+              "text": "According to Elizabeth Black (2016), urbanization and foreign investments are major causes of these changes. Fast food consumption increases in urban areas, while imported and exported processed foods affect traditional diets."
+            },
+            {
+              "type": "heading",
+              "text": "Music"
+            },
+            {
+              "type": "paragraph",
+              "text": "Music helps people express emotions, ideas, and realities. Globalization increases interaction among musical traditions, creating exchanges and blending cultures. Genres like reggae and jazz emerged from African and European influences."
+            },
+            {
+              "type": "paragraph",
+              "text": "In the Philippines, Western music influence began during Spanish colonization through sacred music. Despite indigenous genres like kundiman, Western traditions remain influential. Digital platforms such as Spotify, SoundCloud, and YouTube made music sharing faster and more accessible."
+            },
+            {
+              "type": "heading",
+              "text": "Sports"
+            },
+            {
+              "type": "paragraph",
+              "text": "Sports play an important role in globalization and identity formation among nations. International competitions like the Olympics show how sports operate globally."
+            },
+            {
+              "type": "paragraph",
+              "text": "The presentation discussed several Olympic Games:"
+            },
+            {
+              "type": "bullet",
+              "text": "Atlanta 1996"
+            },
+            {
+              "type": "bullet",
+              "text": "Sydney 2000"
+            },
+            {
+              "type": "bullet",
+              "text": "Athens 2004"
+            },
+            {
+              "type": "bullet",
+              "text": "Beijing 2008"
+            },
+            {
+              "type": "bullet",
+              "text": "London 2012"
+            },
+            {
+              "type": "paragraph",
+              "text": "The increase in Olympic viewership was connected to developments in media, satellite broadcasting, digital streaming, social media, and global connectivity."
+            }
+          ]
+        },
+        {
+          "title": "Globalization of Education",
+          "image": "/lesson4_education.png",
+          "imageCaption": "Illustration for Globalization of Education",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Education is the process of teaching and learning and involves the transfer of knowledge, skills, beliefs, and values."
+            },
+            {
+              "type": "bullet",
+              "text": "Equivalency – comparing educational achievement with academic requirements."
+            },
+            {
+              "type": "bullet",
+              "text": "Qualifications framework – standards used to evaluate educational qualifications between countries."
+            },
+            {
+              "type": "paragraph",
+              "text": "Globalization in education refers to the growing interconnectedness of educational systems worldwide through exchanges of ideas, students, technology, and curricula."
+            },
+            {
+              "type": "paragraph",
+              "text": "Positive effects include:"
+            },
+            {
+              "type": "bullet",
+              "text": "Access to resources and information"
+            },
+            {
+              "type": "bullet",
+              "text": "International research partnerships"
+            },
+            {
+              "type": "bullet",
+              "text": "Cultural exchange"
+            },
+            {
+              "type": "bullet",
+              "text": "Economic opportunities and workforce mobility"
+            },
+            {
+              "type": "bullet",
+              "text": "Improved educational quality"
+            },
+            {
+              "type": "bullet",
+              "text": "Development of global citizenship skills"
+            },
+            {
+              "type": "heading",
+              "text": "Transnational Education"
+            },
+            {
+              "type": "paragraph",
+              "text": "Transnational education allows institutions from one country to provide education to students in another country without requiring relocation."
+            },
+            {
+              "type": "paragraph",
+              "text": "Types include:"
+            },
+            {
+              "type": "bullet",
+              "text": "Branch campuses"
+            },
+            {
+              "type": "bullet",
+              "text": "Joint or dual degrees"
+            },
+            {
+              "type": "bullet",
+              "text": "Franchising"
+            },
+            {
+              "type": "bullet",
+              "text": "Online or distance learning"
+            },
+            {
+              "type": "bullet",
+              "text": "Articulation programs"
+            },
+            {
+              "type": "heading",
+              "text": "Scholarship Programs"
+            },
+            {
+              "type": "paragraph",
+              "text": "Scholarships for international students include:"
+            },
+            {
+              "type": "bullet",
+              "text": "Fulbright Program"
+            },
+            {
+              "type": "bullet",
+              "text": "Chevening Scholarships"
+            },
+            {
+              "type": "bullet",
+              "text": "Erasmus+"
+            },
+            {
+              "type": "bullet",
+              "text": "Australia Awards"
+            },
+            {
+              "type": "bullet",
+              "text": "Eiffel Excellence"
+            },
+            {
+              "type": "bullet",
+              "text": "DAAD"
+            },
+            {
+              "type": "bullet",
+              "text": "Rhodes Scholarship"
+            },
+            {
+              "type": "bullet",
+              "text": "Gates Cambridge"
+            },
+            {
+              "type": "bullet",
+              "text": "Schwarzman Scholars"
+            },
+            {
+              "type": "bullet",
+              "text": "Knight-Hennessy"
+            },
+            {
+              "type": "paragraph",
+              "text": "Scholarships may be:"
+            },
+            {
+              "type": "bullet",
+              "text": "Merit-based"
+            },
+            {
+              "type": "bullet",
+              "text": "Needs-based"
+            },
+            {
+              "type": "heading",
+              "text": "Types of International Students"
+            },
+            {
+              "type": "numbered",
+              "text": "Internationally Mobile Students"
+            },
+            {
+              "type": "numbered",
+              "text": "Foreign Students"
+            },
+            {
+              "type": "numbered",
+              "text": "Credit-Mobile Students"
+            },
+            {
+              "type": "paragraph",
+              "text": "Global student mobility continues to grow, with countries such as the USA, UK, Australia, Canada, and Germany serving as major destinations."
+            },
+            {
+              "type": "heading",
+              "text": "Open and Distance Education"
+            },
+            {
+              "type": "paragraph",
+              "text": "Technology allows learning to happen virtually through:"
+            },
+            {
+              "type": "bullet",
+              "text": "Online university programs"
+            },
+            {
+              "type": "bullet",
+              "text": "MOOCs"
+            },
+            {
+              "type": "bullet",
+              "text": "Virtual classrooms"
+            },
+            {
+              "type": "bullet",
+              "text": "Learning management systems like Google Classroom and Moodle"
+            },
+            {
+              "type": "paragraph",
+              "text": "Distance education became especially important during emergencies and crises because it allows classes to continue online."
+            },
+            {
+              "type": "heading",
+              "text": "Equivalency and Qualifications Frameworks"
+            },
+            {
+              "type": "paragraph",
+              "text": "ASEAN integration created the need for comparable educational standards across Southeast Asia."
+            },
+            {
+              "type": "paragraph",
+              "text": "The ASEAN Qualifications Reference Framework (AQRF) aims to:"
+            },
+            {
+              "type": "bullet",
+              "text": "Support recognition of qualifications"
+            },
+            {
+              "type": "bullet",
+              "text": "Encourage lifelong learning"
+            },
+            {
+              "type": "bullet",
+              "text": "Validate non-formal education"
+            },
+            {
+              "type": "bullet",
+              "text": "Promote worker and learner mobility"
+            },
+            {
+              "type": "bullet",
+              "text": "Improve qualifications systems"
+            },
+            {
+              "type": "bullet",
+              "text": "Enhance transparency and trust among ASEAN member states"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Global Migration and Overseas Filipino Workers",
+      "accent": "linear-gradient(135deg, #3a2a0d 0%, #6b4f1a 50%, #2a1e08 100%)",
+      "img": "book_cover7.png",
+      "subtopics": [
+        {
+          "title": "Lesson 23: Global Migration",
+          "image": "/g4.jpg",
+          "imageCaption": "Migrants crossing borders in search of better opportunities.",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Global migration refers to the movement of people from one place to another, either temporarily or permanently. A migrant is any person who moves across borders or within a country away from their usual residence."
+            },
+            {
+              "type": "paragraph",
+              "text": "It is a complex global phenomenon connected to economic, social, political, and environmental factors. Migration influences geopolitics, trade, cultural exchange, and provides opportunities for countries and communities."
+            },
+            {
+              "type": "heading",
+              "text": "Reasons for Migration"
+            },
+            {
+              "type": "paragraph",
+              "text": "People migrate due to:"
+            },
+            {
+              "type": "bullet",
+              "text": "Economic opportunities (jobs, better income)"
+            },
+            {
+              "type": "bullet",
+              "text": "Social factors (family reunification, education)"
+            },
+            {
+              "type": "bullet",
+              "text": "Political factors (conflict, persecution, human rights violations)"
+            },
+            {
+              "type": "bullet",
+              "text": "Environmental factors (natural disasters, climate change)"
+            },
+            {
+              "type": "heading",
+              "text": "Global Migration Trends"
+            },
+            {
+              "type": "bullet",
+              "text": "Migrants increased from 173 million (2000) to 258 million (2017)"
+            },
+            {
+              "type": "bullet",
+              "text": "3.4% of the world population were migrants in 2017"
+            },
+            {
+              "type": "bullet",
+              "text": "Around 68 million people are forcibly displaced, including refugees, asylum seekers, and internally displaced persons"
+            },
+            {
+              "type": "heading",
+              "text": "Migration and Sustainable Development Goals (SDGs)"
+            },
+            {
+              "type": "paragraph",
+              "text": "Migration is a key feature of the 21st century and contributes to development. It affects multiple areas such as:"
+            },
+            {
+              "type": "bullet",
+              "text": "Health"
+            },
+            {
+              "type": "bullet",
+              "text": "Education"
+            },
+            {
+              "type": "bullet",
+              "text": "Gender equality"
+            },
+            {
+              "type": "bullet",
+              "text": "Work and economy"
+            },
+            {
+              "type": "bullet",
+              "text": "Cities and environment"
+            },
+            {
+              "type": "paragraph",
+              "text": "Migration helps improve opportunities, but migrants also face challenges like limited healthcare access, trafficking risks, and discrimination."
+            },
+            {
+              "type": "heading",
+              "text": "Categories of Migrants"
+            },
+            {
+              "type": "numbered",
+              "text": "Labor/Economic Migrants – move voluntarily for jobs, financial stability, or family reunification."
+            },
+            {
+              "type": "numbered",
+              "text": "Forced Migrants – leave due to war, persecution, or crises. Includes: Asylum seekers – waiting for protection status; Refugees – cannot return home due to fear of persecution."
+            },
+            {
+              "type": "heading",
+              "text": "Drivers of Migration"
+            },
+            {
+              "type": "paragraph",
+              "text": "Migration is driven by:"
+            },
+            {
+              "type": "bullet",
+              "text": "Economic and demographic factors (poverty, job opportunities)"
+            },
+            {
+              "type": "bullet",
+              "text": "Environmental factors (climate vulnerability)"
+            },
+            {
+              "type": "bullet",
+              "text": "Human-made crises (conflicts, disasters)"
+            }
+          ]
+        },
+        {
+          "title": "Overseas Filipino Employment (OFWs)",
+          "image": "/g4.1.jpg",
+          "imageCaption": "Overseas Filipino Workers contributing to global workforce.",
+          "content": [
+            {
+              "type": "heading",
+              "text": "History"
+            },
+            {
+              "type": "bullet",
+              "text": "Began during the Spanish period (galleon trade)"
+            },
+            {
+              "type": "bullet",
+              "text": "Expanded in the 1970s due to Middle East construction demand"
+            },
+            {
+              "type": "bullet",
+              "text": "By 2005, over a million Filipinos were deployed yearly"
+            },
+            {
+              "type": "heading",
+              "text": "Reasons Filipinos Work Abroad"
+            },
+            {
+              "type": "bullet",
+              "text": "Poverty"
+            },
+            {
+              "type": "bullet",
+              "text": "Unemployment and low wages"
+            },
+            {
+              "type": "bullet",
+              "text": "Career growth and skill enhancement"
+            },
+            {
+              "type": "bullet",
+              "text": "Personal ambition and curiosity"
+            },
+            {
+              "type": "heading",
+              "text": "Risks of Overseas Employment"
+            },
+            {
+              "type": "bullet",
+              "text": "Abuse, violence, trafficking, and discrimination"
+            },
+            {
+              "type": "bullet",
+              "text": "Weakening of family ties and relationships"
+            },
+            {
+              "type": "heading",
+              "text": "Laws for OFWs"
+            },
+            {
+              "type": "paragraph",
+              "text": "Various laws and regulations exist to protect overseas Filipino workers, including the Migrant Workers and Overseas Filipinos Act of 1995 and other policies governing recruitment, welfare, and employment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Global Health and Toward A Sustainable World",
+      "accent": "linear-gradient(135deg, #0d3a5e 0%, #1a6b8a 50%, #08283f 100%)",
+      "img": "victa.png",
+      "subtopics": [
+        {
+          "title": "Global Health",
+          "image": "/globalHealth.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Health is defined as a state of complete physical, mental, and social well-being, and not merely the absence of disease or infirmity."
+            },
+            {
+              "type": "paragraph",
+              "text": "Global Health is an area for study, research, and practice that places a priority on improving health and achieving health equity for all people worldwide."
+            },
+            {
+              "type": "paragraph",
+              "text": "Social Determinants of Health are the conditions in which people are born, grow, live, work, and age. Such circumstances are influenced by the distribution of money, power, and resources at global, national, and local levels. These are most often responsible for health inequities in countries."
+            },
+            {
+              "type": "paragraph",
+              "text": "Sustainable Development Goals (SDGs) are 17 interconnected global goals that aim to end poverty, protect the planet, reduce inequality, and promote peace and prosperity for all through collective and sustainable action."
+            },
+            {
+              "type": "heading",
+              "text": "6 Key Concepts for Better Understanding Global Health (Koplan, et al.)"
+            },
+            {
+              "type": "bullet",
+              "text": "Collaborative (or collective)"
+            },
+            {
+              "type": "bullet",
+              "text": "Transnational"
+            },
+            {
+              "type": "bullet",
+              "text": "Research"
+            },
+            {
+              "type": "bullet",
+              "text": "Action"
+            },
+            {
+              "type": "bullet",
+              "text": "Promoting (or improving)"
+            },
+            {
+              "type": "bullet",
+              "text": "Health for all"
+            }
+          ]
+        },
+        {
+          "title": "Toward A Sustainable World",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Sustainable development is that which meets the needs of the present without compromising the ability of future generations to meet their own needs. — Dr. Gro Harlem Brundtland, Prime Minister of Norway (WCED, 1987)"
+            },
+            {
+              "type": "paragraph",
+              "text": "The term sustainable development was first coined in 1987 during the World Commission on Environment and Development (WCED). It arose from the recognition that economic and social needs must be balanced with the capacity of the environment to provide."
+            },
+            {
+              "type": "paragraph",
+              "text": "Global actors and governments must enact policies that account for the entwined aspects of social, cultural, economic development, and environmental protection."
+            },
+            {
+              "type": "heading",
+              "text": "Definitions by Different Organizations"
+            },
+            {
+              "type": "heading",
+              "text": "World Bank (1992)"
+            },
+            {
+              "type": "paragraph",
+              "text": "Sustainable development means considering the costs and benefits of developmental and environmental policies, and focusing on meticulous economic analysis to reinforce environmental protection."
+            },
+            {
+              "type": "heading",
+              "text": "IUCN, WWF, UNEP (1987)"
+            },
+            {
+              "type": "paragraph",
+              "text": "Sustainable development is about the conservation of ecological processes, the safeguarding of genetic diversity, and the balanced utilization of species and ecosystems."
+            },
+            {
+              "type": "heading",
+              "text": "Edward Barbier (1987)"
+            },
+            {
+              "type": "paragraph",
+              "text": "Sustainable economic development is about improving the poor people's standard of living — enhanced food sources, real income, education, health services, water supply, and sanitation; only indirectly concerned with cumulative economic growth."
+            },
+            {
+              "type": "heading",
+              "text": "United Nations Department of Economic & Social Affairs (2013)"
+            },
+            {
+              "type": "paragraph",
+              "text": "Global sustainable development requires significant price corrections, conserving natural abilities, reducing inequalities, adding environmental accounting, rerouting finance to the real economy, and sharing income and employment to increase well-being, especially of the poorest."
+            },
+            {
+              "type": "heading",
+              "text": "The UK Government's 5-Principle Approach"
+            },
+            {
+              "type": "numbered",
+              "text": "Living Within Environmental Limits"
+            },
+            {
+              "type": "numbered",
+              "text": "Ensuring a Strong, Healthy and Just Society"
+            },
+            {
+              "type": "numbered",
+              "text": "Achieving a Sustainable Economy"
+            },
+            {
+              "type": "numbered",
+              "text": "Promoting Good Governance"
+            },
+            {
+              "type": "numbered",
+              "text": "Using Sound Science Responsibly"
+            },
+            {
+              "type": "heading",
+              "text": "Millennium Development Goals (MDGs) & Sustainable Development Goals (SDGs)"
+            },
+            {
+              "type": "heading",
+              "text": "The 8 MDGs (Targeted for 2015)"
+            },
+            {
+              "type": "bullet",
+              "text": "To eradicate extreme poverty and hunger"
+            },
+            {
+              "type": "bullet",
+              "text": "To achieve universal primary education"
+            },
+            {
+              "type": "bullet",
+              "text": "To promote gender equality and empower women"
+            },
+            {
+              "type": "bullet",
+              "text": "To reduce child mortality"
+            },
+            {
+              "type": "bullet",
+              "text": "To improve maternal health"
+            },
+            {
+              "type": "bullet",
+              "text": "To combat HIV/AIDS, malaria, and other diseases"
+            },
+            {
+              "type": "bullet",
+              "text": "To ensure environmental sustainability"
+            },
+            {
+              "type": "bullet",
+              "text": "To develop a global partnership for development"
+            },
+            {
+              "type": "heading",
+              "text": "The 17 SDGs (Targeted for 2030)"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 1 – No Poverty"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 2 – Zero Hunger"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 3 – Good Health and Well-being"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 4 – Quality Education"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 5 – Gender Equality"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 6 – Clean Water and Sanitation"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 7 – Affordable and Clean Energy"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 8 – Decent Work and Economic Growth"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 9 – Industry, Innovation, and Infrastructure"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 10 – Reduced Inequality"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 11 – Sustainable Cities and Communities"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 12 – Responsible Consumption and Production"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 13 – Climate Action"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 14 – Life Below Water"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 15 – Life on Land"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 16 – Peace, Justice and Strong Institutions"
+            },
+            {
+              "type": "bullet",
+              "text": "Goal 17 – Partnerships to Achieve the Goals"
+            },
+            {
+              "type": "heading",
+              "text": "Challenges to Sustainable Development"
+            },
+            {
+              "type": "bullet",
+              "text": "Poverty – the lack and deprivation of basic needs measured through income, education, nutrition, housing, and clean water."
+            },
+            {
+              "type": "bullet",
+              "text": "Income Inequality – the widening gap between rich and poor despite economic growth."
+            },
+            {
+              "type": "bullet",
+              "text": "Unsustainable Patterns of Production and Consumption – over-extraction, overproduction, and disposal beyond the Earth's limits."
+            },
+            {
+              "type": "bullet",
+              "text": "Environmental Destruction – caused by over-harvesting, pollution, and resource exploitation."
+            },
+            {
+              "type": "paragraph",
+              "text": "Key environmental indicators for the Philippines include:"
+            },
+            {
+              "type": "bullet",
+              "text": "Declining forest cover"
+            },
+            {
+              "type": "bullet",
+              "text": "Over-extraction of mineral wealth"
+            },
+            {
+              "type": "bullet",
+              "text": "Agricultural land decline"
+            },
+            {
+              "type": "bullet",
+              "text": "Freshwater contamination"
+            },
+            {
+              "type": "bullet",
+              "text": "Marine ecosystem depletion"
+            },
+            {
+              "type": "bullet",
+              "text": "Urban ecosystem destruction"
+            },
+            {
+              "type": "heading",
+              "text": "Economic Globalization and Sustainable Development"
+            },
+            {
+              "type": "paragraph",
+              "text": "Economic globalization under neoliberalism may threaten sustainable development through:"
+            },
+            {
+              "type": "bullet",
+              "text": "Unconstrained extraction of resources"
+            },
+            {
+              "type": "bullet",
+              "text": "Creation of global markets for endless growth"
+            },
+            {
+              "type": "bullet",
+              "text": "Exploitation of cheap labor and raw materials"
+            },
+            {
+              "type": "paragraph",
+              "text": "Structural adjustment policies and privatization may weaken protection of social services and natural resources. Global civil society and mass movements continue to promote sustainable development through protests, legal actions, negotiations, and alliance-building."
             }
           ]
         }
