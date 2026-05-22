@@ -1,10 +1,8 @@
 import { useState } from "react";
 import "./topicPage.css";
-
 import lessonsData from "../data/lessonsData.json";
+import BookCard from "../components/common/BookCard/BookCard";
 
-// Map the shared JSON data to the format expected by the 3D book card
-// Map the shared JSON data to the format expected by the 3D book card
 const BOOKS = lessonsData.lessons.map((lesson, index) => ({
     id: lesson.id,
     title: lesson.title.split(":")[0] || lesson.title,
@@ -15,7 +13,7 @@ const BOOKS = lessonsData.lessons.map((lesson, index) => ({
     accent: lesson.accent.match(/#([0-9a-fA-F]{6})/g)?.[1] || "#29aef0"
 }));
 
-import BookCard from "../components/common/BookCard/BookCard";
+
 
 const TopicsPage = ({ onSelectLesson }) => {
     const [search, setSearch] = useState("");

@@ -6,7 +6,6 @@ const LessonDetailPage = ({ lessonId, onBack }) => {
   const lesson = lessonsData.lessons.find((l) => l.id === lessonId);
 
   useEffect(() => {
-    // Scroll to the top of the page on render
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [lessonId]);
 
@@ -45,9 +44,17 @@ const LessonDetailPage = ({ lessonId, onBack }) => {
             <section key={index} className="subtopic-section">
               <h3 className="subtopic-title">{subtopic.title}</h3>
               {Array.isArray(subtopic.content)
-                ? subtopic.content.map((line, i) => (
-                  <p key={i} className="subtopic-content">{line}</p>
-                ))
+                ? subtopic.content.map((item, i) =>
+                  item.type === "heading" ? (
+                    <p key={i} className="content-heading">{item.text}</p>
+                  ) : item.type === "bullet" ? (
+                    <p key={i} className="content-bullet">{item.text}</p>
+                  ) : item.type === "numbered" ? (
+                    <p key={i} className="content-numbered">{item.text}</p>
+                  ) : (
+                    <p key={i} className="subtopic-content">{item.text}</p>
+                  )
+                )
                 : <p className="subtopic-content">{subtopic.content}</p>
               }
             </section>

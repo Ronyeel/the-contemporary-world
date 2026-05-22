@@ -96,7 +96,8 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background-color: #00a2ff; /* Perfect sky blue matching the screenshot */
+  background-color: #00a2ff;
+  /* Perfect sky blue matching the screenshot */
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -167,7 +168,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
-  
+
   .col-main {
     max-width: 100%;
     grid-column: span 2;
@@ -179,14 +180,20 @@
     grid-template-columns: 1fr;
     gap: 25px;
   }
-  
+
   .col-main {
     grid-column: span 1;
   }
-  
+
   .footer-bottom {
     flex-direction: column;
     gap: 15px;
     align-items: flex-start;
   }
+}
+
+.instructor-name {
+  color: #8e9aa8;
+  font-size: 0.95rem;
+  font-weight: 300;
 }
