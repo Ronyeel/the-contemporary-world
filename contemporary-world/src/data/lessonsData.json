@@ -1547,7 +1547,7 @@
     },
     {
       "id": 3,
-      "title": "Global Connections: Media, Religion, and Technology",
+      "title": "Global Connections",
       "accent": "linear-gradient(135deg, #2a0d5e 0%, #4a1a8a 50%, #1c0a42 100%)",
       "img": "/book_cover1.png",
       "subtopics": [
@@ -1705,7 +1705,7 @@
         },
         {
           "title": "Lesson 18: Globalization of Technology",
-          "image": "/lesson3_illustration2.png",
+          "image": "/tech.jpg",
           "imageCaption": "Illustration for Globalization of Technology",
           "content": [
             {
